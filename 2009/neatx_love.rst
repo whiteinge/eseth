@@ -2,6 +2,8 @@
 Introduction to neatx
 =====================
 
+.. index:: neatx, ssh, X, remote access
+
 I spend a lot of time working out of a coffee shop on a netbook. Which means I
 often work with limited computing resources over an insecure, unreliable, and
 slow network. Normally that would make working difficult; with ``ssh`` and

@@ -2,4 +2,5 @@
 
 -f http://www.tornadoweb.org/static/tornado-0.2.tar.gz#egg=tornado
 docutils
+Sphinx
 simplejson

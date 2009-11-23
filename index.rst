@@ -2,7 +2,7 @@
 Esoteric Rubbish
 ================
 
-.. rubric:: Rambling so inconsequential it will change your religion
+.. rubric:: Rambling so bereft of purpose it will change your religion
 
 .. toctree::
     :maxdepth: 0

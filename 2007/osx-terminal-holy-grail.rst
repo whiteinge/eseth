@@ -56,6 +56,7 @@ The Gnu Screen from MacPorts is already compiled with 256-color support so
 putting the following in my .screenrc was the last step:
 
 ::
+
     ###############
     # 256 colours #
     ###############

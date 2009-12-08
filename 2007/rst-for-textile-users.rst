@@ -18,6 +18,7 @@ your heading. It doesn't matter what you use, just be consistent with the
 character you use for each header level:
 
 ::
+
     =========
     Chapter 1
     =========

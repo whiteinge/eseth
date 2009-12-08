@@ -1,7 +1,8 @@
+========
 Freebase
 ========
 
-:pubdate: 2007-09-06T13:27
+:pubdate: 2007-09-06
 
 I'm working on a project that required a database of video games (name,
 release date, box-art, etc.). Too much information to input manually, so we

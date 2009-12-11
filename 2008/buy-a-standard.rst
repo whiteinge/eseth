@@ -2,6 +2,8 @@
 How to buy a standard in 10 days
 ================================
 
+.. index:: computing
+
 :pubdate: 2008-04-03
 
 If anyone else out there is stunned that yesterday's ISO approval of

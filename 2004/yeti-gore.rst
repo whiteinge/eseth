@@ -1,6 +1,8 @@
 Yeti Gore Flash game
 ====================
 
+.. index:: computing
+
 :pubdate: 2004-12-16
 
 Here's a little `penguin batting practice`_ game. This site is *not* safe for

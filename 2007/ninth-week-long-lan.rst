@@ -2,6 +2,8 @@
 Ninth Annual Week(end)-Long LAN Party
 =====================================
 
+.. index:: gaming
+
 :pubdate: 2007-05-02
 
 Prepare yourselves for the Ninth Annual Week(end)-Long LAN Party!

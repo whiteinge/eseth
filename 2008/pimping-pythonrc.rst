@@ -2,6 +2,8 @@
 Pimping out your .pythonrc.py
 =============================
 
+.. index:: computing, python
+
 :pubdate: 2008
 
 I don't wanna be hatin' on `IPython`_, but I don't use it. I often favor

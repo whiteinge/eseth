@@ -2,6 +2,8 @@
 The Tactile Pro
 ===============
 
+.. index:: computing
+
 :pubdate: 2004
 
 My `Tactile Pro`_ keyboard arrived today. It's a Mac USB keyboard and I'm

@@ -2,6 +2,8 @@
 Apple's Keynote
 ===============
 
+.. index:: computing, os x
+
 :pubdate: 2004-11-08
 
 When I'm on the verge of buying a Mac I tend to get a little obsessive.

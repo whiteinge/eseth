@@ -2,6 +2,8 @@
 Firefox and boxen-hopping
 =========================
 
+.. index:: computing, web
+
 :pubdate: 2006-03-30
 
 Update 2006-12-20: Firefox *is* very easy to personalize via configuration

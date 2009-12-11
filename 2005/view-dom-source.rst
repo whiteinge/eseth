@@ -2,6 +2,8 @@
 Viewing the DOM Source with Firefox
 ===================================
 
+.. index:: computing, web
+
 :pub_date: 2005-12-06
 
 I'll be the first to admit that blogging about not-so-obvious features in

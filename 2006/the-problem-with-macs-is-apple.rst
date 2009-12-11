@@ -2,6 +2,8 @@
 The Problem with Macs is Apple
 ==============================
 
+.. index:: computing, os x
+
 :pubdate: 2006-10-26
 
 The Problem with Macs is Apple, or rather that Apple is a

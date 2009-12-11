@@ -2,6 +2,8 @@
 Learning Django with IPython
 ============================
 
+.. index:: computing, web, django, python
+
 :pubdate: 2007-01-28
 
 I've gone a long time without doing any serious web programming because the

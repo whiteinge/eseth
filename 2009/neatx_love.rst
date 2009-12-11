@@ -2,7 +2,7 @@
 Introduction to neatx
 =====================
 
-.. index:: neatx, ssh, X, remote access
+.. index:: computing, unix
 
 I spend a lot of time working out of a coffee shop on a netbook. Which means I
 often work with limited computing resources over an insecure, unreliable, and

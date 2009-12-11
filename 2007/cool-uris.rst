@@ -2,6 +2,8 @@
 Cool URIs don't change; so what's considered 'cool'?
 ====================================================
 
+.. index:: computing, web
+
 :pubdate: 2007-05-20
 
 I've given a lot of thought, lately, to the famous `Cool URIs don't change`_

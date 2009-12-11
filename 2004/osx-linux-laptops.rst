@@ -2,6 +2,8 @@
 OS X vs. Linux and Linux on Laptops
 ===================================
 
+.. index:: computing, os x, unix
+
 :pubdate: 2004
 
 Apple recently introduced a sub $1k `iBook`_ so I've (almost) promptly put my

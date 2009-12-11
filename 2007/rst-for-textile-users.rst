@@ -2,6 +2,8 @@
 ReST for Markdown and Textile Users
 ===================================
 
+.. index:: computing
+
 :pubdate: 2007-10-11
 
 ReStructuredText is freaking huge so users of lighter-weight markup languages

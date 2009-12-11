@@ -2,6 +2,8 @@
 The Elements of Typographic Style
 =================================
 
+.. index:: typography
+
 :pubdate: 2005-12-15
 
 Thanks to Nat for letting me borrow `The Elements of Typographic Style`_

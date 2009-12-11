@@ -2,6 +2,8 @@
 Auto-sensing PowerBook network port
 ===================================
 
+.. index:: computing, os x
+
 :pubdate: 2004
 
 I never would've tried it unless `Erik`_ had insisted, but the network port

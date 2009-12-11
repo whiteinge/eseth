@@ -2,6 +2,8 @@
 Mac OS X 10.4 (Tiger) Bug Review
 ================================
 
+.. index:: computing, os x
+
 :pubdate: 2005-05-04
 
 Lotta reviews of OS 10.4 floating around these last few days. Instead of

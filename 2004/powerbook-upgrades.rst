@@ -2,6 +2,8 @@
 Powerbook Upgrades
 ==================
 
+.. index:: computing, os x
+
 :pubdate: 2004-12-23
 
 I got a new Mac.

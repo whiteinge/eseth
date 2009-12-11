@@ -2,6 +2,8 @@
 d20 Future book review
 ======================
 
+.. index:: gaming
+
 :pubdate: 2004-09-21
 
 For those of you who play Dungeons & Dragons, you may have heard about `d20

@@ -2,6 +2,8 @@
 Dotfiles
 ========
 
+.. index:: computing, unix, zsh, screen, vim
+
 :pubdate: 2005-10-08
 
 I've long enjoyed painstakingly constructing `dotfiles`_ or \*rc files for

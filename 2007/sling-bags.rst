@@ -2,6 +2,8 @@
 Sling laptop bags, a review
 ===========================
 
+.. index:: computing
+
 :pubdate: 2007-01-01
 
 It seems that most reviews for the two popular MacBook sling bags

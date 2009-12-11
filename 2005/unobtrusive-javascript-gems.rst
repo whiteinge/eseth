@@ -1,6 +1,8 @@
 Unobtrusive JavaScript Gems
 ===========================
 
+.. index:: computing, web, javascript
+
 :pubdate: 2005-03-02
 
 I'm diving in to ECMAScript for the first time, inspired by DOM Scripting

@@ -2,6 +2,8 @@
 Textpattern
 ===========
 
+.. index:: computing, web
+
 :pubdate: 2005-10-26
 
 Although I have no qualms with `WordPress`_, I've always been very curious

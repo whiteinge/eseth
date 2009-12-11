@@ -2,6 +2,8 @@
 Web Typography, Bringhurst-style
 ================================
 
+.. index:: computing, typography, web
+
 :pubdate: 2005-12-14
 
 Richard Rutter of `Clearleft`_ has recently started a project entitled `The

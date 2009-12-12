@@ -18,10 +18,7 @@ directly to me!) crafted my own list of 257 favorites, slapped together a
 Makefile and README, and am now releasing the `Oscar Wilde UNIX fortune
 cookie`_ for your local BSD Games installation.
 
-`.. image:: ./wilde.jpg
+.. image:: ./wilde.jpg
     :alt: Oscar Wilde fortune file screenshot
-`__
 
-.. _Oscar Wilde UNIX fortune cookie:
-    http://eseth.org/filez/storage/wilde.tar.bz2
-.. __: http://www.macosxhints.com/article.php?story=20041116043212702
+.. _Oscar Wilde UNIX fortune cookie: http://eseth.org/filez/storage/wilde.tar.bz2

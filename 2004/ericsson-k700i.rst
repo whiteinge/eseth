@@ -7,8 +7,10 @@ Sony Ericsson K700i
 :pubdate: 2004-12-26
 
 Eager to have a mobile PIM in my pocket once again, and inspired by `SVG-T`_
-and `Bluetooth`_ I have purchased the `Sony Ericsson K700i`_... image::
-./k700.jpg
+and `Bluetooth`_ I have purchased the `Sony Ericsson K700i`_.
+
+.. image::
+    ./k700.jpg
     :alt: Sony Ericsson K700i
 
 It works fabulously with my Apple Powerbook. I'm able to synchronise my
@@ -39,16 +41,10 @@ stretch it out to at least two days, maybe three if I really took it easy.
 All things considered, the K700i is a fantastic phone with a great many
 features all packed into a little tiny case. It was definitely a good buy.
 
-.. _Sony Ericsson K700i: ericsson-k700.html (Permanent Link: Sony
-    Ericsson K700i)
 .. _SVG-T: http://svg.org/special/svg_phones
 .. _Bluetooth: http://www.apple.com/bluetooth/
-.. _Sony Ericsson K700i: http://developer.sonyericsson.com/site/global/pr
-    oducts/phones/k700/p_k700.jsp
-.. _few bugs:
-    http://www.esato.com/board/viewtopic.php?topic=61888&start=45#post859904
-.. _remote control:
-    http://homepage.mac.com/jonassalling/Shareware/RemoteBasics/
-.. _open standard:
-    http://the.taoofmac.com/space/SonyEricsson/HID%20Profiles
+.. _Sony Ericsson K700i: http://developer.sonyericsson.com/site/global/products/phones/k700/p_k700.jsp
+.. _few bugs: http://www.esato.com/board/viewtopic.php?topic=61888&start=45#post859904
+.. _remote control: http://homepage.mac.com/jonassalling/Shareware/RemoteBasics/
+.. _open standard: http://the.taoofmac.com/space/SonyEricsson/HID%20Profiles
 .. _NES emulator: http://www.vampent.com/emu.htm

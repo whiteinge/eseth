@@ -78,6 +78,7 @@ default behavior for Firefox.
     Again, this extension deserves exception since it is hardly Mozilla's
     fault that `the OS X Flash player sucks`_.
 
+.. _`dotsync() function`: ../filez/prefs/zshrc
 .. _userChrome.css: ../filez/prefs/userChrome.css
 .. _userPref.js: ../filez/prefs/user.js
 .. _Google: http://www.google.com/help/features.html
@@ -87,8 +88,6 @@ default behavior for Firefox.
 .. _Tab X: http://extensionroom.mozdev.org/clav/#tabx
 .. _linkToolbar: http://cdn.mozdev.org/linkToolbar/
 .. _ViewSourceWith: https://addons.mozilla.org/firefox/394/
-.. _Web Developer Toolbar: https://addons.mozilla.org/extensions/moreinfo
-    .php?application=firefox&id=60
-.. _Flashblock: https://addons.mozilla.org/extensions/moreinfo.php?applic
-    ation=firefox&id=433
+.. _Web Developer Toolbar: https://addons.mozilla.org/extensions/moreinfo.php?application=firefox&id=60
+.. _Flashblock: https://addons.mozilla.org/extensions/moreinfo.php?application=firefox&id=433
 .. _the OS X Flash player sucks: ../2004/yeti-gore/index.html

@@ -26,7 +26,7 @@ running Vim.
 
 Although I had to compile it myself, I had no issues with the following:
 ``./configure --enable-everything --disable-debug --disable-greek``. (Install
-the ``no*debug*x `` patch if you're compiling mrxvt-0.5.2 or it'll be very
+the ``no*debug*x`` patch if you're compiling mrxvt-0.5.2 or it'll be very
 slow.)
 
 I also added the following to my ``.Xresources``:

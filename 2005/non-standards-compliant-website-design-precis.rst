@@ -17,6 +17,9 @@ going to hate me for posting this screenshot, but I thought it was funny.
 
 Everything outlined in red or green is an error.
 
+.. image::
+    ./ejoshua.org20050126.gif
+
 Archived Comments
 -----------------
 

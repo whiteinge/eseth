@@ -34,9 +34,8 @@ bookmarks instantly configured just they way you like 'em. :-)
 .. image:: ./colorterm.jpg
     :alt: My terminal running Gnu screen and Vim
 
-
 .. _dotfiles: http://www.dotfiles.com/
-.. _If only Firefox worked so simply: firefox-and-boxen-
-    hopping/index.html
+.. _If only Firefox worked so simply: firefox-and-boxen-hopping/index.html
 .. _my zshrc has a Vi-style mode display: ../filez/prefs/zshrc
 .. _My screenrc file illustrates tabs: ../filez/prefs/screenrc
+.. _`best goddamn vimrc in the whole world`: ../filez/prefs/vimrc

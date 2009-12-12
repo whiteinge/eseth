@@ -58,11 +58,12 @@ otherwise *special characters* aren't processed`` ". Dig?
 
 ::
 
-::
-    A paragraph containing only two colons (or ending in two colons)
-    followed by an indented text block starts a code block.  No
-    ReST processing will happen in this block, so feel free to use
-    funny characters. `!@#$%^&*()_+
+    ::
+
+        A paragraph containing only two colons (or ending in two colons)
+        followed by an indented text block starts a code block.  No
+        ReST processing will happen in this block, so feel free to use
+        funny characters. `!@#$%^&*()_+
 
 
 
@@ -102,18 +103,21 @@ Lists
     #. Place a blank line
     #. between sub-lists
 
-       #. And line the bullet up
-       #. exactly with the farthest left column of text of the parent
-       list
+       #.   And line the bullet up
+       #.   exactly with the farthest left column of text of the parent
+            list
 
     * Unordered lists work in
       exactly the same way
 
     * Just be careful to line the bullets
       up with the first text column of the parent list.
+
       Also, you can do multi-line bullet items if you're
       careful of the indentation.
-     Definition Lists are easy: Just indent the definition!
+
+     Definition Lists are easy
+        Just indent the definition!
 
 
 Images
@@ -123,6 +127,7 @@ You can easily include images, along with some useful attributes (carefully
 line up subsequent lines with the parent!):
 
 ::
+
     .. image:: http://path/to/image.png
        :alt: alternate text
        :class: class names

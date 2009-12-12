@@ -51,7 +51,7 @@ realize that I lazily relied on the visible list of files that were currently
 open to know which files I was working on---even when I *knew* which files I
 was working on if I would just give it some thought.
 
-`[OLDGUY]`_`http://www.gnu.org/fun/jokes/ed.msg.html`_
+`[OLDGUY]`_ http://www.gnu.org/fun/jokes/ed.msg.html
 
 So here are some tips on how to effectively use buffers in Vim, please drop
 more in the comments If you have 'em. Also, never stop reading the built-in
@@ -96,14 +96,11 @@ all the buffers you've got open. (Mine is F1 ``map`` ``<F1>`` ``:ls<cr>``.)
 .. _Learning Vi: http://www.bookpool.com/sm/1565924266
 .. _even before it had tabs: http://www.vim.org/tips/tip.php?tip_id=173
 .. _[1]: vim-buffers.html#exception
-.. _Bram Moolenaar describe tabs:
-    http://video.google.com/videoplay?docid=2538831956647446078#1h15m
+.. _Bram Moolenaar describe tabs: http://video.google.com/videoplay?docid=2538831956647446078#1h15m
 .. _[1]: vim-buffers.html#id1
 .. _minibufexplorer: http://www.vim.org/scripts/script.php?script_id=159
 .. _[OLDGUY]: vim-buffers.html#oldguy
 .. _[OLDGUY]: vim-buffers.html#id2
-.. _http://www.gnu.org/fun/jokes/ed.msg.html:
-    http://www.gnu.org/fun/jokes/ed.msg.html
 .. _Vim buffer FAQ: http://www.vim.org/tips/tip.php?tip_id=135
 .. _tip 821: http://www.vim.org/tips/tip.php?tip_id=821
 .. _custom statusline: ../filez/prefs/vimrc

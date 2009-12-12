@@ -36,4 +36,4 @@ gifting such an awesome web-development tool.
 .. _Django: http://www.djangoproject.com/
 .. _glowing testimonials: http://www.linuxjournal.com/article/3882
 .. _All those testimonials: http://www.python.org/about/success/
-.. _s creators: http://www.djangoproject.com/documentation/faq/#who-s-behind-this
+.. _`Django's creators`: http://www.djangoproject.com/documentation/faq/#who-s-behind-this

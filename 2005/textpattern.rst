@@ -6,7 +6,7 @@ Textpattern
 
 :pubdate: 2005-10-26
 
-Although I have no qualms with `WordPress`_, I've always been very curious
+Although I have no qualms with WordPress, I've always been very curious
 about `Textpattern`_ since it is made by the people who freely gifted `A
 Humane Web Text Generator`_ on the undeserving web.
 

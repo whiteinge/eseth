@@ -25,11 +25,9 @@ currently unsupported in Internet Explorer, to indent sub-paragraphs::
     }
 
 .. _Clearleft: http://www.clearleft.com/
-.. _The Elements of Typographic Style Applied to the Web:
-    http://webtypography.net/
-.. _s personal blog: http://www.clagnut.com/blog/1600/
-.. _Adjacent Sibling Selectors:
-    http://css.maxdesign.com.au/selectutorial/selectors_adjacent.htm
+.. _The Elements of Typographic Style Applied to the Web: http://webtypography.net/
+.. _`author's personal blog`: http://www.clagnut.com/blog/1600/
+.. _Adjacent Sibling Selectors: http://css.maxdesign.com.au/selectutorial/selectors_adjacent.htm
 
 Archived Comments
 -----------------

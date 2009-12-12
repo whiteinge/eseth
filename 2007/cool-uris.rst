@@ -28,5 +28,5 @@ and it's the direction the industry is (slowly) moving toward. (`REST`_!)
 Incidentally, screw the W3C for not including PUT and DELETE in HTML. Oh, and
 HTTP authentication needs some serious work. /EORant
 
-.. _t change: http://www.w3.org/Provider/Style/URI
+.. _`Cool URIs don't change`: http://www.w3.org/Provider/Style/URI
 .. _REST: http://tomayko.com/articles/2004/12/12/rest-to-my-wife

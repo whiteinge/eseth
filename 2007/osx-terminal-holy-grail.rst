@@ -145,9 +145,9 @@ whiteinge Says:
     hack, and it helps to see it in action to understand what it’s doing.
 
     If you want to try pseudo-transparency, use MacPorts to install Eterm, then
-    try |Esetroot -f /path/to/your/background/image.jpg| then start up |Eterm|.
-    I stopped trying to get it to work with mrxvt though since I couldn’t get
-    the background image to stop changing by itself. :-(
+    try ``Esetroot -f /path/to/your/background/image.jpg`` then start up
+    ``Eterm``. I stopped trying to get it to work with mrxvt though since I
+    couldn’t get the background image to stop changing by itself. :-(
 
     .. [#1] Side note, I just stumbled across Terminal 2 on Apple’s site. That
         should be interesting to see in November.

@@ -24,24 +24,24 @@ pattern on tabs that did not fit the Vim editing pattern well.
 In Vim, a buffer is a file that you have open in the editor (even if it's not
 currently displayed), and a window is a view of a buffer. Well tabs in Vim 7
 are really just views for windows. There isn't a mechanism in Vim to tie a
-certain buffer to a certain tab `[1]`_ which would fit better with the modern
+certain buffer to a certain tab [1]_ which would fit better with the modern
 idea of tabs. This was *finally* impressed on me while watching `Bram
 Moolenaar describe tabs`_: he doesn't use them! They are really intended to
 group Vim windows without having to resort to multiple xterms or GNU Screen
 windows.
 
-`[1]`_The plugin `minibufexplorer`_ actually does a very good job of mapping
-one (virtual) tab to one buffer--which may explain why it's the second-
-highest rated script on vim.org. I highly recommend using it as a sort of
-"training wheels" for eventually using buffers without a visual aid, as it
-allows you to see all available buffers as you edit.
+.. [1] The plugin `minibufexplorer`_ actually does a very good job of mapping
+    one (virtual) tab to one buffer--which may explain why it's the second-
+    highest rated script on vim.org. I highly recommend using it as a sort of
+    "training wheels" for eventually using buffers without a visual aid, as it
+    allows you to see all available buffers as you edit.
 
 
 How the old guys use Vim
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 There's a third opinion in the perpetual Emacs vs. Vim holy war written by
-one of those grumpy, uphill-both-ways, old guys `[OLDGUY]`_. In an excellent
+one of those grumpy, uphill-both-ways, old guys [OLDGUY]_. In an excellent
 writeup of his favored text editor he mentioned something that got me
 thinking: "Ed is for those who can *remember* what they are working on."
 Certainly this is an exaggeration, but one that is rooted in the very real
@@ -51,7 +51,7 @@ realize that I lazily relied on the visible list of files that were currently
 open to know which files I was working on---even when I *knew* which files I
 was working on if I would just give it some thought.
 
-`[OLDGUY]`_ http://www.gnu.org/fun/jokes/ed.msg.html
+.. [OLDGUY] http://www.gnu.org/fun/jokes/ed.msg.html
 
 So here are some tips on how to effectively use buffers in Vim, please drop
 more in the comments If you have 'em. Also, never stop reading the built-in
@@ -95,12 +95,8 @@ all the buffers you've got open. (Mine is F1 ``map`` ``<F1>`` ``:ls<cr>``.)
 .. _User Manual: http://vimdoc.sourceforge.net/htmldoc/usr_toc.html
 .. _Learning Vi: http://www.bookpool.com/sm/1565924266
 .. _even before it had tabs: http://www.vim.org/tips/tip.php?tip_id=173
-.. _[1]: vim-buffers.html#exception
 .. _Bram Moolenaar describe tabs: http://video.google.com/videoplay?docid=2538831956647446078#1h15m
-.. _[1]: vim-buffers.html#id1
 .. _minibufexplorer: http://www.vim.org/scripts/script.php?script_id=159
-.. _[OLDGUY]: vim-buffers.html#oldguy
-.. _[OLDGUY]: vim-buffers.html#id2
 .. _Vim buffer FAQ: http://www.vim.org/tips/tip.php?tip_id=135
 .. _tip 821: http://www.vim.org/tips/tip.php?tip_id=821
 .. _custom statusline: ../filez/prefs/vimrc

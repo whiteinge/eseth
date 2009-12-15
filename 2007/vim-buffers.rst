@@ -41,7 +41,7 @@ How the old guys use Vim
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 There's a third opinion in the perpetual Emacs vs. Vim holy war written by
-one of those grumpy, uphill-both-ways, old guys [OLDGUY]_. In an excellent
+one of those grumpy, uphill-both-ways, old guys [2]_. In an excellent
 writeup of his favored text editor he mentioned something that got me
 thinking: "Ed is for those who can *remember* what they are working on."
 Certainly this is an exaggeration, but one that is rooted in the very real
@@ -51,14 +51,14 @@ realize that I lazily relied on the visible list of files that were currently
 open to know which files I was working on---even when I *knew* which files I
 was working on if I would just give it some thought.
 
-.. [OLDGUY] http://www.gnu.org/fun/jokes/ed.msg.html
+.. [2] http://www.gnu.org/fun/jokes/ed.msg.html
 
 So here are some tips on how to effectively use buffers in Vim, please drop
 more in the comments If you have 'em. Also, never stop reading the built-in
 Vim documentation and online tips. Re-read a book on Vim every third year or
 so. Editors as old as this one have so many features you'll never master them
-all, the more you keep trying the more efficient you'll get at text-wrangling
---and if you edit for a living, it'll be well worth the time.
+all, the more you keep trying the more efficient you'll get at
+text-wrangling—and if you edit for a living, it'll be well worth the time.
 
 
 Vim Usage Tips for Young People

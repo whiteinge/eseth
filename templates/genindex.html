@@ -1,60 +1,51 @@
 {% extends "layout.html" %}
+
 {% set title = _('Posts by Tag') %}
+
 {% block body %}
 
-   <h1 id="index">{{ _('Index') }}</h1>
+    <h1 id="index">{{ _('Posts by Tag') }}</h1>
 
-   {% for key, dummy in genindexentries -%}
-   <a href="#{{ key }}"><strong>{{ key }}</strong></a> {% if not loop.last %}| {% endif %}
-   {%- endfor %}
-
-   <hr />
-
-   {% for key, entries in genindexentries %}
-<table width="100%" class="indextable"><tr><td width="33%" valign="top">
-<dl>
-{%- set breakat = genindexcounts[loop.index0] // 2 %}
-{%- set numcols = 1 %}
-{%- set numitems = 0 %}
-{% for entryname, (links, subitems) in entries %}
-{%- if links -%}
-<h2>{{ entryname|e }}</h2>
-<ul>
-    {%- for link in links %}
-    <li><a href="{{ link }}">{{ link }}</a></li>
-    {% endfor -%}
-</ul>
-{%- endif -%}
-
-  {%- if subitems %}
-  <dd><dl>
-    {%- for subentryname, subentrylinks in subitems %}
-    <dt><a href="{{ subentrylinks[0] }}">{{ subentryname|e }}</a>
-    {%- for link in subentrylinks[1:] %}, <a href="{{ link }}">[{{ loop.index }}]</a>{% endfor -%}
-    </dt>
+    {% for key, dummy in genindexentries -%}
+    <a href="#{{ key }}"><strong>{{ key }}</strong></a> {% if not loop.last %}| {% endif %}
     {%- endfor %}
-  </dl></dd>
-  {%- endif -%}
-{%- set numitems = numitems + 1 + (subitems|length) -%}
-{%- if numcols < 2 and numitems > breakat -%}
-{%- set numcols = numcols+1 -%}
-</dl></td><td width="33%" valign="top"><dl>
-{%- endif -%}
-{%- endfor %}
-</dl></td></tr></table>
-{% endfor %}
 
-{% endblock %}
+    <hr />
 
-{% block sidebarrel %}
-{% if split_index %}
-   <h4>{{ _('Index') }}</h4>
-   <p>{% for key, dummy in genindexentries -%}
-   <a href="{{ pathto('genindex-' + key) }}"><strong>{{ key }}</strong></a>
-     {% if not loop.last %}| {% endif %}
-   {%- endfor %}</p>
+    {% for key, entries in genindexentries %}
+    <table width="100%" class="indextable"><tr><td width="33%" valign="top">
 
-   <p><a href="{{ pathto('genindex-all') }}"><strong>{{ _('Full index on one page') }}</strong></a></p>
-{% endif %}
-   {{ super() }}
+        <dl>
+            {%- set breakat = genindexcounts[loop.index0] // 2 %}
+            {%- set numcols = 1 %}
+            {%- set numitems = 0 %}
+
+            {% for entryname, (links, subitems) in entries %}
+            {%- if links -%}
+            <h2>{{ entryname|e }}</h2>
+            <ul>
+                {%- for link in links %}
+                <li><a href="{{ link }}">{{ link }}</a>
+
+                    {# FIXME #}
+                    {%- if subitems %}
+                    <dd><dl>
+                        {%- for subentryname, subentrylinks in subitems %}
+                        <dt><a href="{{ subentrylinks[0] }}">{{ subentryname|e }}</a>
+                        {%- for link in subentrylinks[1:] %}, <a href="{{ link }}">[{{ loop.index }}]</a>{% endfor -%}
+                        </dt>
+                        {%- endfor %}
+                    </dl></dd>
+                    {%- endif -%}
+
+                </li>
+                {% endfor -%}
+            </ul>
+            {%- endif -%}
+            {%- endfor %}
+        </dl>
+
+    </td></tr></table>
+    {% endfor %}
+
 {% endblock %}

@@ -91,19 +91,40 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
-html_theme= 'basic'
+html_theme= 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    "rightsidebar": "true",
+}
+
+# footerbgcolor (CSS color): Background color for the footer line.
+# footertextcolor (CSS color): Text color for the footer line.
+# sidebarbgcolor (CSS color): Background color for the sidebar.
+# sidebartextcolor (CSS color): Text color for the sidebar.
+# sidebarlinkcolor (CSS color): Link color for the sidebar.
+# relbarbgcolor (CSS color): Background color for the relation bar.
+# relbartextcolor (CSS color): Text color for the relation bar.
+# relbarlinkcolor (CSS color): Link color for the relation bar.
+# bgcolor (CSS color): Body background color.
+# textcolor (CSS color): Body text color.
+# linkcolor (CSS color): Body link color.
+# headbgcolor (CSS color): Background color for headings.
+# headtextcolor (CSS color): Text color for headings.
+# headlinkcolor (CSS color): Link color for headings.
+# codebgcolor (CSS color): Background color for code blocks.
+# codetextcolor (CSS color): Default text color for code blocks, if not set differently by the highlighting style.
+# bodyfont (CSS font-family): Font for normal text.
+# headfont (CSS font-family): Font for headings.
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = "Esoteric Rubbish"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -131,7 +152,7 @@ html_last_updated_fmt = '%Y-%m-%d'
 html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+# html_sidebars = {}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -144,7 +165,7 @@ html_use_smartypants = True
 #html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
-#html_split_index = False
+html_split_index = True
 
 # If true, links to the reST sources are added to the pages.
 html_show_sourcelink = True

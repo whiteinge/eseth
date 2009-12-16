@@ -5,9 +5,9 @@ Esoteric Rubbish
 .. rubric:: Rambling so bereft of purpose it will change your religion
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     */index
 
-:ref:`genindex`
+Put snippets of most recent entries here.

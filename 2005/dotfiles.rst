@@ -17,15 +17,15 @@ Here are some of mine:
 
 *   Zsh is an amazing shell. It has unbelievable completion abilities,
     and is just gorgeous (pictured). I enjoy Vi-mode in my shells and :rc:`my
-    zshrc has a Vi-style mode display <zshrc>` that I cobbled together from a few
+    zshrc has a Vi-style mode display <.zshrc>` that I cobbled together from a few
     examples on the 'net. It also includes a small shell-function called
-    `dotsync() <zshrc@9366c5b532a5#228>` that keeps the rest of these dotfiles current.
+    :rc:`dotsync <.zshrc@9366c5b532a5#228>` that keeps the rest of these dotfiles current.
 *   I've spent days of my life fine-tuning the :rc:`best goddamn vimrc in the
-    whole world <vimrc>`. Parts of it are very much tailored to me, but I've tried
+    whole world <.vimrc>`. Parts of it are very much tailored to me, but I've tried
     to comment all my reasons for each option.
 *   GNU screen brings tabs and resume-able sessions to your command-line work,
     this utility is too useful to overlook. :rc:`My screenrc file illustrates
-    tabs <screenrc>` as best as possible (pictured).
+    tabs <.screenrc>` as best as possible (pictured).
 
 There's no reason you should work with an ugly terminal. It's 2005, your
 computer can handle it. And nothings beats sitting down at a new computer and

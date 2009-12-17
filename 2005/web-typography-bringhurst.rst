@@ -1,3 +1,5 @@
+.. _web-typography-bringhurst:
+
 ================================
 Web Typography, Bringhurst-style
 ================================

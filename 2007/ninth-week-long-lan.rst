@@ -1,3 +1,5 @@
+.. _ninth-week-long-lan:
+
 =====================================
 Ninth Annual Week(end)-Long LAN Party
 =====================================

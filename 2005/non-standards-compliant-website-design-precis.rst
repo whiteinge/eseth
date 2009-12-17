@@ -1,3 +1,5 @@
+.. _non-standards-compliant-website-design-precis:
+
 =============================================
 Non-standards compliant website design précis
 =============================================

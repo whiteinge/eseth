@@ -1,3 +1,5 @@
+.. _osx-terminal-holy-grail:
+
 =======================================
 The Mac OS X Terminal Holy Grail: mrxvt
 =======================================

@@ -1,3 +1,5 @@
+.. _post-freebase:
+
 ========
 Freebase
 ========

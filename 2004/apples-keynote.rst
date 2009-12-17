@@ -1,3 +1,5 @@
+.. _apples-keynote:
+
 ===============
 Apple's Keynote
 ===============

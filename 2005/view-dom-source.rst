@@ -1,3 +1,5 @@
+.. _view-dom-source:
+
 ===================================
 Viewing the DOM Source with Firefox
 ===================================

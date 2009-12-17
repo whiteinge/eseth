@@ -1,3 +1,5 @@
+.. _oscar-wilde-fortune:
+
 ==========================
 Oscar Wilde fortune cookie
 ==========================

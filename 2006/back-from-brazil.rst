@@ -1,3 +1,5 @@
+.. _back-from-brazil:
+
 ================
 Back from Brazil
 ================

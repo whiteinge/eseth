@@ -1,3 +1,5 @@
+.. _django-ipython:
+
 ============================
 Learning Django with IPython
 ============================

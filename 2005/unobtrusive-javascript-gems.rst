@@ -1,3 +1,5 @@
+.. _unobtrusive-javascript-gems:
+
 Unobtrusive JavaScript Gems
 ===========================
 

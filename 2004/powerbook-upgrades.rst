@@ -1,3 +1,5 @@
+.. _powerbook-upgrades:
+
 ==================
 Powerbook Upgrades
 ==================

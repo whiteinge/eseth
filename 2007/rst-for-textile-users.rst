@@ -1,3 +1,5 @@
+.. _rst-for-textile-users:
+
 ===================================
 ReST for Markdown and Textile Users
 ===================================

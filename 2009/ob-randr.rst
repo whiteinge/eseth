@@ -1,3 +1,5 @@
+.. _post-ob-randr:
+
 =======================
 Openbox xrandr Pipemenu
 =======================

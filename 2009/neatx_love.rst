@@ -1,3 +1,5 @@
+.. _neatx_love:
+
 =====================
 Introduction to neatx
 =====================

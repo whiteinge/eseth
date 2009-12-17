@@ -1,3 +1,5 @@
+.. _eighth-week-long-lan:
+
 =================================
 Eighth Annual Week-Long LAN Party
 =================================

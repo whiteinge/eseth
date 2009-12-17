@@ -1,3 +1,5 @@
+.. _tactile-pro:
+
 ===============
 The Tactile Pro
 ===============

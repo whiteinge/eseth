@@ -1,3 +1,5 @@
+.. _autosensing-nic:
+
 ===================================
 Auto-sensing PowerBook network port
 ===================================

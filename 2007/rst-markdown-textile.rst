@@ -1,3 +1,5 @@
+.. _rst-markdown-textile:
+
 ========================================================
 RestructuredText, Markdown, and Textile (and typography)
 ========================================================

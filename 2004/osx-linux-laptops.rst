@@ -1,3 +1,5 @@
+.. _osx-linux-laptops:
+
 ===================================
 OS X vs. Linux and Linux on Laptops
 ===================================

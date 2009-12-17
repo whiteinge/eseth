@@ -1,3 +1,5 @@
+.. _seventh-week-long-lan:
+
 ==================================
 Seventh Annual Week-Long LAN Party
 ==================================

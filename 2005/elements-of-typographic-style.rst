@@ -1,3 +1,5 @@
+.. _elements-of-typographic-style:
+
 =================================
 The Elements of Typographic Style
 =================================

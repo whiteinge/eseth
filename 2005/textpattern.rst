@@ -1,3 +1,5 @@
+.. _post-textpattern:
+
 ===========
 Textpattern
 ===========
@@ -47,4 +49,3 @@ than web-professional.
 
 .. _Textpattern: http://textpattern.com/
 .. _A Humane Web Text Generator: http://textism.com/tools/textile/
-

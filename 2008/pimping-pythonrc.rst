@@ -1,3 +1,5 @@
+.. _pimping-pythonrc:
+
 =============================
 Pimping out your .pythonrc.py
 =============================
@@ -69,6 +71,7 @@ Lastly a few Python shell tips
     attributes for that object.
 -   You can get the output from the last command run with the variable
     ``_`` (underscore). For example: ::
+
         >>> {1:2, 3:4}
         {1: 2, 3: 4}
         >>> t = _
@@ -77,11 +80,11 @@ Lastly a few Python shell tips
 
 -   Use the built-in ``help()`` method to get more info on a function or
     module. For example: ::
+
         >>> import os
         >>> help(os)
         Help on module os:
         ...
-
 
 If you have any other tips or fixes, please let me know!
 

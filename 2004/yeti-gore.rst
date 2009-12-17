@@ -1,3 +1,5 @@
+.. _yeti-gore:
+
 Yeti Gore Flash game
 ====================
 

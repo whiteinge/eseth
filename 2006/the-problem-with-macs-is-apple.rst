@@ -1,3 +1,5 @@
+.. _the-problem-with-macs-is-apple:
+
 ==============================
 The Problem with Macs is Apple
 ==============================

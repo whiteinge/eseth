@@ -19,7 +19,7 @@ below if you care to see them.
 
 Thais is from the southern-most state in Brazil, Rio Grande do Sul, which is
 `heavily populated by German immigrants`_. Her parents are living in a little
-town named |Harmonia|, population 2,000, which is 90% German-speaking. The
+town named Harmonia |Harmonia|, population 2,000, which is 90% German-speaking. The
 townsfolk are largely farmers or factory workers and are pretty suspicious of
 strangers. We were visiting during an annual town celebration (pictured),
 announced by a loud- speaker on a car that drove around for a week beforehand,

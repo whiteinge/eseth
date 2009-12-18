@@ -105,26 +105,27 @@ html_theme= 'default'
 # documentation.
 html_theme_options = {
     'rightsidebar': 'true',
+
+    'footerbgcolor': '#000',
+    'footertextcolor': 'whiteSmoke',
+    'sidebarbgcolor': 'whiteSmoke',
+    'sidebartextcolor': '#555',
+    'sidebarlinkcolor': '#a7a7a7',
+    'relbarbgcolor': 'whiteSmoke',
+    'relbartextcolor': '#555',
+    'relbarlinkcolor': '#a7a7a7',
+    'bgcolor': 'whiteSmoke',
+    'textcolor': '#555',
+    'linkcolor': '#a7a7a7',
+    'headbgcolor': 'whiteSmoke',
+    'headtextcolor': '#555',
+    'headlinkcolor': '#a7a7a7',
+    'codebgcolor': '#FBFAF4',
+    'codetextcolor': '#333',
+    'bodyfont': '"helvetica neue", arial, sans-serif',
+    'headfont': '"helvetica neue", arial, sans-serif',
 }
 
-# footerbgcolor (CSS color): Background color for the footer line.
-# footertextcolor (CSS color): Text color for the footer line.
-# sidebarbgcolor (CSS color): Background color for the sidebar.
-# sidebartextcolor (CSS color): Text color for the sidebar.
-# sidebarlinkcolor (CSS color): Link color for the sidebar.
-# relbarbgcolor (CSS color): Background color for the relation bar.
-# relbartextcolor (CSS color): Text color for the relation bar.
-# relbarlinkcolor (CSS color): Link color for the relation bar.
-# bgcolor (CSS color): Body background color.
-# textcolor (CSS color): Body text color.
-# linkcolor (CSS color): Body link color.
-# headbgcolor (CSS color): Background color for headings.
-# headtextcolor (CSS color): Text color for headings.
-# headlinkcolor (CSS color): Link color for headings.
-# codebgcolor (CSS color): Background color for code blocks.
-# codetextcolor (CSS color): Default text color for code blocks, if not set differently by the highlighting style.
-# bodyfont (CSS font-family): Font for normal text.
-# headfont (CSS font-family): Font for headings.
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []

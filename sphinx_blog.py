@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
-"""Additional roles useful for this blog."""
+"""Roles/extensions/builders that are useful for generating a weblog with
+Sphinx.
+
+"""
+VERSION = 0.1
+AUTHOR = 'Seth House <seth@eseth.com>'
+
+import os
 import re
 
 from docutils import nodes, utils
@@ -7,7 +14,10 @@ from docutils.parsers.rst import roles
 
 from sphinx.util import caption_ref_re
 
-re_rcfile = re.compile(r'^(?P<rcfile>[a-zA-Z0-9._-]\w*)(@(?P<revhash>[a-z0-9]\w*))?(#(?P<linenr>[0-9]\w*))?$')
+re_rcfile = re.compile(r'^'\
+        '(?P<rcfile>[a-zA-Z0-9._-]\w*)'\
+        '(@(?P<revhash>[a-z0-9]\w*))?'\
+        '(#(?P<linenr>[0-9]\w*))?$')
 
 def rcfile_role(role, rawtext, text, lineno, inliner,
         options={}, content=[]):
@@ -71,11 +81,9 @@ def rcfile_role(role, rawtext, text, lineno, inliner,
 
 
 def setup(app):
-    # http://bitbucket.org/someuser/dotfiles/src/
-    app.add_config_value('rc_url', '', True)
-    # tip
-    app.add_config_value('rc_head', '', True)
-    # Must include string mapping key: #cl-%(linenr)s
-    app.add_config_value('rc_linenr', '', True)
+    app.add_config_value('rc_url',
+            'http://bitbucket.org/%s/dotfiles/src/' % os.getlogin(), True)
+    app.add_config_value('rc_head', 'tip', True)
+    app.add_config_value('rc_linenr', '#cl-%(linenr)s', True)
 
 roles.register_local_role('rc', rcfile_role)

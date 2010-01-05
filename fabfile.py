@@ -1,27 +1,34 @@
 # -*- coding: utf-8 -*-
+"""Fabric script for Esoteric Rubbish."""
 import os
 import tempfile
 
 import fabric
 import fabric.api as _fab
 
+
+##### Environment
+###############################################################################
 _fab.env.roledefs = {
-    'bishop': ['192.168.0.100'],
-    'eseth': ['eseth.org']}
+    'local': [],
+    'web': ['eseth.org'],
+}
+_fab.env.hosts = _fab.env.roledefs['local']
 
-_fab.env.hosts = _fab.env.roledefs.get('bishop')
-role = lambda x: _fab.env.roledefs.get(x)
+def production():
+    """Make changes on the production server !
 
-def deploy(version='tip'):
-    filename = 'esoteric_rubbish.tar.bz2'
-    dest_path = 'esoteric_rubbish'
+    This must be called in order to make changes to a host other than
+    localhost.
 
-    tempdir = tempfile.mkdtemp()
-    file = os.path.join(tempdir, filename)
+    """
+    _fab.env.hosts = _fab.env.roledefs['web']
 
-    _fab.local('hg archive -r %s -t tbz2 %s' % file)
-    _fab.put(file, dest_path)
+def deploy():
+    tempdir = os.path.join(tempfile.mkdtemp(), 'htdocs')
+    _fab.local('sphinx-build -b dirhtml . %s' % tempdir)
 
-    with _fab.cd(dest_path):
-        _fab.run('./bin/sphinx-build . _build')
-        # TODO: restart tornado
+    fabric.contrib.project.rsync_project(
+            remote_dir='/home/shouse/',
+            local_dir=tempdir,
+            delete=True)

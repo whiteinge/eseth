@@ -1,6 +1,6 @@
 # Required software for the Esoteric Rubbish blog
 
--f http://www.tornadoweb.org/static/tornado-0.2.tar.gz#egg=tornado
+Twisted
 Fabric
 docutils
 Sphinx

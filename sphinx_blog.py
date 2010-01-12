@@ -81,8 +81,13 @@ def rcfile_role(role, rawtext, text, lineno, inliner,
 
 
 def setup(app):
+    try:
+        user = os.getlogin()
+    except OSError:
+        user = os.getenv('USER')
+
     app.add_config_value('rc_url',
-            'http://bitbucket.org/%s/dotfiles/src/' % os.getlogin(), True)
+            'http://bitbucket.org/%s/dotfiles/src/' % user or 'username', True)
     app.add_config_value('rc_head', 'tip', True)
     app.add_config_value('rc_linenr', '#cl-%(linenr)s', True)
 

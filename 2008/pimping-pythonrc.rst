@@ -30,9 +30,8 @@ you want any key-bindings specific to the Python shell.
 The ``.inputrc`` should be somewhat self-explanatory. For the options that
 aren't check out the `GNU Bash Reference Manual`_. Also Google is your
 friend. For example if you want to use page-up and page-down to do completion
-from your history use the following two commands:
+from your history use the following two commands::
 
-::
     "\e[5~": history-search-backward
     "\e[6~": history-search-forward
 
@@ -70,7 +69,7 @@ Lastly a few Python shell tips
     name followed by a dot then hit ``tab``. You will see the methods and
     attributes for that object.
 -   You can get the output from the last command run with the variable
-    ``_`` (underscore). For example: ::
+    ``_`` (underscore). For example::
 
         >>> {1:2, 3:4}
         {1: 2, 3: 4}
@@ -79,7 +78,7 @@ Lastly a few Python shell tips
         {1: 2, 3: 4}
 
 -   Use the built-in ``help()`` method to get more info on a function or
-    module. For example: ::
+    module. For example::
 
         >>> import os
         >>> help(os)

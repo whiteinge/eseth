@@ -9,5 +9,3 @@ Esoteric Rubbish
     :glob:
 
     */index
-
-Put snippets of most recent entries here.

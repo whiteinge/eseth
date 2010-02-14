@@ -10,7 +10,7 @@ import fabric.api as _fab
 ##### Environment
 ###############################################################################
 _fab.env.roledefs = {
-    'local': [],
+    'local': ['192.168.0.100'],
     'web': ['eseth.org'],
 }
 _fab.env.hosts = _fab.env.roledefs['local']

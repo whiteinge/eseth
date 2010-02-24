@@ -27,7 +27,7 @@ utility are *spectcaular*.
     pace with xorg enhancements and can now suck a nut.
 
 I created a pipemenu for Openbox that captures the output of :command:`xrandr`
-and puts it into nice menus. It’s called `ob-randr` and it’s on Google Code.
+and puts it into nice menus. It’s called `ob-randr`_ and it’s on Google Code.
 You can also make a configuration file with commonly-used configurations and
 the pipemenu will pull those in for quick-access. For example, here are two
 that I commonly use:

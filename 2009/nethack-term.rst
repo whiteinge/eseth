@@ -1,3 +1,5 @@
+.. _post-nethack-term:
+
 ===================
 Computing is Lonely
 ===================

@@ -1,7 +1,7 @@
 # Required software for the Esoteric Rubbish blog
 
-Twisted
-Fabric
-docutils
-Sphinx
-simplejson
+Twisted==9.0.0
+Fabric==0.9.0
+docutils==0.6
+Sphinx==0.6.3
+simplejson==2.0.9

@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Roles/extensions/builders that are useful for generating a weblog with
-Sphinx.
-
-"""
+"""A role to easily make links to your dotfiles on BitBucket or GitHub."""
 VERSION = 0.1
 AUTHOR = 'Seth House <seth@eseth.com>'
 
@@ -78,7 +75,6 @@ def rcfile_role(role, rawtext, text, lineno, inliner,
     # Build the actual rST node and return it
     node = nodes.reference(rawtext, title, refuri=uri, **options)
     return [node], []
-
 
 def setup(app):
     try:

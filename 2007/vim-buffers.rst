@@ -119,10 +119,10 @@ whiteinge
     Using different editors "just for variety" is the real hardcore, Matt! :-)
 
 Peter
-    You've shown several nice ways of jumping between buffers. I've mapped 
+    You've shown several nice ways of jumping between buffers. I've mapped ^H
     in command mode to open the list of buffers and wait for me to select a
     number and hit enter:
 
-    ::map  :ls:e #
+    ::map ^H :ls:e #
 
     Works for me.

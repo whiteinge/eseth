@@ -20,14 +20,14 @@ It should be said that this code is not especially interesting, and a lot of
 this is very straightforward readline configuration -- but it seems that a
 lot of people are unfamiliar with the basics, so here is my set up.
 
-There are two parts. The `.inputrc`_ sets up the key-bindings and some
-completion options, and the `.pythonrc.py`_ which does the rest.
+There are two parts. The :rc:`.inputrc` sets up the key-bindings and some
+completion options, and the :rc:`.pythonrc.py` which does the rest.
 
-You will almost certainly want to strip things out of my ``.inputrc`` that
+You will almost certainly want to strip things out of my :rc:`.inputrc` that
 you don't use or enjoy, like vi-mode. Note the conditional for Python in case
 you want any key-bindings specific to the Python shell.
 
-The ``.inputrc`` should be somewhat self-explanatory. For the options that
+The :rc:`.inputrc` should be somewhat self-explanatory. For the options that
 aren't check out the `GNU Bash Reference Manual`_. Also Google is your
 friend. For example if you want to use page-up and page-down to do completion
 from your history use the following two commands::
@@ -43,11 +43,11 @@ vi-mode hit ``esc`` to get in Normal mode then press ``?`` followed by the
 search term. (I don't know the search command for the regular Emacs shell
 mode.)
 
-A very cool thing about the ``.inputrc`` is it will also affect other
+A very cool thing about the :rc:`.inputrc` is it will also affect other
 programs that utilize readline, such as bash and the shells for SQLite,
 PostgreSQL, and MySQL.
 
-In order for the Python shell to run your ``.pythonrc.py`` file on startup
+In order for the Python shell to run your :rc:`.pythonrc.py` file on startup
 you need to set the ``PYTHONSTARTUP`` environment variable. Place the
 following line in one of your shell startup files:
 
@@ -88,7 +88,5 @@ Lastly a few Python shell tips
 If you have any other tips or fixes, please let me know!
 
 .. _IPython: http://ipython.scipy.org/moin/
-.. _.inputrc: ../filez/prefs/inputrc
-.. _.pythonrc.py: ../filez/prefs/pythonrc.py
 .. _GNU Bash Reference Manual: http://www.network-
     theory.co.uk/docs/bashref/ReadlineInitFileSyntax.html

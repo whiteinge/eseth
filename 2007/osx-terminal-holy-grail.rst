@@ -28,12 +28,11 @@ running Vim.
 
 Although I had to compile it myself, I had no issues with the following:
 ``./configure --enable-everything --disable-debug --disable-greek``. (Install
-the ``no*debug*x`` patch if you're compiling mrxvt-0.5.2 or it'll be very
+the ``no_debug_x`` patch if you're compiling mrxvt-0.5.2 or it'll be very
 slow.)
 
-I also added the following to my ``.Xresources``:
+I also added the following to my ``.Xresources``::
 
-::
     ! --- mrxvt settings
     mrxvt*background: black
     mrxvt*foreground: white
@@ -57,9 +56,7 @@ I also added the following to my ``.Xresources``:
 
 
 The Gnu Screen from MacPorts is already compiled with 256-color support so
-putting the following in my .screenrc was the last step:
-
-::
+putting the following in my .screenrc was the last step::
 
     ###############
     # 256 colours #

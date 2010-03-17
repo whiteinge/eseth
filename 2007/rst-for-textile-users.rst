@@ -76,17 +76,15 @@ ReST will automatically hyperlink any bare URLs.
 `http://buildabridgeoutof.her/`_
 
 Inline hyperlinks can be somewhat hard to read `like this`_ surrounded by
-text:
+text::
 
-::
     Inline hyperlinks can be somewhat hard to read `like this <http
     ://the-meaning-of-life.info/>`_ surrounded by text.
 
 
 Fortunately reference-style links `look`_ very legible in text-format. And
-can even `span multiple words`_ (like you would expect!).
+can even `span multiple words`_ (like you would expect!)::
 
-::
     Fortunately reference-style links look_ very legible in text-format.
     And can even `span multiple words`_ (like you would expect!).
 
@@ -98,7 +96,8 @@ can even `span multiple words`_ (like you would expect!).
 Lists
 ~~~~~
 
-::
+Syntax::
+
     #. Lists are a bit trickier in ReST
     #. than in Markdown or Textile
 
@@ -126,9 +125,7 @@ Images
 ~~~~~~
 
 You can easily include images, along with some useful attributes (carefully
-line up subsequent lines with the parent!):
-
-::
+line up subsequent lines with the parent!)::
 
     .. image:: http://path/to/image.png
        :alt: alternate text
@@ -139,9 +136,8 @@ line up subsequent lines with the parent!):
 Tables
 ~~~~~~
 
-Banging out simple tables is also very quick:
+Banging out simple tables is also very quick::
 
-::
     =====  =====  ======
        Inputs     Output
     ------------  ------

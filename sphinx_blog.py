@@ -15,9 +15,9 @@ from docutils.parsers.rst import roles
 from sphinx.util import caption_ref_re
 
 re_rcfile = re.compile(r'^'\
-        '(?P<rcfile>[a-zA-Z0-9._-]\w*)'\
-        '(@(?P<revhash>[a-z0-9]\w*))?'\
-        '(#(?P<linenr>[0-9]\w*))?$')
+        '(?P<rcfile>[\w._-]*)'\
+        '(@(?P<revhash>[\w]*))?'\
+        '(#(?P<linenr>[0-9]*))?$')
 
 def rcfile_role(role, rawtext, text, lineno, inliner,
         options={}, content=[]):

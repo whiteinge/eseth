@@ -2,7 +2,7 @@
 import sys, os
 
 sys.path.append(os.path.abspath('./ext'))
-extensions = ['rcfile']
+extensions = ['rcfile', 'feed']
 
 project = u'Esoteric Rubbish'
 copyright = u'2009, Nathaniel Whiteinge'
@@ -15,6 +15,11 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 rc_url = 'http://bitbucket.org/whiteinge/dotfiles/src'
+
+base_uri = "http://eseth.org/"
+feed_title = project
+feed_description = "Rambling so bereft of purpose it will change your religion"
+feed_link = base_uri + 'rss.xml'
 
 html_title = "Esoteric Rubbish"
 #html_logo = None

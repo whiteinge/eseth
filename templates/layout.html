@@ -101,6 +101,10 @@
         <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
         <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
 
+        {% block feed %}
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS 2.0">
+        {% endblock %}
+
         {%- if not embedded %}
             <script type="text/javascript">
                 var DOCUMENTATION_OPTIONS = {

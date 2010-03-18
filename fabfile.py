@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Fabric script for Esoteric Rubbish."""
 import os
+import shutil
 import tempfile
 
 import fabric
@@ -32,3 +33,6 @@ def deploy():
             remote_dir='/home/shouse/',
             local_dir=tempdir,
             delete=True)
+
+    # clean up
+    shutil.rmtree(tempdir)

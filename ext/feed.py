@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 """Hooks to generate RSS feeds for pages."""
-VERSION = '0.1.0'
-AUTHOR = 'Seth House <seth@eseth.com>'
+from __future__ import with_statement # python 2.5 compat
 
 import hashlib
 import os
 
 from xml.etree import ElementTree as etree
+
+VERSION = '0.1.0'
+AUTHOR = 'Seth House <seth@eseth.com>'
 
 def indent(elem, level=0):
     i = "\n" + level*"  "

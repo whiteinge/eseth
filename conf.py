@@ -23,6 +23,7 @@ feed_link = base_uri + 'rss.xml'
 
 html_title = "Esoteric Rubbish"
 #html_logo = None
+html_add_permalinks = False
 html_favicon = 'favicon.ico'
 html_static_path = ['static']
 html_show_sourcelink = True

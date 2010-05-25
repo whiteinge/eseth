@@ -35,7 +35,7 @@
         {%- if logo %}
         <p class="logo"><a href="{{ pathto(master_doc) }}">
             <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-        </a></p>
+        </a> Seth House</p>
         {%- endif %}
         {%- endblock %}
 
@@ -79,6 +79,13 @@
         </div>
         <script type="text/javascript">$('#searchbox').show(0);</script>
         {%- endif %}
+
+        <h3>Related Sites</h3>
+        <ul>
+            <li><a href="http://github.com/whiteinge/">My GitHub page</a></li>
+            <li><a href="http://bitbucket.org/whiteinge/">My BitBucket page</a></li>
+            <li><a href="http://oalug.com/">the Ogden Area Linux User Group</a></li>
+        </ul>
         {%- endblock %}
     </div>
 </div>
@@ -127,7 +134,7 @@
             {%- endif %}
 
             {%- if favicon %}
-            <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+            <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
             {%- endif %}
         {%- endif %}
 

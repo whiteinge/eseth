@@ -20,7 +20,7 @@ blog and stayed that way for a couple years.
 Since I don’t take my blog too seriously, and since I’ve already been writing
 blog posts in |rst| for a few years now (using a WordPress plugin), and since
 I’ve already been documenting my Python code using the hair-raisingly cool
-`<Sphinx>`_ it seemed natural to also want to use Sphinx for my blog; sort of a
+`Sphinx`_ it seemed natural to also want to use Sphinx for my blog; sort of a
 less special-purpose `Blogofile`_.
 
 If you’re thinking “WTF?” you may want to `move on

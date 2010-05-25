@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath('./ext'))
 extensions = ['rcfile', 'feed']
 
 project = u'Esoteric Rubbish'
-copyright = u'2009, Nathaniel Whiteinge'
+copyright = u'2009, Seth House'
 
 version = '1.0'
 release = '1.0'
@@ -15,14 +15,17 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 rc_url = 'http://bitbucket.org/whiteinge/dotfiles/src'
+rc2_url = 'http://github.com/whiteinge/dotfiles/blob'
+rc2_head = 'master'
+rc2_linenr = '#L%(linenr)s'
 
 base_uri = "http://eseth.org/"
 feed_title = project
-feed_description = "Rambling so bereft of purpose it will change your religion"
+feed_description = "Rambling so utterly bereft of purpose"
 feed_link = base_uri + 'rss.xml'
 
 html_title = "Esoteric Rubbish"
-#html_logo = None
+html_logo = 'static/whiteinge.jpg'
 html_add_permalinks = False
 html_favicon = 'favicon.ico'
 html_static_path = ['static']

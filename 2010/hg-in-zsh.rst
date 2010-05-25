@@ -1,7 +1,7 @@
 .. _post-hg-in-zsh:
 
 =================================
-Mercurial Info in Your zsh Prompt
+Mercurial Info in Your Zsh Prompt
 =================================
 
 .. index:: computing, unix, zsh, mercurial
@@ -13,13 +13,13 @@ Mercurial Info in Your zsh Prompt
 What is ``VCS_Info``?
 =====================
 
-If you aren’t already familiar with ``VCS_Info`` in zsh, fire up your favorite
+If you aren’t already familiar with ``VCS_Info`` in Zsh, fire up your favorite
 manpage viewer and read through the section in :manpage:`zshcontrib(1)`. It
 allows you to pull information out of a version-controlled repository and
 display that in your shell prompt.
 
 The big win for ``VCS_Info`` over other, similar solutions is that it is built
-right into zsh and supports Bazaar, Codeville, CVS, Darcs, Git, GNU arch, GNU
+right into Zsh and supports Bazaar, Codeville, CVS, Darcs, Git, GNU arch, GNU
 quilt, Mercurial, Monotone, Perforce, Subversion, and SVK all using the same
 configuration. You put it into your prompt once then as you :command:`cd`
 between your favorite git, hg, bzr, or svn local clones it Just Works®:
@@ -132,7 +132,7 @@ Show when rebasing or merging. Define ``actionformats``::
 Display both parents during a merge
 -----------------------------------
 
-Mercurial separates multiple parents with a ``+`` by default::
+Mercurial separates multiple parents with a ``+`` by default:
 
 .. image::
     ./vcs-merging.png
@@ -225,7 +225,7 @@ The hook looks like this::
 .. note::
 
     The reason this functionality isn’t in the core backend is because the
-    :file:`branchheads.cache`` isn’t updated with every :command:`hg` operation
+    :file:`branchheads.cache` isn’t updated with every :command:`hg` operation
     so on occasion it will give a false positive. Most of the time it is Good
     Enough®.
 
@@ -288,11 +288,11 @@ checkout from CVS are located in the `vcs_info-examples file`_.
 #.  Download the `latest snapshot`_ tarball from the Git mirror and untar it.
 #.  Put the ``Functions/VCS_Info`` directory from the archive somewhere.
     ``~/.zfuncs`` is a good place.
-#.  Point your zsh at that directory (requires :envvar:`extended_glob` to be set)::
+#.  Point your Zsh at that directory (requires :envvar:`extended_glob` to be set)::
 
         fpath=( ~/.zfuncs ~/.zfuncs/VCS_Info/**/*~*/(CVS)#(/) $fpath )
 
-#.  Restart zsh::
+#.  Restart Zsh::
 
         % exec zsh
 

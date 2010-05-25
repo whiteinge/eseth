@@ -11,6 +11,12 @@ Esoteric Rubbish
 
     */index
 
+Recent Entries
+==============
+
+* :ref:`post-hg-in-zsh`
+* :ref:`post-blogging-with-sphinx`
+
 About
 =====
 

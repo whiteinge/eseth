@@ -14,10 +14,10 @@ templates_path = ['templates']
 source_suffix = '.rst'
 master_doc = 'index'
 
-rc_url = 'http://bitbucket.org/whiteinge/dotfiles/src'
-rc2_url = 'http://github.com/whiteinge/dotfiles/blob'
-rc2_head = 'master'
-rc2_linenr = '#L%(linenr)s'
+rc_url = 'http://github.com/whiteinge/dotfiles/blob'
+rc_head = 'master'
+rc_linenr = '#L%(linenr)s'
+rc_main = 'http://github.com/whiteinge/dotfiles/tree/master'
 
 base_uri = "http://eseth.org/"
 feed_title = project

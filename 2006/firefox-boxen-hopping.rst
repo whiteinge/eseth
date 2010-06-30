@@ -13,7 +13,7 @@ Firefox and boxen-hopping
     Firefox *is* very easy to personalize via configuration files. I've found
     the ``userChrome.css`` and ``userPref.js`` files to be surprisingly
     capable, I've added them as well as my bookmarks file to my :rc:`dotsync
-    <.zshrc@9366c5b532a5#228>` for a (very) minimal Firefox UI footprint
+    <.zshrc@6a2377c#228>` for a (very) minimal Firefox UI footprint
     (pictured).
 
     The original post follows.

@@ -48,7 +48,7 @@ def rcfile_role(role, rawtext, text, lineno, inliner,
             title = text[:brace]
 
     if target == '*':
-        uri = env.config['rc_url']
+        uri = env.config['rc_main'] or env.config['rc_url']
     else:
         # Parse arguments for the rc file like rev and line number
         rc_string = re_rcfile.search(target)

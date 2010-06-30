@@ -19,7 +19,7 @@ Here are some of mine:
     and is just gorgeous (pictured). I enjoy Vi-mode in my shells and :rc:`my
     zshrc has a Vi-style mode display <.zshrc>` that I cobbled together from a few
     examples on the 'net. It also includes a small shell-function called
-    :rc:`dotsync <.zshrc@9366c5b532a5#228>` that keeps the rest of these dotfiles current.
+    :rc:`dotsync <.zshrc@6a2377c#228>` that keeps the rest of these dotfiles current.
 *   I've spent days of my life fine-tuning the :rc:`best goddamn vimrc in the
     whole world <.vimrc>`. Parts of it are very much tailored to me, but I've tried
     to comment all my reasons for each option.

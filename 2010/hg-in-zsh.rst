@@ -10,6 +10,8 @@ Mercurial Info in Your Zsh Prompt
 
 :pubdate: 2010-05-24
 
+.. seealso:: :ref:`post-git-in-zsh`
+
 What is ``VCS_Info``?
 =====================
 

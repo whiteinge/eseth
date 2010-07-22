@@ -82,9 +82,20 @@ def setup(app):
     except OSError:
         user = os.getenv('USER')
 
+    # bitbucket
+    # app.add_config_value('rc_main', None, True)
+    # app.add_config_value('rc_url',
+            # 'http://bitbucket.org/%s/dotfiles/src/' % user or 'username', True)
+    # app.add_config_value('rc_head', 'tip', True)
+    # app.add_config_value('rc_linenr', '#cl-%(linenr)s', True)
+
+    # github
+    app.add_config_value('rc_main', 
+        'http://github.com/%s/dotfiles/tree/master' % user or 'username', True)
     app.add_config_value('rc_url',
-            'http://bitbucket.org/%s/dotfiles/src/' % user or 'username', True)
-    app.add_config_value('rc_head', 'tip', True)
-    app.add_config_value('rc_linenr', '#cl-%(linenr)s', True)
+        'http://github.com/%s/dotfiles/blob' % user or 'username', True)
+    app.add_config_value('rc_head', 'master', True)
+    app.add_config_value('rc_linenr', '#L%(linenr)s', True)
+
 
 roles.register_local_role('rc', rcfile_role)

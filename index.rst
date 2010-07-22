@@ -11,9 +11,13 @@ Esoteric Rubbish
 
     */index
 
+.. /* fix annoying Vim syntax highlighting bug
+
 Recent Entries
 ==============
 
+* :ref:`post-nethack-term` (updated)
+* :ref:`post-git-in-zsh`
 * :ref:`post-hg-in-zsh`
 * :ref:`post-blogging-with-sphinx`
 

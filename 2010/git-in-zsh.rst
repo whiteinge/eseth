@@ -19,6 +19,8 @@ awesome ``VCS_Info`` system that is built into Zsh.
 .. image::
     ./git-prompt.png
 
+:rc:`The code can be found on GitHub. <.zsh_shouse_prompt>`
+
 Configuration
 =============
 

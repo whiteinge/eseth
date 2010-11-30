@@ -1,6 +1,7 @@
 bittorrent
 brasero
 build-essential
+curl
 conky
 console-data
 console-tools

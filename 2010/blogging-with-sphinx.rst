@@ -9,6 +9,7 @@ Blogging with Sphinx
 .. |rst| replace:: `reStructuredText`_
 
 :pubdate: 2010-03-17
+:updated: 2011-01-03
 
 Excruciatingly Boring Navel-Gazing
 ==================================
@@ -49,9 +50,12 @@ Feeds
 -----
 
 Sphinx doesn’t generate RSS so I rolled my own as a Sphinx extension
-(`source`_). At the moment it generates a monolithic feed of all posts when
-really it should just collect the most recent few, but it’ll do as-is for the
-short-term.
+(`source`_).
+
+.. versionchanged:: 2011-01-03
+    It now sorts by most recent entries and takes a few configuration options
+    such as not outputting entries older than a certain date or only outputting
+    a maximum number of entries.
 
 Other Crap
 ----------
@@ -81,5 +85,5 @@ source for this blog`_ at BitBucket.
 .. _`reStructuredText`: http://docutils.sf.net/rst.html
 .. _`Blogofile`: http://www.blogofile.com/
 .. _`directive`: http://sphinx.pocoo.org/rest.html#directives
-.. _`source`: http://bitbucket.org/whiteinge/eseth/src/tip/ext/feed.py
-.. _`entire source for this blog`: http://bitbucket.org/whiteinge/eseth/src/
+.. _`source`: https://github.com/whiteinge/eseth/blob/master/ext/feed.py
+.. _`entire source for this blog`: https://github.com/whiteinge/eseth

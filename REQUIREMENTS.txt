@@ -2,7 +2,7 @@
 
 Twisted==9.0.0
 Fabric==0.9.0
-docutils==0.6
+docutils==0.7
 simplejson==2.0.9
-Sphinx==0.6.6
+Sphinx==1.0.5
 Pygments==1.3.1

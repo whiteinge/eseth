@@ -13,35 +13,33 @@
     {% for key, entries in genindexentries %}
     <table width="100%" class="indextable"><tr><td width="33%" valign="top">
 
-        <dl>
-            {%- set breakat = genindexcounts[loop.index0] // 2 %}
-            {%- set numcols = 1 %}
-            {%- set numitems = 0 %}
+        {%- set breakat = genindexcounts[loop.index0] // 2 %}
+        {%- set numcols = 1 %}
+        {%- set numitems = 0 %}
 
-            {% for entryname, (links, subitems) in entries %}
-            {%- if links -%}
-            <h2>{{ entryname|e }}</h2>
-            <ul>
-                {%- for link in links %}
-                <li><a href="{{ link }}">{{ link }}</a>
+        {% for entryname, (links, subitems) in entries %}
+        {%- if links -%}
+        <h2>{{ entryname|e }}</h2>
+        <ul>
+            {%- for link in links %}
+            <li><a href="{{ link }}">{{ link }}</a>
 
-                    {# FIXME #}
-                    {%- if subitems %}
-                    <dd><dl>
-                        {%- for subentryname, subentrylinks in subitems %}
-                        <dt><a href="{{ subentrylinks[0] }}">{{ subentryname|e }}</a>
-                        {%- for link in subentrylinks[1:] %}, <a href="{{ link }}">[{{ loop.index }}]</a>{% endfor -%}
-                        </dt>
-                        {%- endfor %}
-                    </dl></dd>
-                    {%- endif -%}
+                {# FIXME #}
+                {%- if subitems %}
+                <dd><dl>
+                    {%- for subentryname, subentrylinks in subitems %}
+                    <dt><a href="{{ subentrylinks[0] }}">{{ subentryname|e }}</a>
+                    {%- for link in subentrylinks[1:] %}, <a href="{{ link }}">[{{ loop.index }}]</a>{% endfor -%}
+                    </dt>
+                    {%- endfor %}
+                </dl></dd>
+                {%- endif -%}
 
-                </li>
-                {% endfor -%}
-            </ul>
-            {%- endif -%}
-            {%- endfor %}
-        </dl>
+            </li>
+            {% endfor -%}
+        </ul>
+        {%- endif -%}
+        {%- endfor %}
 
     </td></tr></table>
     {% endfor %}

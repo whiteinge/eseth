@@ -55,7 +55,7 @@
 
         {% for key, entries in genindexentries %}
         {% for entryname, (links, subitems) in entries %}
-        <a href="">{{ entryname }}</a>
+        <a href="{{ pathto('genindex') }}key-{{ key }}">{{ entryname }}</a>
         {% endfor %},
         {%- endfor %}
 

@@ -19,7 +19,7 @@
 
         {% for entryname, (links, subitems) in entries %}
         {%- if links -%}
-        <h2>{{ entryname|e }}</h2>
+        <h2 id="key-{{ key }}">{{ entryname|e }}</h2>
         <ul>
             {%- for link in links %}
             <li><a href="{{ link }}">{{ link }}</a>

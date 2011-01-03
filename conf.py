@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import sys, os
+import sys, os, datetime
 
 sys.path.append(os.path.abspath('./ext'))
 extensions = ['rcfile', 'feed']
@@ -19,10 +19,12 @@ rc_head = 'master'
 rc_linenr = '#L%(linenr)s'
 rc_main = 'http://github.com/whiteinge/dotfiles/tree/master'
 
-base_uri = "http://eseth.org/"
+base_uri = "http://eseth.org"
 feed_title = project
 feed_description = "Rambling so utterly bereft of purpose"
-feed_link = base_uri + 'rss.xml'
+feed_link = '%s/rss.xml' % (base_uri,)
+feed_maxitems = 7
+feed_ignorepagenames = ['index_*', 'search']
 
 html_title = "Esoteric Rubbish"
 html_logo = 'static/whiteinge.jpg'

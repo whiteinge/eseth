@@ -1,3 +1,5 @@
+:pubdate: 2006-05-30
+
 .. _eighth-week-long-lan:
 
 =================================
@@ -5,8 +7,6 @@ Eighth Annual Week-Long LAN Party
 =================================
 
 .. index:: gaming
-
-:pubdate: 2006-05-30
 
 Dates and Location
 ------------------

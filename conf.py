@@ -9,10 +9,13 @@ copyright = u'2009, Seth House'
 
 version = '1.0'
 release = '1.0'
+
+master_doc = 'index'
+source_suffix = '.rst'
+
 pygments_style = 'sphinx'
 templates_path = ['templates']
-source_suffix = '.rst'
-master_doc = 'index'
+template_bridge = 'template_helpers.BlogTemplateBridge'
 
 rc_url = 'http://github.com/whiteinge/dotfiles/blob'
 rc_head = 'master'

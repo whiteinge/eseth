@@ -1,3 +1,5 @@
+:pubdate: 2008-04-03
+
 .. _buy-a-standard:
 
 ================================
@@ -5,8 +7,6 @@ How to buy a standard in 10 days
 ================================
 
 .. index:: computing
-
-:pubdate: 2008-04-03
 
 If anyone else out there is stunned that yesterday's ISO approval of
 Microsoft's OOXML document format was not an April Fool's joke, James Hogarth

@@ -1,3 +1,5 @@
+:pubdate: 2006-06-12
+
 .. _back-from-brazil:
 
 ================
@@ -5,8 +7,6 @@ Back from Brazil
 ================
 
 .. index:: personal
-
-:pubdate: 2006-06-12
 
 We're back from Brazil and had a fabulous time. Thais' family is awesome and
 that country is just gorgeous. I haven't been terribly social since our return,

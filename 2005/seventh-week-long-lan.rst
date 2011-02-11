@@ -1,3 +1,5 @@
+:pubdate: 2005-06-12
+
 .. _seventh-week-long-lan:
 
 ==================================
@@ -5,8 +7,6 @@ Seventh Annual Week-Long LAN Party
 ==================================
 
 .. index:: gaming
-
-:pubdate: 2005-06-12
 
 This year's Week-Long was one of the best in recent years, I've moved this
 page to a blog entry to preserve it and get it out of the way.

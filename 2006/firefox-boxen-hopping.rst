@@ -1,3 +1,5 @@
+:pubdate: 2006-03-30
+
 .. _firefox-boxen-hopping:
 
 =========================
@@ -5,8 +7,6 @@ Firefox and boxen-hopping
 =========================
 
 .. index:: computing, web
-
-:pubdate: 2006-03-30
 
 .. note:: Update 2006-12-20
 

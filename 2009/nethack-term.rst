@@ -1,3 +1,5 @@
+:pubdate: 2009-12-22
+
 .. _post-nethack-term:
 
 ==================
@@ -7,8 +9,6 @@ Easy multi-line prompts using Zsh arrays
 ----------------------------------------
 
 .. index: computing, unix
-
-:pubdate: 2009-12-22
 
 Overview
 ========

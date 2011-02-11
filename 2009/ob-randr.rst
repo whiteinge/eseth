@@ -1,3 +1,5 @@
+:pubdate: 2009-12-15
+
 .. _post-ob-randr:
 
 =======================
@@ -5,8 +7,6 @@ Openbox xrandr Pipemenu
 =======================
 
 .. index:: computing, unix
-
-:pubdate: 2009-12-15
 
 Openbox is damn-near perfect. I was recently musing on what I would most miss
 if I switched back to OS X [1]_ and the answer is Openbox. I’ve grown very fond

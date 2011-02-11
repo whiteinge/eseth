@@ -1,3 +1,5 @@
+:pubdate: 2005-10-26
+
 .. _post-textpattern:
 
 ===========
@@ -5,8 +7,6 @@ Textpattern
 ===========
 
 .. index:: computing, web
-
-:pubdate: 2005-10-26
 
 Although I have no qualms with WordPress, I've always been very curious
 about `Textpattern`_ since it is made by the people who freely gifted `A

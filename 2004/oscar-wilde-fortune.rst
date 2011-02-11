@@ -1,3 +1,5 @@
+:pubdate: 2004-09-23
+
 .. _oscar-wilde-fortune:
 
 ==========================
@@ -5,8 +7,6 @@ Oscar Wilde fortune cookie
 ==========================
 
 .. index:: computing, unix
-
-:pubdate: 2004-09-23
 
 Oscar Wilde is the greatest author of all time. I can prove it.
 

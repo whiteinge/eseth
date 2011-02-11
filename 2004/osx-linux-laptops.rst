@@ -1,3 +1,5 @@
+:pubdate: 2004
+
 .. _osx-linux-laptops:
 
 ===================================
@@ -5,8 +7,6 @@ OS X vs. Linux and Linux on Laptops
 ===================================
 
 .. index:: computing, os x, unix
-
-:pubdate: 2004
 
 Apple recently introduced a sub $1k `iBook`_ so I've (almost) promptly put my
 `Vaio on eBay`_. Now this doesn't bode well for my emotional state as this

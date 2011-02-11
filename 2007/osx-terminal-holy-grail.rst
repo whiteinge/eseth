@@ -1,3 +1,5 @@
+:pubdate: 2007-05-15
+
 .. _osx-terminal-holy-grail:
 
 =======================================
@@ -5,8 +7,6 @@ The Mac OS X Terminal Holy Grail: mrxvt
 =======================================
 
 .. index:: computing, os x
-
-:pubdate: 2007-05-15
 
 I've been a bit unhappy with terminal offerings on OS X since I switched.
 I've spent a bit of time working with each iTerm, GLTerm, xterm, aterm,

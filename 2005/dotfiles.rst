@@ -1,3 +1,5 @@
+:pubdate: 2005-10-08
+
 .. _dotfiles:
 
 ========
@@ -5,8 +7,6 @@ Dotfiles
 ========
 
 .. index:: computing, unix, zsh, screen, vim
-
-:pubdate: 2005-10-08
 
 I've long enjoyed painstakingly constructing dotfiles or \*rc files for
 various programs I use frequently. They allow such exact configuration and

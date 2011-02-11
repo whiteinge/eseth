@@ -1,3 +1,5 @@
+:pubdate: 2010-05-24
+
 .. _post-git-in-zsh:
 
 ===========================
@@ -7,8 +9,6 @@ Git Info in Your Zsh Prompt
 .. index:: computing, unix, zsh, mercurial
 
 .. highlight:: bash
-
-:pubdate: 2010-05-24
 
 .. seealso:: :ref:`post-hg-in-zsh`
 

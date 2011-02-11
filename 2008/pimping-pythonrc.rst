@@ -1,3 +1,5 @@
+:pubdate: 2008
+
 .. _pimping-pythonrc:
 
 =============================
@@ -5,8 +7,6 @@ Pimping out your .pythonrc.py
 =============================
 
 .. index:: computing, python
-
-:pubdate: 2008
 
 I don't wanna be hatin' on `IPython`_, but I don't use it. I often favor fairly
 extreme minimalism in computing. Why install something if you can accomplish

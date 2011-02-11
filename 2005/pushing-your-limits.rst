@@ -1,3 +1,5 @@
+:pubdate: 2005
+
 .. _pushing-your-limits:
 
 ===================
@@ -5,8 +7,6 @@ Pushing your limits
 ===================
 
 .. index:: computing, web
-
-:pubdate: 2005
 
 This is a must-read for any web developer interested in using CSS for layout
 for some simple explanations (with pictures!) and a pretty decent and quick

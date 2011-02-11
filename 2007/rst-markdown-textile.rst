@@ -1,3 +1,5 @@
+:pubdate: 2007-04-10
+
 .. _rst-markdown-textile:
 
 ========================================================
@@ -5,8 +7,6 @@ RestructuredText, Markdown, and Textile (and typography)
 ========================================================
 
 .. index:: computing
-
-:pubdate: 2007-04-10
 
 I used to be a huge Textile fanboy. It took quite a bit to drag me (kicking
 and screaming) to another lightweight markup language. I now use

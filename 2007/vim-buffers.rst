@@ -1,3 +1,5 @@
+:pubdate: 2007-04-09
+
 .. _vim-buffers:
 
 ===================================================
@@ -5,8 +7,6 @@ How I learned to stop worrying and love Vim buffers
 ===================================================
 
 .. index:: computing, vim
-
-:pubdate: 2007-04-09
 
 Background
 ~~~~~~~~~~

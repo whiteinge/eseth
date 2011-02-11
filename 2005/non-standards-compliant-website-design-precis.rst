@@ -1,3 +1,5 @@
+:pubdate: 2005-01-26
+
 .. _non-standards-compliant-website-design-precis:
 
 =============================================
@@ -5,8 +7,6 @@ Non-standards compliant website design précis
 =============================================
 
 .. index:: computing, web
-
-:pubdate: 2005-01-26
 
 Often when trying to evangelize web standards I use a friend’s
 non-compliant website to offer a comparison in methodologies. Recently I

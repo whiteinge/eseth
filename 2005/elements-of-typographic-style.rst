@@ -1,3 +1,5 @@
+:pubdate: 2005-12-15
+
 .. _elements-of-typographic-style:
 
 =================================
@@ -5,8 +7,6 @@ The Elements of Typographic Style
 =================================
 
 .. index:: typography
-
-:pubdate: 2005-12-15
 
 Thanks to Nat for letting me borrow `The Elements of Typographic Style`_
 (ISBN: 0881792063).

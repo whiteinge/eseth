@@ -1,3 +1,5 @@
+:pubdate: 2004-09-21
+
 .. _d20-future:
 
 ======================
@@ -5,8 +7,6 @@ d20 Future book review
 ======================
 
 .. index:: gaming
-
-:pubdate: 2004-09-21
 
 For those of you who play Dungeons & Dragons, you may have heard about `d20
 Modern`_, which brings the excellent and open `d20`_ rules that govern D&D v3.5

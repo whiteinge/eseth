@@ -1,3 +1,5 @@
+:pubdate: 2007-10-11
+
 .. _rst-for-textile-users:
 
 ===================================
@@ -5,8 +7,6 @@ ReST for Markdown and Textile Users
 ===================================
 
 .. index:: computing
-
-:pubdate: 2007-10-11
 
 ReStructuredText is freaking huge so users of lighter-weight markup languages
 can be easily put off. This is an *absolute basics* quickref to ReST for

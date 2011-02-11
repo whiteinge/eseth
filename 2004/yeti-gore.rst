@@ -1,11 +1,11 @@
+:pubdate: 2004-12-16
+
 .. _yeti-gore:
 
 Yeti Gore Flash game
 ====================
 
 .. index:: computing
-
-:pubdate: 2004-12-16
 
 Here's a little `penguin batting practice`_ game. This site is *not* safe for
 work (NSFW)! However, the game itself is clean because:

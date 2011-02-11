@@ -1,3 +1,5 @@
+:pubdate: 2005-12-06
+
 .. _view-dom-source:
 
 ===================================
@@ -5,8 +7,6 @@ Viewing the DOM Source with Firefox
 ===================================
 
 .. index:: computing, web
-
-:pub_date: 2005-12-06
 
 I'll be the first to admit that blogging about not-so-obvious features in
 software isn't always cool, unless that happens to be `your thing`_. However,

@@ -1,3 +1,5 @@
+:pubdate: 2007-05-20
+
 .. _cool-uris:
 
 ====================================================
@@ -5,8 +7,6 @@ Cool URIs don't change; so what's considered 'cool'?
 ====================================================
 
 .. index:: computing, web
-
-:pubdate: 2007-05-20
 
 I've given a lot of thought, lately, to the famous `Cool URIs don't change`_
 W3C document. Should URLs end in a slash or not? Should they end in a file-

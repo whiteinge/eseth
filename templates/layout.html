@@ -182,6 +182,13 @@
                 <div class="body">
                     {% block body %} {% endblock %}
                 </div>
+
+                <div class="body summary">
+                    {% if meta and 'pubdate' in meta %}
+                    <p>Posted {{ meta['pubdate']|dayssince }} days ago.</p>
+                    {% endif %}
+                </div>
+
                 {%- if not embedded %}{% if not theme_nosidebar|tobool %}
                 </div>
                 {%- endif %}{% endif %}

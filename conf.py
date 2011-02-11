@@ -64,3 +64,7 @@ latex_documents = [
   ('index', 'EsotericRubbish.tex', u'Esoteric Rubbish',
    u'Seth House', 'manual'),
 ]
+
+man_pages = [
+    ('index', 'eseth-org', project, 'Seth House', 1),
+]

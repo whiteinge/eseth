@@ -81,11 +81,8 @@
         {%- endif %}
 
         <h3>Related Sites</h3>
-        <ul>
-            <li><a href="http://github.com/whiteinge/">My GitHub page</a></li>
-            <li><a href="http://bitbucket.org/whiteinge/">My BitBucket page</a></li>
-            <li><a href="http://oalug.com/">the Ogden Area Linux User Group</a></li>
-        </ul>
+        <p><a href="http://oalug.com/">the Ogden Area Linux User Group</a></p>
+        <div id="github-badge"></div>
         {%- endblock %}
     </div>
 </div>
@@ -163,7 +160,18 @@
             {%- endif %}
         {%- endblock %}
 
-        {%- block extrahead %} {% endblock %}
+        {%- block extrahead %}
+        <link rel="stylesheet" href="{{ pathto('_static/jquery.github_badge.css', 1) }}?v=1" />
+        <script src="{{ pathto('_static/jquery.github_badge.js', 1) }}"></script>
+        <script>
+            jQuery(document).ready(function($){
+                $('#github-badge').GithubBadge({
+                    login: 'whiteinge',
+                    image_path: '{{ pathto("_static/images/", 1) }}'
+                });
+            });
+        </script>
+        {% endblock %}
     </head>
 
     <body>

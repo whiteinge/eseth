@@ -138,18 +138,3 @@ every day to keep abreast of the latest techniques and developments.
 
 I am President of the Ogden Area Linux User Group, and active with the Utah
 Open Source Foundation and the Utah Python User Group.
-
-References
-==========
-
-Steve Diamond : Manager, SendOutCards
-    801-673-2750
-
-Matt Davies : Owner, Septcon
-    801-870-6135
-
-Dale Pedersen : Manager, Zufelt Media Group
-    801-628-7637
-
-Nat Carson : Supervisor, 1FamilyNet
-    801-592-8865

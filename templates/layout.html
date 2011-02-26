@@ -193,7 +193,7 @@
 
                 <div class="body summary">
                     {% if meta and 'pubdate' in meta %}
-                    <p>Posted {{ meta['pubdate']|dayssince }} days ago.</p>
+                    <p>Posted {{ meta['pubdate']|dayssince }} days ago on {{ meta['pubdate'] }}.</p>
                     {% endif %}
                 </div>
 

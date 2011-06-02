@@ -1,6 +1,5 @@
 {%- block doctype -%}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 {%- endblock %}
 
 {%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
@@ -22,117 +21,49 @@
         {%- for parent in parents %}
         <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>
         {%- endfor %}
-        {%- block relbaritems %} {% endblock %}
+        {%- block relbaritems %}{% endblock %}
     </ul>
 </div>
 {%- endmacro %}
 
-{%- macro sidebar() %}
-{%- if not embedded %}{% if not theme_nosidebar|tobool %}
-<div class="sphinxsidebar">
-    <div class="sphinxsidebarwrapper">
-        {%- block sidebarlogo %}
-        {%- if logo %}
-        <p class="logo"><a href="{{ pathto(master_doc) }}">
-            <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-        </a> Seth House</p>
-        {%- endif %}
-        {%- endblock %}
-
-        {% if not 'index' in pagename %}
-        {%- block sidebarsourcelink %}
-        <h3>{{ _('This Page') }}</h3>
-        {{ toc }}
-
-        {%- if show_source and has_source and sourcename %}
-        <p><a href="{{ pathto('_sources/' + sourcename, true)|e }}"
-                rel="nofollow">{{ _('Show Source') }}</a></p>
-        {%- endif %}
-        {%- endblock %}
-        {%- endif %}
-
-        <h3>Posts by Tag</h3>
-
-        {% for key, entries in genindexentries %}
-        {% for entryname, (links, subitems) in entries %}
-        <a href="{{ pathto('genindex') }}key-{{ key }}">{{ entryname }}</a>
-        {% endfor %},
-        {%- endfor %}
-
-        <h3>Posts by Date</h3>
-        {{ toctree() }}
-
-        {%- if customsidebar %}
-        {% include customsidebar %}
-        {%- endif %}
-
-        {%- block sidebarsearch %}
-        {%- if pagename != "search" %}
-        <div id="searchbox" style="display: none">
-            <h3>{{ _('Search') }}</h3>
-            <form class="search" action="{{ pathto('search') }}" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="{{ _('Go') }}" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-            </form>
-        </div>
-        <script type="text/javascript">$('#searchbox').show(0);</script>
-        {%- endif %}
-
-        <h3>Related Sites</h3>
-        <p><a href="http://oalug.com/">the Ogden Area Linux User Group</a></p>
-        <div id="github-badge"></div>
-        {%- endblock %}
-    </div>
-</div>
-{%- endif %}{% endif %}
-{%- endmacro %}
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        {{ metatags }}
+        <meta charset="utf-8">
 
-        {%- if not embedded %}
-        {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
-        {%- else %}
-        {%- set titlesuffix = "" %}
-        {%- endif %}
+        {{ metatags }}
 
         <title>{{ title|striptags }}{{ titlesuffix }}</title>
 
-        <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-        <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
+        {% for s in style %}
+        <link rel="stylesheet" href="{{ pathto('_static/' + s, 1) }}" type="text/css" />
+        {% endfor %}
 
         {% block feed %}
         <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS 2.0">
         {% endblock %}
 
-        {%- if not embedded %}
-            <script type="text/javascript">
-                var DOCUMENTATION_OPTIONS = {
-                    URL_ROOT:    '{{ pathto("", 1) }}',
-                    VERSION:     '{{ release|e }}',
-                    COLLAPSE_MODINDEX: false,
-                    FILE_SUFFIX: '{{ file_suffix }}',
-                    HAS_SOURCE:  {{ has_source|lower }}
-                };
-            </script>
+        <script type="text/javascript">
+            var DOCUMENTATION_OPTIONS = {
+                URL_ROOT:    '{{ pathto("", 1) }}',
+                VERSION:     '{{ release|e }}',
+                COLLAPSE_MODINDEX: false,
+                FILE_SUFFIX: '{{ file_suffix }}',
+                HAS_SOURCE:  {{ has_source|lower }}
+            };
+        </script>
 
-            {%- for scriptfile in script_files %}
-            <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-            {%- endfor %}
+        {%- for scriptfile in script_files %}
+        <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+        {%- endfor %}
 
-            {%- if use_opensearch %}
-            <link rel="search" type="application/opensearchdescription+xml"
-                title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
-                href="{{ pathto('_static/opensearch.xml', 1) }}"/>
-            {%- endif %}
+        {%- if use_opensearch %}
+        <link rel="search" type="application/opensearchdescription+xml"
+            title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
+            href="{{ pathto('_static/opensearch.xml', 1) }}"/>
+        {%- endif %}
 
-            {%- if favicon %}
-            <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
-            {%- endif %}
+        {%- if favicon %}
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
         {%- endif %}
 
         {%- block linktags %}
@@ -177,96 +108,113 @@
     <body>
         {%- block header %}{% endblock %}
 
-        {%- block relbar1 %}{{ relbar() }}{% endblock %}
+        {%- block document %}
+        <div class="documentwrapper"><div class="bodywrapper">
+            {%- block relbar1 %}{{ relbar() }}{% endblock %}
 
-        {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
+            <div class="body{% if pagename == 'index' %} body-index{% endif %}">
+                {% block body %}{% endblock %}
 
-        <div class="document">
-            {%- block document %}
-                <div class="documentwrapper">
-                {%- if not embedded %}{% if not theme_nosidebar|tobool %}
-                    <div class="bodywrapper">
-                {%- endif %}{% endif %}
-                <div class="body">
-                    {% block body %} {% endblock %}
-                </div>
-
-                <div class="body summary">
-                    {% if meta and 'pubdate' in meta %}
+                {% if meta and 'pubdate' in meta %}
+                <div class="summary">
                     <p>Posted {{ meta['pubdate']|dayssince }} days ago on {{ meta['pubdate'] }}.</p>
-                    {% endif %}
                 </div>
+                {% endif %}
 
-                {%- if not 'index' in pagename %}
-                    <div id="disqus_thread" class="body comments"></div>
-                    <script type="text/javascript">
-                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                        var disqus_shortname = 'esotericrubbish'; // required: replace example with your forum shortname
+                {% if pagename == 'index' %}
+                <div class="section section-index">
+                    {%- block sidebarsearch %}
+                    {%- if pagename != "search" %}
+                    <div id="searchbox" style="display: none">
+                        <h3>{{ _('Search') }}</h3>
+                        <form class="search" action="{{ pathto('search') }}" method="get">
+                            <input type="text" name="q" size="18" />
+                            <input type="submit" value="{{ _('Go') }}" />
+                            <input type="hidden" name="check_keywords" value="yes" />
+                            <input type="hidden" name="area" value="default" />
+                        </form>
+                    </div>
+                    <script type="text/javascript">$('#searchbox').show(0);</script>
+                    {%- endif %}
+                    {%- endblock %}
 
-                        // The following are highly recommended additional parameters. Remove the slashes in front to use.
-                        // var disqus_identifier = 'unique_dynamic_id_1234';
-                        // var disqus_url = 'http://example.com/permalink-to-page.html';
+                    {%- block posts_by_tag %}
+                    <div class="posts by-tag">
+                        <h3>Posts by Tag</h3>
+                        {% for key, entries in genindexentries %}
+                        {% for entryname, (links, subitems) in entries %}
+                        <a href="{{ pathto('genindex') }}key-{{ key }}">{{ entryname }}</a>
+                        {% endfor %},
+                        {%- endfor %}
+                    </div>
+                    {%- endblock %}
 
-                        /* * * DON'T EDIT BELOW THIS LINE * * */
-                        (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                        })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-                {%- endif %}
+                    {%- block posts_by_date %}
+                    <div class="posts by-date">
+                        <h3>Posts by Date</h3>
+                        {{ toctree() }}
+                    </div>
+                    {%- endblock %}
 
-                {%- if not embedded %}{% if not theme_nosidebar|tobool %}
+                    <div id="github-badge"></div>
                 </div>
-                {%- endif %}{% endif %}
-            </div>
-            {%- endblock %}
+                {% endif %}
+        </div></div>
+        {%- endblock %}
 
-            {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
-            <div class="clearer"></div>
-        </div>
+        {%- if not 'index' in pagename %}
+        <div id="disqus_thread" class="body comments"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'esotericrubbish'; // required: replace example with your forum shortname
+
+            // The following are highly recommended additional parameters. Remove the slashes in front to use.
+            // var disqus_identifier = 'unique_dynamic_id_1234';
+            // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+        {%- endif %}
 
         {%- block relbar2 %}{{ relbar() }}{% endblock %}
 
         {%- block footer %}
-        <div class="footer">
-            {%- if hasdoc('copyright') %}
-            {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-            {%- else %}
-            {% trans copyright=copyright|e %}&copy; <a href="http://google.com/profiles/whiteinge" rel="me">Copyright {{ copyright }}</a>.{% endtrans %}
-            {%- endif %}
+            <div class="footer">
+                {%- if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+                {%- else %}
+                {% trans copyright=copyright|e %}&copy; <a href="http://google.com/profiles/whiteinge" rel="me">Copyright {{ copyright }}</a>.{% endtrans %}
+                {%- endif %}
 
-            {%- if last_updated %}
-            {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-            {%- endif %}
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">Some rights reserved</a>.
 
-            {%- if show_sphinx %}
-            {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
-            {%- endif %}
+                {%- if last_updated %}
+                {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+                {%- endif %}
 
-            <br>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">
-                <img alt="Creative Commons License" style="border-width:0"
-                    src="http://creativecommons.org/images/public/somerights20.png">
-            </a>
-        </div>
+                {%- if show_sphinx %}
+                {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+                {%- endif %}
+            </div>
 
-        <script type="text/javascript">
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-12716924-1']);
+                _gaq.push(['_trackPageview']);
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-12716924-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-        </script>
-
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
         {%- endblock %}
     </body>
 </html>

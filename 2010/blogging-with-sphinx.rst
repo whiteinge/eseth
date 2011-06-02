@@ -1,5 +1,6 @@
 :pubdate: 2010-03-17
 :updated: 2011-01-03
+
 .. _post-blogging-with-sphinx:
 
 ====================

@@ -11,6 +11,9 @@ Blogging with Sphinx
 
 .. |rst| replace:: `reStructuredText`_
 
+.. contents:: Contents
+    :local:
+    :depth: 2
 
 Excruciatingly Boring Navel-Gazing
 ==================================

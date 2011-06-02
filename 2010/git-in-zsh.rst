@@ -8,6 +8,10 @@ Git Info in Your Zsh Prompt
 
 .. index:: computing, unix, zsh, mercurial
 
+.. contents:: Contents
+    :local:
+    :depth: 2
+
 .. highlight:: bash
 
 .. seealso:: :ref:`post-hg-in-zsh`

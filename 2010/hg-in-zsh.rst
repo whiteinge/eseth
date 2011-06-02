@@ -10,6 +10,10 @@ Mercurial Info in Your Zsh Prompt
 
 .. highlight:: bash
 
+.. contents:: Contents
+    :local:
+    :depth: 2
+
 .. seealso:: :ref:`post-git-in-zsh`
 
 What is ``VCS_Info``?

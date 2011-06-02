@@ -5,10 +5,14 @@
 ==================
 Nethack Zsh Prompt
 ==================
-Easy multi-line prompts using Zsh arrays
-----------------------------------------
+
+.. rubric:: Easy multi-line prompts using Zsh arrays
 
 .. index: computing, unix
+
+.. contents:: Contents
+    :local:
+    :depth: 2
 
 Overview
 ========

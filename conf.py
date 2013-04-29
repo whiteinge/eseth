@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath('./ext'))
 extensions = ['rcfile', 'feed']
 
 project = u'Esoteric Rubbish'
-copyright = u'2009, Seth House'
+copyright = u'2013, Seth House'
 
 version = '1.0'
 release = '1.0'

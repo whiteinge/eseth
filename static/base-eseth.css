@@ -137,6 +137,7 @@ pre {
     border: 1px solid #ac9;
     border-left: none;
     border-right: none;
+    overflow-x: auto;
 }
 
 tt {

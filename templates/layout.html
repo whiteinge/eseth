@@ -141,11 +141,7 @@
                     {%- block posts_by_tag %}
                     <div class="posts by-tag">
                         <h3>Posts by Tag</h3>
-                        {% for key, entries in genindexentries %}
-                        {% for entryname, (links, subitems) in entries %}
-                        <a href="{{ pathto('genindex') }}key-{{ key }}">{{ entryname }}</a>
-                        {% endfor %},
-                        {%- endfor %}
+                        <p><a href="{{ pathto('genindex') }}">See the Index</a></p>
                     </div>
                     {%- endblock %}
 

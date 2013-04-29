@@ -92,16 +92,6 @@
         {%- endblock %}
 
         {%- block extrahead %}
-        <link rel="stylesheet" href="{{ pathto('_static/jquery.github_badge.css', 1) }}?v=1" />
-        <script src="{{ pathto('_static/jquery.github_badge.js', 1) }}"></script>
-        <script>
-            jQuery(document).ready(function($){
-                $('#github-badge').GithubBadge({
-                    login: 'whiteinge',
-                    image_path: '{{ pathto("_static/images/", 1) }}'
-                });
-            });
-        </script>
         {% endblock %}
     </head>
 
@@ -152,7 +142,7 @@
                     </div>
                     {%- endblock %}
 
-                    <div id="github-badge"></div>
+                    <iframe src="http://githubbadge.appspot.com/badge/whiteinge?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe>
                 </div>
                 {% endif %}
         </div></div>

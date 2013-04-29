@@ -150,11 +150,11 @@ Here is a example shell session::
     ~  % echo $GREP_OPTIONS
     --color --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.git
     ~  % cd ~/path/to/myproject
-    % cat .grepoptions                                                                                                                       (git) 611ac627 ? @{u}+2
+    % cat .grepoptions
     # Don't grep any minified JavaScript files
     --exclude=\*min.js
 
     # Don't grep third-party libs
     --exclude-dir=lib
-    % echo $GREP_OPTIONS                                                                                                                     (git) 611ac627 ? @{u}+2
+    % echo $GREP_OPTIONS
     --color --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.git --exclude=\*min.js --exclude-dir=lib

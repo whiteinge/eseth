@@ -1,4 +1,4 @@
-:pubdate: 2006-06-12
+:Date: 2006-06-12
 
 .. _back-from-brazil:
 

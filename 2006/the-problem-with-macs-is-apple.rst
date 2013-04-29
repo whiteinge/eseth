@@ -1,4 +1,4 @@
-:pubdate: 2006-10-26
+:Date: 2006-10-26
 
 .. _the-problem-with-macs-is-apple:
 

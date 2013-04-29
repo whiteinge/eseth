@@ -1,4 +1,4 @@
-:pubdate: 2007-05-20
+:Date: 2007-05-20
 
 .. _cool-uris:
 

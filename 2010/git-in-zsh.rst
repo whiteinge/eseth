@@ -1,4 +1,4 @@
-:pubdate: 2010-05-24
+:Date: 2010-05-24
 
 .. _post-git-in-zsh:
 

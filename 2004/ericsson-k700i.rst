@@ -1,4 +1,4 @@
-:pubdate: 2004-12-26
+:Date: 2004-12-26
 
 .. _ericsson-k700i:
 

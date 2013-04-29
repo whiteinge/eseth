@@ -1,4 +1,4 @@
-:pubdate: 2005-12-14
+:Date: 2005-12-14
 
 .. _web-typography-bringhurst:
 

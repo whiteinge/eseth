@@ -1,4 +1,4 @@
-:pubdate: 2007-05-02
+:Date: 2007-05-02
 
 .. _ninth-week-long-lan:
 

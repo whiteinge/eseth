@@ -1,4 +1,4 @@
-:pubdate: 2005-05-04
+:Date: 2005-05-04
 
 .. _tiger-bug-review:
 

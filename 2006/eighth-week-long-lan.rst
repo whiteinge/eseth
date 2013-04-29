@@ -1,4 +1,4 @@
-:pubdate: 2006-05-30
+:Date: 2006-05-30
 
 .. _eighth-week-long-lan:
 

@@ -1,4 +1,4 @@
-:pubdate: 2005-10-08
+:Date: 2005-10-08
 
 .. _dotfiles:
 

@@ -1,4 +1,4 @@
-:pubdate: 2005-03-02
+:Date: 2005-03-02
 
 .. _unobtrusive-javascript-gems:
 

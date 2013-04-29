@@ -1,4 +1,4 @@
-:pubdate: 2004-11-08
+:Date: 2004-11-08
 
 .. _apples-keynote:
 

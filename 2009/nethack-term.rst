@@ -1,4 +1,4 @@
-:pubdate: 2009-12-22
+:Date: 2009-12-22
 
 .. _post-nethack-term:
 

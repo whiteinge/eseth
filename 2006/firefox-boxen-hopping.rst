@@ -1,4 +1,4 @@
-:pubdate: 2006-03-30
+:Date: 2006-03-30
 
 .. _firefox-boxen-hopping:
 

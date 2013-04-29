@@ -1,4 +1,4 @@
-:pubdate: 2005
+:Date: 2005
 
 .. _pushing-your-limits:
 

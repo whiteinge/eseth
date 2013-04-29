@@ -1,4 +1,4 @@
-:pubdate: 2008-04-03
+:Date: 2008-04-03
 
 .. _buy-a-standard:
 

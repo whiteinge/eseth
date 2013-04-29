@@ -1,4 +1,4 @@
-:pubdate: 2005-06-12
+:Date: 2005-06-12
 
 .. _seventh-week-long-lan:
 

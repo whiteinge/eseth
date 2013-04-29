@@ -1,4 +1,4 @@
-:pubdate: 2004-12-23
+:Date: 2004-12-23
 
 .. _powerbook-upgrades:
 

@@ -1,4 +1,4 @@
-:pubdate: 2007-01-01
+:Date: 2007-01-01
 
 .. _sling-bags:
 

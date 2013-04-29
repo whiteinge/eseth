@@ -1,4 +1,4 @@
-:pubdate: 2004-09-23
+:Date: 2004-09-23
 
 .. _oscar-wilde-fortune:
 

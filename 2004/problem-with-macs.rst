@@ -1,4 +1,4 @@
-:pubdate: 2004
+:Date: 2004
 
 .. _problem-with-macs:
 

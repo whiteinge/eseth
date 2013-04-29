@@ -1,4 +1,4 @@
-:pubdate: 2005-10-26
+:Date: 2005-10-26
 
 .. _post-textpattern:
 

@@ -1,4 +1,4 @@
-:pubdate: 2005-01-26
+:Date: 2005-01-26
 
 .. _non-standards-compliant-website-design-precis:
 

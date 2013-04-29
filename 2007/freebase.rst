@@ -1,4 +1,4 @@
-:pubdate: 2007-09-06
+:Date: 2007-09-06
 
 .. _post-freebase:
 

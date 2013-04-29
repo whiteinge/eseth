@@ -1,4 +1,4 @@
-:pubdate: 2007-04-10
+:Date: 2007-04-10
 
 .. _rst-markdown-textile:
 

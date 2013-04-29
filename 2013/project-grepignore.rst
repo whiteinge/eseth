@@ -1,4 +1,4 @@
-:pubdate: 2013-04-28
+:Date: 2013-04-28
 
 .. _post-project-grepignore:
 

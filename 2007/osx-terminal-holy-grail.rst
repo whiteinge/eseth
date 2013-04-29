@@ -1,4 +1,4 @@
-:pubdate: 2007-05-15
+:Date: 2007-05-15
 
 .. _osx-terminal-holy-grail:
 

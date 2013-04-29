@@ -1,4 +1,4 @@
-:pubdate: 2005-12-06
+:Date: 2005-12-06
 
 .. _view-dom-source:
 

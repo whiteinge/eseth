@@ -1,4 +1,4 @@
-:pubdate: 2007-01-28
+:Date: 2007-01-28
 
 .. _django-ipython:
 

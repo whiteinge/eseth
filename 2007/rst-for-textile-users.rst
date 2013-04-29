@@ -1,4 +1,4 @@
-:pubdate: 2007-10-11
+:Date: 2007-10-11
 
 .. _rst-for-textile-users:
 

@@ -1,4 +1,4 @@
-:pubdate: 2008
+:Date: 2008
 
 .. _pimping-pythonrc:
 

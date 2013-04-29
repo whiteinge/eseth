@@ -1,4 +1,4 @@
-:pubdate: 2004-12-16
+:Date: 2004-12-16
 
 .. _yeti-gore:
 

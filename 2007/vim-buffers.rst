@@ -1,4 +1,4 @@
-:pubdate: 2007-04-09
+:Date: 2007-04-09
 
 .. _vim-buffers:
 

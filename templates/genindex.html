@@ -21,7 +21,7 @@
         {%- if links -%}
         <h2 id="key-{{ key }}">{{ entryname|e }}</h2>
         <ul>
-            {%- for link in links %}
+            {%- for _, link in links %}
             <li><a href="{{ link }}">{{ link }}</a>
 
                 {# FIXME #}

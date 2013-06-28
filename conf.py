@@ -2,7 +2,7 @@
 import sys, os
 
 sys.path.append(os.path.abspath('./ext'))
-extensions = ['rcfile', 'sphinxcontrib.feed']
+extensions = ['rcfile', 'feed']
 
 project = u'Esoteric Rubbish'
 copyright = u'2013, Seth House'
@@ -22,9 +22,12 @@ rc_head = 'master'
 rc_linenr = '#L%(linenr)s'
 rc_main = 'http://github.com/whiteinge/dotfiles/tree/master'
 
-feed_base_url = "http://eseth.org"
+base_uri = "http://eseth.org"
 feed_title = project
 feed_description = "Rambling so utterly bereft of purpose"
+feed_link = '%s/rss.xml' % (base_uri,)
+feed_maxitems = 7
+feed_ignorepagenames = ['index_*', 'search']
 
 html_title = "Esoteric Rubbish"
 html_add_permalinks = False

@@ -56,7 +56,7 @@ Septcon : September 2006–February 2008
     * Adapted Photoshop layouts to standards-compliant HTML and CSS templates.
     * Web server configuration and maintenance.
 
-Zufelt Media Group : January 2006–September 2006
+Zufelt Media Group : January 2006–September 2007
     * Designed and wrote a fantasy betting website from scratch.
     * Built and maintained a production webserver.
     * Consolidated all company websites to one in-house server.

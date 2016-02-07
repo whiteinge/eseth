@@ -9,19 +9,58 @@ Resume
 :Phone:     801-448-7384
 :Email:     seth@eseth.com
 :Homepage:  http://eseth.org/
-:Address:   1159 21st St.
-            Ogden, UT 84401
+:GitHub:    https://github.com/whiteinge
+:Address:   2433 Regency Dr.
+            Ogden, UT 84403
 
 Objective
 =========
 
-Knowledge. I enjoy problems and people that encourage constant education.
+Learning. I enjoy problems and people that encourage constant education.
 
 Employment
 ==========
 
-SendOutCards : October 2009–Current
-    * Technical Coordinator for a team of eleven.
+SaltStack : Sep 2012–Present
+    * Implemented the documentation build system used by the Salt community.
+      Spanning seven years, over 511,101 words, 7,000 commits, and over 600
+      contributors.
+    * Helped establish and manage the thousands-strong Salt community via
+      mailing list, IRC, GitHub issues, user groups, and conferences.
+    * Contributed many Salt modules spanning file management, Git and Mercurial
+      integration, integration with external services, APIs, and programs.
+    * Contributed to Salt core, the Python API, and 
+    * Wrote and maintained the primary REST API for Salt.
+    * Established the Salt Formulas community and development best practices.
+      Assisted the community in managing 270+ Git repositories spanning 900
+      contributors.
+    * Helped establish the Professional Services team. Traveled across the
+      country to help dozens of customers develop and deploy custom Salt
+      solutions.
+    * Helped develop the official Salt training material and taught over thirty
+      training classes spanning two hundred students.
+    * Architected and built the JavaScript single-page application for our
+      flagship enterprise product and managed a development team of seven.
+    * Promoted to Enterprise Architect to manage and coordinate both the
+      front-end and back-end teams.
+
+Cars.com : Apr 2012–Oct 2012
+    * Developed and deployed a maintenance release to a critical production
+      customer conversion website.
+    * Developed a local, development deployment system for configuring and
+      testing code changes.
+    * Developed and taught weekly team training sessions on using Git and
+      git-svn.
+
+Skullcandy : Nov 2011–Feb 2012
+    * Began transition to using configuration management software to manage
+      staging servers.
+    * Assisted in pivot to Django as the backplane to our e-commerce website.
+    * Started team training sessions on the Django web framework.
+
+SendOutCards : October 2009–November 2011
+    * Promoted to Technical Coordinator then promoted to Programming Manager
+      for a team of eleven.
     * Release manager. Responsible for deploying weekly code releases to the
       production servers.
     * Devops. Responsible for scripting, building, and configuring all
@@ -33,17 +72,14 @@ SendOutCards : October 2009–Current
     * Wrote over 8000 words of documentation on development workflow, release
       instructions, and style guide.
 
-.. Utah Saves : Contract
-    * Developed robust custom content management system from scratch.
-
-Feature50 : June 2008–October 2008
-    * Adapted a File Maker Pro mock-up into a full web application. Implemented
-      a complete buyer-side to seller-side workflow.
+Feature50 : June 2008–October 2008 (Contract)
+    * Adapted a File Maker Pro mock-up into a full web application.
+    * Implemented a complete buyer-side to seller-side application workflow.
     * Web server setup and maintenance.
 
-Flakwolf : August 2006–Current
+Flakwolf : August 2006–August 2007 (Contract)
     * Implemented a used video game trading website from scratch.
-    * Features include location-aware queries; publishing a ‘staging’ database
+    * Features included location-aware queries; publishing a ‘staging’ database
       table to ‘live’ status at the click of a button; integration with credit
       card processing API, shipping label API, Amazon product API, Freebase
       API, Google Maps API.
@@ -56,9 +92,9 @@ Septcon : September 2006–February 2008
     * Adapted Photoshop layouts to standards-compliant HTML and CSS templates.
     * Web server configuration and maintenance.
 
-Zufelt Media Group : January 2006–September 2006
+Zufelt Media Group : January 2006–September 2007
     * Designed and wrote a fantasy betting website from scratch.
-    * Built and maintained a production webserver.
+    * Built and maintained a production web server.
     * Consolidated all company websites to one in-house server.
     * Consolidated all company email to one server.
 
@@ -72,9 +108,9 @@ International Center at The University of Utah : June 2003–April 2006
       university domain.
 
 1FamilyNet.net : March 2002–June 2003
-    * Built and maintained an internal web and mail server for office staff and
-      independent contractors.
-    * Maintained two load-balanced web and email servers for nine-hundred
+    * Helped build and maintain an internal web and mail server for office
+      staff and independent contractors.
+    * Helped maintain two load-balanced web and email servers for nine-hundred
       subscribers to our ISP service.
     * Created a web-based customer tracking system for our independent
       contractors.
@@ -106,9 +142,11 @@ Salt Lake Tribune : March 1995–May 1999
 Hobbies
 =======
 
-My leisure time is usually spent swimming or running, reading about typography,
-or trying to avoid YASD in NetHack. The Web is also my hobby. I spend time
-every day to keep abreast of the latest techniques and developments.
+My leisure time is usually spent playing with the kids, swimming, reading about
+category theory, or trying to avoid YASD in NetHack.
 
-I am President of the Ogden Area Linux User Group, and active with the Utah
-Open Source Foundation and the Utah Python User Group.
+I spent six years as the President of the Ogden Area Linux User Group and two
+years as Co-President of the Utah Python User Group. I have presented at
+conferences and user groups over sixty times around the country on topics
+ranging from Linux and Linux utilities, to Python and JavaScript, to Salt, and
+more.

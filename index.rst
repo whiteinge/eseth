@@ -16,8 +16,8 @@ Esoteric Rubbish
 Recent Entries
 ==============
 
+* :ref:`post-flux-with-rxjs`
 * :ref:`post-project-grepignore`
 * :ref:`post-nethack-term` (updated)
 * :ref:`post-git-in-zsh`
 * :ref:`post-hg-in-zsh`
-* :ref:`post-blogging-with-sphinx`

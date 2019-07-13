@@ -83,8 +83,8 @@ edit a certain file somewhere on your Vim path like this: ``$ vim "+find
 filename"``.
 
 Use the alternate buffer to quickly jump between two files: ``CTRL-^`` (or
-``CTRL-6`` if you're lucky) also you can do ``:b#``. My `custom statusline`_
-displays the alternate buffer filename to remind me.
+``CTRL-6`` if you're lucky) also you can do ``:b#``. My :rc:`custom statusline
+<.vimrc@8d5ca5a#239>` displays the alternate buffer filename to remind me.
 
 To open a bunch of additional files after you've already opened Vim use
 ``:args`` ``filename*`` or ``:argadd files*.py``. Try using Vim's
@@ -101,7 +101,6 @@ all the buffers you've got open. (Mine is F1 ``map`` ``<F1>`` ``:ls<cr>``.)
 .. _minibufexplorer: http://www.vim.org/scripts/script.php?script_id=159
 .. _Vim buffer FAQ: http://www.vim.org/tips/tip.php?tip_id=135
 .. _tip 821: http://www.vim.org/tips/tip.php?tip_id=821
-.. _custom statusline: ../filez/prefs/vimrc
 
 Archived Comments
 ~~~~~~~~~~~~~~~~~

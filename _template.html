@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            This file was generated from $sourcefile$.
+            Do not edit manually.
+        -->
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+        $if(date-meta)$
+        <meta name="date" content="$date$" />
+        $endif$
+
+        $if(category)$
+        <meta name="category" content="$category$" />
+        $endif$
+
+        <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+
+        $if(highlighting-css)$
+        <style type="text/css">
+            $highlighting-css$
+        </style>
+        $endif$
+
+        $for(css)$
+        <link rel="stylesheet" href="$css$">
+        $endfor$
+
+        $if(math)$
+        $math$
+        $endif$
+
+        $for(header-includes)$
+        $header-includes$
+        $endfor$
+    </head>
+    <body>
+        <div class="documentwrapper">
+        $if(date)$
+        <p class="date">$date$</p>
+        $endif$
+
+        $body$
+
+        $if(toc)$
+        <nav id="$idprefix$TOC">
+            $table-of-contents$
+        </nav>
+        $endif$
+        </div>
+    </body>
+</html>

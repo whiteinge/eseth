@@ -1,4 +1,0 @@
-# Required software for the Esoteric Rubbish blog
-
-docutils==0.7
-Sphinx==1.0.7

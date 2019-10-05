@@ -1,12 +1,9 @@
-:Date: 2004-12-23
-
-.. _powerbook-upgrades:
+:date: 2004-12-23
+:category: computing, os x
 
 ==================
 Powerbook Upgrades
 ==================
-
-.. index:: computing, os x
 
 I got a new Mac.
 

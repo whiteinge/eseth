@@ -1,12 +1,9 @@
-:Date: 2005-12-06
-
-.. _view-dom-source:
+:date: 2005-12-06
+:category: computing, web
 
 ===================================
 Viewing the DOM Source with Firefox
 ===================================
-
-.. index:: computing, web
 
 I'll be the first to admit that blogging about not-so-obvious features in
 software isn't always cool, unless that happens to be `your thing`_. However,

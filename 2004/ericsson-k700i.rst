@@ -1,12 +1,9 @@
-:Date: 2004-12-26
-
-.. _ericsson-k700i:
+:date: 2004-12-26
+:category: mobiles
 
 ===================
 Sony Ericsson K700i
 ===================
-
-.. index:: mobiles
 
 Eager to have a mobile PIM in my pocket once again, and inspired by `SVG-T`_
 and `Bluetooth`_ I have purchased the `Sony Ericsson K700i`_.

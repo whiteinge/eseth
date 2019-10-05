@@ -1,12 +1,9 @@
-:Date: 2005-12-15
-
-.. _elements-of-typographic-style:
+:date: 2005-12-15
+:category: typography
 
 =================================
 The Elements of Typographic Style
 =================================
-
-.. index:: typography
 
 Thanks to Nat for letting me borrow `The Elements of Typographic Style`_
 (ISBN: 0881792063).
@@ -27,7 +24,7 @@ you're probably more boring than *I* am:
 
 "Yet generations of men and women have turned to writing and printing to
 house and share their deepest hopes, perceptions, dreams and fears. It is to
-them, not to the extortionist???nor to the opportunist or the
-profiteer???that the typographer must answer."
+them, not to the extortionist -- nor to the opportunist or the
+profiteer -- that the typographer must answer."
 
 .. _The Elements of Typographic Style: http://search.barnesandnoble.com/BookSearch/isbnInquiry.asp?userid=gq6vSpEAWL&isbn=0881792063&itm=1

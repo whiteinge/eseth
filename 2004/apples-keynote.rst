@@ -1,12 +1,9 @@
-:Date: 2004-11-08
-
-.. _apples-keynote:
+:date: 2004-11-08
+:category: computing, os x
 
 ===============
 Apple's Keynote
 ===============
-
-.. index:: computing, os x
 
 When I'm on the verge of buying a Mac I tend to get a little obsessive.
 `Erik`_'s had to physically restrain me once or twice. So here's a telling of

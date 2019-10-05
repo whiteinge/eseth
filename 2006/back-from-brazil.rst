@@ -1,12 +1,9 @@
-:Date: 2006-06-12
-
-.. _back-from-brazil:
+:date: 2006-06-12
+:category: personal
 
 ================
 Back from Brazil
 ================
-
-.. index:: personal
 
 We're back from Brazil and had a fabulous time. Thais' family is awesome and
 that country is just gorgeous. I haven't been terribly social since our return,
@@ -19,7 +16,7 @@ below if you care to see them.
 
 Thais is from the southern-most state in Brazil, Rio Grande do Sul, which is
 `heavily populated by German immigrants`_. Her parents are living in a little
-town named :download:`Harmonia <Harmonia.kmz>` |ge|, population 2,000, which is 90%
+town named `Harmonia <./Harmonia.kmz>`_ |ge|, population 2,000, which is 90%
 German-speaking. The townsfolk are largely farmers or factory workers and are
 pretty suspicious of strangers. We were visiting during an annual town
 celebration (pictured), announced by a loud- speaker on a car that drove around
@@ -31,26 +28,26 @@ derivative of German folk music and dancing.
 
 Rio Grande do Sul is famous for shoes, furniture, and chocolate that are
 exported all over the world. We visited another German town called
-:download:`Novo Hamburgo <NovoHamburgo.kmz>` |ge| ('Novo' means 'New')
+`Novo Hamburgo <./NovoHamburgo.kmz>`_ |ge| ('Novo' means 'New')
 specifically to buy new shoes - we weren't disapointed with the selection. :-)
 
-:download:`Gramado <Gramado.kmz>` |ge| (pictured), similarly, is famous for chocolate. The
+`Gramado <./Gramado.kmz>`_ |ge| (pictured), similarly, is famous for chocolate. The
 town is very reminiscent of Park City - but German-er - complete with high,
 touristy, prices; a film festival; cold weather and high altitude.
 
 A few times a week we'd make the hour-and-a-half drive into the capital city of
-Rio Grande do Sul, :download:`Porto Alegre <PortoAlegre.kmz>` |ge|. for
+Rio Grande do Sul, `Porto Alegre <./PortoAlegre.kmz>`_ |ge|. for
 shopping and business. Thais' family recycles plastics so I got to tour a
 couple plastic factories, one of which makes the plastic for the soles of
 (famous) shoe brands. It was very cool to see.
 
-To finish the trip we spent only a couple days in :download:`Rio de Janeiro
+To finish the trip we spent only a couple days in `Rio de Janeiro
 <RiodeJaneiro.kmz>` |ge| The city is very beautiful, but many parts are very
 impovershed and dangerous. The largest slum we drove past spanned the entire
 side of a mountain and is populated by 80,000 people. The famous beaches there,
 Copacabana and Ipanema, we're pretty gorgeous and warm even though we visited
-in the late fall. The big Jesus statue, :download:`Cristo Redentor
-<CristoRedentor.kmz>` |ge| (pictured) that looks over the city was pretty
+in the late fall. The big Jesus statue, `Cristo Redentor
+<./CristoRedentor.kmz>`_ |ge| (pictured) that looks over the city was pretty
 awesome, and visible from almost everywhere. (The Google Earth topographical
 data for Rio de Janeiro seems suspect to me, the mountain that the statue sits
 atop is much more dramatic in person.) Next visit we'd like to spend more time

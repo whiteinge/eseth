@@ -1,12 +1,9 @@
-:Date: 2007-10-11
-
-.. _rst-for-textile-users:
+:date: 2007-10-11
+:category: computing
 
 ===================================
 ReST for Markdown and Textile Users
 ===================================
-
-.. index:: computing
 
 ReStructuredText is freaking huge so users of lighter-weight markup languages
 can be easily put off. This is an *absolute basics* quickref to ReST for
@@ -73,7 +70,6 @@ Links
 ~~~~~
 
 ReST will automatically hyperlink any bare URLs.
-`http://buildabridgeoutof.her/`_
 
 Inline hyperlinks can be somewhat hard to read `like this`_ surrounded by
 text::
@@ -169,7 +165,6 @@ simple docs---but it doesn't have to be. You may appreciate that down the
 road when you find you suddenly need one of your docs in PDF or XML format.
 
 .. _Closing: rest-for-markdown-and-textile-users.html#closing
-.. _http://buildabridgeoutof.her/: http://buildabridgeoutof.her/
 .. _like this: http://the-meaning-of-life.info/
 .. _look: http://the-universe-and-everything.info/
 .. _span multiple words: http://yourockthepartythatrocksthebody.com

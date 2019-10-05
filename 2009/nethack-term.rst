@@ -1,18 +1,11 @@
-:Date: 2009-12-22
-
-.. _post-nethack-term:
+:date: 2009-12-22
+:category: computing, unix
 
 ==================
 Nethack Zsh Prompt
 ==================
 
 .. rubric:: Easy multi-line prompts using Zsh arrays
-
-.. index: computing, unix
-
-.. contents:: Contents
-    :local:
-    :depth: 2
 
 Overview
 ========
@@ -21,7 +14,8 @@ This is a quick overview of my two- (sometimes three-) line Zsh prompt. It is
 built using Zsh arrays which makes the code extremely readable and mantainable.
 Each line of the prompt is an element in an array.
 
-:rc:`The code can be found on GitHub. <.zsh_shouse_prompt>`
+`The code can be found on GitHub.
+<https://github.com/whiteinge/dotfiles/blob/master/.zsh_shouse_prompt>`_
 
 In addition, I wanted the faithful dog from NetHack to wander around my prompt
 as I work. If you have ever played NetHack then you know how useful a good pet
@@ -43,19 +37,19 @@ Building the prompt
 
 A step by step walkthrough. Be sure to have the following Zsh manpages handy.
 
-:manpage:`zshexpn(1)`
+`zshexpn(1)`
     Look up expansions in the section titled “PARAMETER EXPANSION”. For
     example, ``${(j: :)somearray}`` to join the elements of an array into a
     string.
 
-:manpage:`zshmisc(1)`
+`zshmisc(1)`
     Look up escapes that you can use in your prompt in the section titled
     “SIMPLE PROMPT ESCAPES”.
 
-:manpage:`zshparam(1)`
+`zshparam(1)`
     Read about arrays in Zsh in the section titled “ARRAY PARAMETERS”.
 
-:manpage:`zshmodules(1)`
+`zshmodules(1)`
     Read the syntax on how to use ``zstyle``.
 
 Color aliases
@@ -125,7 +119,7 @@ characters are in the string::
 
     i_width=${#${(%)i_width}}
 
-:envvar:`$COLUMNS` is automatically set to the width of the terminal window;
+`$COLUMNS` is automatically set to the width of the terminal window;
 finally, we can find the difference of the two variables and see how much
 filler we’re going to need::
 
@@ -162,11 +156,11 @@ a string::
     lines+=( ${(j::)infoline} )
 
 Zsh has an awesome contrib module for pulling information from VCS repositories
-called ``vcs_info``. You can read about it in :manpage:`zshcontrib(1)`.
+called ``vcs_info``. You can read about it in `zshcontrib(1)`.
 
-.. seealso:: :ref:`post-git-in-zsh`
+See also: `Git in Zsh <../2010/git-in-zsh.html>`_
 
-.. seealso:: :ref:`post-hg-in-zsh`
+See also: `HG in Zsh <../2010/hg-in-zsh.rst>`_
 
 When it detects that we are inside some VCS repository it fills the variable
 ``$vcs_info_msg_0_`` so lets add that variable to our array only if it contains

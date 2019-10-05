@@ -1,44 +1,42 @@
-:Date: 2010-05-24
+:date: 2010-05-24
+:category: computing, unix, zsh, mercurial
 
-.. _post-hg-in-zsh:
+.. _`mq`: http://mercurial.selenic.com/wiki/MqExtension
+.. _`guards`: http://hgbook.red-bean.com/read/advanced-uses-of-mercurial-queues.html
+.. _`stgit`: http://www.procode.org/stgit/
+.. _`Quilt`: http://savannah.nongnu.org/projects/quilt
+.. _`Bookmarks`: http://mercurial.selenic.com/wiki/BookmarksExtension
+.. _`hg-git`: http://hg-git.github.com/
+.. _`hgsubversion`: http://www.bitbucket.org/durin42/hgsubversion/
+.. _`hgsvn`: http://pypi.python.org/pypi/hgsvn/
 
 =================================
 Mercurial Info in Your Zsh Prompt
 =================================
 
-.. index:: computing, unix, zsh, mercurial
-
-.. highlight:: bash
-
-.. contents:: Contents
-    :local:
-    :depth: 2
-
-.. seealso:: :ref:`post-git-in-zsh`
+See also: `Git in Zsh <./git-in-zsh.html>`_
 
 What is ``VCS_Info``?
 =====================
 
 If you aren’t already familiar with ``VCS_Info`` in Zsh, fire up your favorite
-manpage viewer and read through the section in :manpage:`zshcontrib(1)`. It
+manpage viewer and read through the section in `zshcontrib(1)`. It
 allows you to pull information out of a version-controlled repository and
 display that in your shell prompt.
 
 The big win for ``VCS_Info`` over other, similar solutions is that it is built
 right into Zsh and supports Bazaar, Codeville, CVS, Darcs, Git, GNU arch, GNU
 quilt, Mercurial, Monotone, Perforce, Subversion, and SVK all using the same
-configuration. You put it into your prompt once then as you :command:`cd`
+configuration. You put it into your prompt once then as you `cd`
 between your favorite git, hg, bzr, or svn local clones it Just Works®:
 
 Mercurial (using `hg-git`_):
 
-.. image::
-    ./vcs-hggit.png
+.. image:: ./vcs-hggit.png
 
 Git:
 
-.. image::
-    ./vcs-git.png
+.. image:: ./vcs-git.png
 
 It is also highly customizable.
 
@@ -50,7 +48,7 @@ It is also highly customizable.
         autoload -Uz vcs_info
         zstyle ':vcs_info:*' enable hg git bzr svn
 
-2.  Put :envvar:`${vcs_info_msg_0_}` somewhere in your :envvar:`$PS1`.
+2.  Put `${vcs_info_msg_0_}` somewhere in your `$PS1`.
 
 3.  Test it by going into a local repository directory. Your prompt should look
     something like this::
@@ -77,7 +75,7 @@ changeset ID, local revision number, current branch, and the topmost applied
     Many features in ``VCS_Info`` are disabled by default for performance
     reasons. Most of the below styles require customizing your ``formats`` and
     ``actionformats`` zstyles at least. Look at my customizations below and
-    give :manpage:`zshcontrib(1)` a read before you give up or complain.
+    give `zshcontrib(1)` a read before you give up or complain.
 
 Support for the Bookmarks extension
 -----------------------------------
@@ -105,7 +103,7 @@ Avoid the overhead of starting the Python interpreter
 
 In very large repositories or on very slow computers, invoking Mercurial every
 time the prompt is drawn can simply be too slow. You can optionally use the
-:command:`hexdump` program to fetch the changeset ID instead which is lightning
+`hexdump` program to fetch the changeset ID instead which is lightning
 fast.
 
 For example, the NetBeans repository is 3 GB in size so to enable fast lookup
@@ -118,8 +116,7 @@ difference. Note that by specifying the current revision with ``-r .`` causes
 Mercurial to ignore the state of the working directory which goes a little
 faster but doesn’t look for changes.
 
-.. image::
-    ./vcs-hexdump.png
+.. image:: ./vcs-hexdump.png
 
 .. note::
 
@@ -132,8 +129,7 @@ Show when rebasing or merging. Define ``actionformats``::
 
     zstyle ':vcs_info:hg*' actionformats "(%s|%a)[%i%u %b %m]"
 
-.. image::
-    ./vcs-merging.png
+.. image:: ./vcs-merging.png
 
 Display both parents during a merge
 -----------------------------------
@@ -144,7 +140,7 @@ Mercurial separates multiple parents with a ``+`` by default:
     ./vcs-merging.png
 
 This doesn’t (currently) work with the ``use-simple`` setting, although I think
-the second parent hash is available with :command:`hexdump` so this may be
+the second parent hash is available with `hexdump` so this may be
 added in the future.
 
 Detection for `hg-git`_, `hgsubversion`_, and `hgsvn`_
@@ -172,15 +168,6 @@ The unapplied count now takes `guards`_ into account.
 
 .. image::
     ./vcs-guards.png
-
-.. _`mq`: http://mercurial.selenic.com/wiki/MqExtension
-.. _`guards`: http://hgbook.red-bean.com/read/advanced-uses-of-mercurial-queues.html
-.. _`stgit`: http://www.procode.org/stgit/
-.. _`Quilt`: http://savannah.nongnu.org/projects/quilt
-.. _`Bookmarks`: http://mercurial.selenic.com/wiki/BookmarksExtension
-.. _`hg-git`: http://hg-git.github.com/
-.. _`hgsubversion`: http://www.bitbucket.org/durin42/hgsubversion/
-.. _`hgsvn`: http://pypi.python.org/pypi/hgsvn/
 
 .. ............................................................................
 
@@ -231,7 +218,7 @@ The hook looks like this::
 .. note::
 
     The reason this functionality isn’t in the core backend is because the
-    :file:`branchheads.cache` isn’t updated with every :command:`hg` operation
+    `branchheads.cache` isn’t updated with every `hg` operation
     so on occasion it will give a false positive. Most of the time it is Good
     Enough®.
 
@@ -246,8 +233,8 @@ You can pack quite a lot of information into your prompt (if you want to):
     ./vcs-complete.png
 
 If you are interested, the entirely of my ``VCS_Info`` configuration is
-available on GitHub or BitBucket in my :rc:`Zsh prompt file
-<.zsh_shouse_prompt>`.
+available on GitHub or BitBucket in my `Zsh prompt file
+<https://github.com/whiteinge/dotfiles/blob/master/.zsh_shouse_prompt>`_.
 
 Here are the important lines (omitting hooks and colors). ``hg*`` ensures the
 same style is applied to ``hg`` as well as variants like ``hg-git``,
@@ -294,7 +281,7 @@ checkout from CVS are located in the `vcs_info-examples file`_.
 #.  Download the `latest snapshot`_ tarball from the Git mirror and untar it.
 #.  Put the ``Functions/VCS_Info`` directory from the archive somewhere.
     ``~/.zfuncs`` is a good place.
-#.  Point your Zsh at that directory (requires :envvar:`extended_glob` to be set)::
+#.  Point your Zsh at that directory (requires `extended_glob` to be set)::
 
         fpath=( ~/.zfuncs ~/.zfuncs/VCS_Info/**/*~*/(CVS)#(/) $fpath )
 

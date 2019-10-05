@@ -1,29 +1,20 @@
-:Date: 2010-05-24
-
-.. _post-git-in-zsh:
+:date: 2010-05-24
+:category: computing, unix, zsh, mercurial
 
 ===========================
 Git Info in Your Zsh Prompt
 ===========================
 
-.. index:: computing, unix, zsh, mercurial
+See also: `HG in Zsh <./hg-in-zsh.html>`_
 
-.. contents:: Contents
-    :local:
-    :depth: 2
-
-.. highlight:: bash
-
-.. seealso:: :ref:`post-hg-in-zsh`
-
-I already talked at length about :ref:`my Mercurial Zsh prompt
-<post-hg-in-zsh>`. Well I should also show my Git prompt using the same,
+I already talked at length about `my Mercurial Zsh prompt <./hg-in-zsh.html>`_. Well I should also show my Git prompt using the same,
 awesome ``VCS_Info`` system that is built into Zsh.
 
 .. image::
     ./git-prompt.png
 
-:rc:`The code can be found on GitHub. <.zsh_shouse_prompt>`
+`The code can be found on GitHub.
+<https://github.com/whiteinge/dotfiles/blob/master/.zsh_shouse_prompt>`_
 
 Configuration
 =============

@@ -1,11 +1,8 @@
-:Date: 2005-03-02
-
-.. _unobtrusive-javascript-gems:
+:date: 2005-03-02
+:category: computing, web, javascript
 
 Unobtrusive JavaScript Gems
 ===========================
-
-.. index:: computing, web, javascript
 
 I'm diving in to ECMAScript for the first time, inspired by DOM Scripting
 (also called Unobtrusive JavaScript). As a web designer of a handful of years

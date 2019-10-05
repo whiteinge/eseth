@@ -1,12 +1,9 @@
-:Date: 2004
-
-.. _tactile-pro:
+:date: 2004
+:category: computing
 
 ===============
 The Tactile Pro
 ===============
-
-.. index:: computing
 
 My `Tactile Pro`_ keyboard arrived today. It's a Mac USB keyboard and I'm
 running Linux, but I'm happy to say that it worked without a hitch.

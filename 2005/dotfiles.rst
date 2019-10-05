@@ -1,31 +1,30 @@
-:Date: 2005-10-08
-
-.. _dotfiles:
+:date: 2005-10-08
+:category: computing, unix, zsh, screen, vim
 
 ========
 Dotfiles
 ========
 
-.. index:: computing, unix, zsh, screen, vim
-
 I've long enjoyed painstakingly constructing dotfiles or \*rc files for
 various programs I use frequently. They allow such exact configuration and
-are so portable between systems. :ref:`If only Firefox worked so simply
-<firefox-boxen-hopping>`.
+are so portable between systems. `If only Firefox worked so simply
+<../2006/firefox-boxen-hopping.html>`_.
 
 Here are some of mine:
 
 *   Zsh is an amazing shell. It has unbelievable completion abilities,
-    and is just gorgeous (pictured). I enjoy Vi-mode in my shells and :rc:`my
-    zshrc has a Vi-style mode display <.zshrc>` that I cobbled together from a few
+    and is just gorgeous (pictured). I enjoy Vi-mode in my shells and `my zshrc
+    has a Vi-style mode display
+    <https://github.com/whiteinge/dotfiles/blob/master/.zshrc>`_ that I cobbled together from a few
     examples on the 'net. It also includes a small shell-function called
-    :rc:`dotsync <.zshrc@6a2377c#228>` that keeps the rest of these dotfiles current.
-*   I've spent days of my life fine-tuning the :rc:`best goddamn vimrc in the
-    whole world <.vimrc>`. Parts of it are very much tailored to me, but I've tried
+    `dotsync
+    <https://github.com/whiteinge/dotfiles/blob/6a2377c/.zshrc#L228>`_ that keeps the rest of these dotfiles current.
+*   I've spent days of my life fine-tuning the `best goddamn vimrc in the whole
+    world <https://github.com/whiteinge/dotfiles/blob/master/.vimrc>`_. Parts of it are very much tailored to me, but I've tried
     to comment all my reasons for each option.
 *   GNU screen brings tabs and resume-able sessions to your command-line work,
-    this utility is too useful to overlook. :rc:`My screenrc file illustrates
-    tabs <.screenrc>` as best as possible (pictured).
+    this utility is too useful to overlook. `My screenrc file illustrates tabs
+    <https://github.com/whiteinge/dotfiles/blob/master/.screenrc>`_ as best as possible (pictured).
 
 There's no reason you should work with an ugly terminal. It's 2005, your
 computer can handle it. And nothings beats sitting down at a new computer and

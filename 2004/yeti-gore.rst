@@ -1,11 +1,8 @@
-:Date: 2004-12-16
-
-.. _yeti-gore:
+:date: 2004-12-16
+:category: computing
 
 Yeti Gore Flash game
 ====================
-
-.. index:: computing
 
 Here's a little `penguin batting practice`_ game. This site is *not* safe for
 work (NSFW)! However, the game itself is clean because:
@@ -61,14 +58,3 @@ John Dowdell
     Codeweavers is the best bet here now.
 
     Regards, John Dowdell Macromedia Support
-
-Seth
-    Thanks for the comment, John. I haven't been around for long, at least not
-    on the Mac. Most of the 100% CPU problem I find is on game related sites,
-    so I can see the advertisers wanting those ads to look great and cranking
-    up the FPS.
-
-    In the event you check back here, could you lend any advice to the Linux
-    problem? Obviously sound on Linux still needs a little work (even the newer
-    ALSA), but would it help if I had better sound hardware, something that
-    could do hardware mixing for instance?

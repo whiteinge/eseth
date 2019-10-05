@@ -1,12 +1,9 @@
-:Date: 2004-09-23
-
-.. _oscar-wilde-fortune:
+:date: 2004-09-23
+:category: computing, unix
 
 ==========================
 Oscar Wilde fortune cookie
 ==========================
-
-.. index:: computing, unix
 
 Oscar Wilde is the greatest author of all time. I can prove it.
 
@@ -23,4 +20,4 @@ cookie`_ for your local BSD Games installation.
 .. image:: ./wilde.jpg
     :alt: Oscar Wilde fortune file screenshot
 
-.. _Oscar Wilde UNIX fortune cookie: http://eseth.org/filez/storage/wilde.tar.bz2
+.. _Oscar Wilde UNIX fortune cookie: ./wilde.tar.bz2

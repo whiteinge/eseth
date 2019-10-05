@@ -1,12 +1,9 @@
-:Date: 2007-04-09
-
-.. _vim-buffers:
+:date: 2007-04-09
+:category: computing, vim
 
 ===================================================
 How I learned to stop worrying and love Vim buffers
 ===================================================
-
-.. index:: computing, vim
 
 Background
 ~~~~~~~~~~
@@ -83,8 +80,8 @@ edit a certain file somewhere on your Vim path like this: ``$ vim "+find
 filename"``.
 
 Use the alternate buffer to quickly jump between two files: ``CTRL-^`` (or
-``CTRL-6`` if you're lucky) also you can do ``:b#``. My :rc:`custom statusline
-<.vimrc@8d5ca5a#239>` displays the alternate buffer filename to remind me.
+``CTRL-6`` if you're lucky) also you can do ``:b#``. My `custom statusline
+<https://github.com/whiteinge/dotfiles/blob/8d5ca5a/.vimrc#L239>`_ displays the alternate buffer filename to remind me.
 
 To open a bunch of additional files after you've already opened Vim use
 ``:args`` ``filename*`` or ``:argadd files*.py``. Try using Vim's

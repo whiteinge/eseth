@@ -1,12 +1,9 @@
-:Date: 2006-10-26
-
-.. _the-problem-with-macs-is-apple:
+:date: 2006-10-26
+:category: computing, os x
 
 ==============================
 The Problem with Macs is Apple
 ==============================
-
-.. index:: computing, os x
 
 The Problem with Macs is Apple, or rather that Apple is a
 hardware-driven company.

@@ -1,12 +1,9 @@
-:Date: 2006-05-30
-
-.. _eighth-week-long-lan:
+:date: 2006-05-30
+:category: gaming
 
 =================================
 Eighth Annual Week-Long LAN Party
 =================================
-
-.. index:: gaming
 
 Dates and Location
 ------------------

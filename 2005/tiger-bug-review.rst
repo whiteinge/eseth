@@ -1,12 +1,9 @@
-:Date: 2005-05-04
-
-.. _tiger-bug-review:
+:date: 2005-05-04
+:category: computing, os x
 
 ================================
 Mac OS X 10.4 (Tiger) Bug Review
 ================================
-
-.. index:: computing, os x
 
 Lotta reviews of OS 10.4 floating around these last few days. Instead of
 reporting all the things you’ve read (or don’t care about) again here,

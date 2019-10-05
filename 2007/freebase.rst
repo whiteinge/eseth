@@ -1,12 +1,9 @@
-:Date: 2007-09-06
-
-.. _post-freebase:
+:date: 2007-09-06
+:category: computing, web
 
 ========
 Freebase
 ========
-
-.. index:: computing, web
 
 I'm working on a project that required a database of video games (name,
 release date, box-art, etc.). Too much information to input manually, so we

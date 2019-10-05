@@ -1,19 +1,16 @@
-:Date: 2006-03-30
-
-.. _firefox-boxen-hopping:
+:date: 2006-03-30
+:category: computing, web
 
 =========================
 Firefox and boxen-hopping
 =========================
 
-.. index:: computing, web
-
 .. note:: Update 2006-12-20
 
     Firefox *is* very easy to personalize via configuration files. I've found
     the ``userChrome.css`` and ``userPref.js`` files to be surprisingly
-    capable, I've added them as well as my bookmarks file to my :rc:`dotsync
-    <.zshrc@6a2377c#228>` for a (very) minimal Firefox UI footprint
+    capable, I've added them as well as my bookmarks file to my `dotsync
+    <https://github.com/whiteinge/dotfiles/blob/6a2377c/.zshrc#L228>`_ for a (very) minimal Firefox UI footprint
     (pictured).
 
     The original post follows.
@@ -34,8 +31,7 @@ Quick Searches play a large role in making the web a viable platform.
 
 My productivity is based on two environments, Firefox and a terminal. The
 terminal environment is easy to keep up-to-date and synced between disparate
-computers due to the wonders of scripting and so-called :rc:`dotfiles <*>`.
-Firefox, on the other hand, isn't as simple to keep consistent. I tend to be a
+computers due to the wonders of scripting and so-called `dotfiles <https://github.com/whiteinge/dotfiles>`_. Firefox, on the other hand, isn't as simple to keep consistent. I tend to be a
 purist when it comes to extending most software, I dislike installing
 extensions or plug-ins especially when each new release of the base program
 requires updates to the add-on. Although Firefox is fairly decent at
@@ -84,7 +80,7 @@ default behavior for Firefox.
     Flash-heavy sites can make your computer completely unusable. This
     extension lets you start Flash animations selectively. Again, this
     extension deserves exception since it is hardly Mozilla's fault that
-    :ref:`the OS X Flash player sucks <yeti-gore>`.
+    `the OS X Flash player sucks <../2004/yeti-gore.html>`_.
 
 .. _Google: http://www.google.com/help/features.html
 .. _SessionSaver: http://forums.mozillazine.org/viewtopic.php?t=47184

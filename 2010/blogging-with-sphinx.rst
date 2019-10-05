@@ -1,29 +1,19 @@
-:Date: 2010-03-17
-:updated: 2011-01-03
-
-.. _post-blogging-with-sphinx:
+:date: 2010-03-17
+:category: computing, python
 
 ====================
 Blogging with Sphinx
 ====================
 
-.. index:: computing, python
-
-.. |rst| replace:: `reStructuredText`_
-
-.. contents:: Contents
-    :local:
-    :depth: 2
-
 Excruciatingly Boring Navel-Gazing
 ==================================
 
 It’s been a long time since I’ve done anything with this blog. It went from
-being on WordPress to being a static-HTML :command:`wget` dump of a WordPress
+being on WordPress to being a static-HTML `wget` dump of a WordPress
 blog and stayed that way for a couple years.
 
 Since I don’t take my blog too seriously, and since I’ve already been writing
-blog posts in |rst| for a few years now (using a WordPress plugin), and since
+blog posts in reStructuredText for a few years now (using a WordPress plugin), and since
 I’ve already been documenting my Python code using the hair-raisingly cool
 `Sphinx`_ it seemed natural to also want to use Sphinx for my blog; sort of a
 less special-purpose `Blogofile`_.
@@ -64,14 +54,16 @@ Sphinx doesn’t generate RSS so I rolled my own as a Sphinx extension
 Other Crap
 ----------
 
-I like to entertain my inner-OCD by crafting :rc:`dotfiles <*>` and as such,
-:ref:`I talk about them a lot on my blog <dotfiles>`. I wanted a quick way to
-link to one of my dotfiles, wherever it may be hosted, so I wrote a |rst| role
+I like to entertain my inner-OCD by crafting `dotfiles
+<https://github.com/whiteinge/dotfiles>`_ and as such,
+`I talk about them a lot on my blog <../2005/dotfiles.html>`_. I wanted a quick way to
+link to one of my dotfiles, wherever it may be hosted, so I wrote a reStructuredText role
 to do so. Something like the following will generate the right link to a
 specific file, of a specific revision, and a specific line in my BitBucket
 repo::
 
-    See :rc:`line 42 of my ~/barrc <.barrc@b1e8bfc81b0a#42>`.
+    See `line 42 of my ~/barrc
+    <https://github.com/whiteinge/dotfiles/blob/b1e8bfc81b0a/.barrc#L42>`_.
 
 If I switch to some other provider or self-host, I simply update the URL in my
 configuration file.
@@ -81,7 +73,7 @@ The Source
 ==========
 
 This is a work in progress as I’ve only just launched the site. If you’re
-interested, you can see the actual |rst| source for any of these posts by
+interested, you can see the actual reStructuredText source for any of these posts by
 clicking the ‘View Source’ link in the sidebar and you can see the `entire
 source for this blog`_ at BitBucket.
 

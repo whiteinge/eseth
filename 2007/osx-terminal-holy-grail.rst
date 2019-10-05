@@ -1,12 +1,9 @@
-:Date: 2007-05-15
-
-.. _osx-terminal-holy-grail:
+:date: 2007-05-15
+:category: computing, os x
 
 =======================================
 The Mac OS X Terminal Holy Grail: mrxvt
 =======================================
-
-.. index:: computing, os x
 
 I've been a bit unhappy with terminal offerings on OS X since I switched.
 I've spent a bit of time working with each iTerm, GLTerm, xterm, aterm,
@@ -148,9 +145,9 @@ whiteinge Says:
     ``Eterm``. I stopped trying to get it to work with mrxvt though since I
     couldn’t get the background image to stop changing by itself. :-(
 
-    .. [#1] Side note, I just stumbled across Terminal 2 on Apple’s site. That
-        should be interesting to see in November.
-        http://www.apple.com/macosx/leopard/technology/unix.html
+.. [#1] Side note, I just stumbled across Terminal 2 on Apple’s site. That
+    should be interesting to see in November.
+    http://www.apple.com/macosx/leopard/technology/unix.html
 
 P.Gr. Says:
     Cool, I got pseudo-transparency working. I like the effect. I added

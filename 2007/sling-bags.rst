@@ -1,12 +1,9 @@
-:Date: 2007-01-01
-
-.. _sling-bags:
+:date: 2007-01-01
+:category: computing
 
 ===========================
 Sling laptop bags, a review
 ===========================
-
-.. index:: computing
 
 It seems that most reviews for the two popular MacBook sling bags
 consist of the manufacturer’s promotional text, verbatim. WTF? Making a

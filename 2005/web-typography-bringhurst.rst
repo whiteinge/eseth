@@ -1,12 +1,9 @@
-:Date: 2005-12-14
-
-.. _web-typography-bringhurst:
+:date: 2005-12-14
+:category: computing, typography, web
 
 ================================
 Web Typography, Bringhurst-style
 ================================
-
-.. index:: computing, typography, web
 
 Richard Rutter of `Clearleft`_ has recently started a project entitled `The
 Elements of Typographic Style Applied to the Web`_. This looks like a great

@@ -1,12 +1,9 @@
-:Date: 2005-10-26
-
-.. _post-textpattern:
+:date: 2005-10-26
+:category: computing, web
 
 ===========
 Textpattern
 ===========
-
-.. index:: computing, web
 
 Although I have no qualms with WordPress, I've always been very curious
 about `Textpattern`_ since it is made by the people who freely gifted `A

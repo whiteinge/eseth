@@ -1,12 +1,9 @@
-:Date: 2007-01-28
-
-.. _django-ipython:
+:date: 2007-01-28
+:category: computing, web, django, python
 
 ============================
 Learning Django with IPython
 ============================
-
-.. index:: computing, web, django, python
 
 I've gone a long time without doing any serious web programming because the
 thought of all the effort you have to put into building a PHP app has been

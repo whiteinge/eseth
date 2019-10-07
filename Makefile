@@ -40,14 +40,16 @@ TEMPLATE_FILE = _template.html
             -c "../base.css" \
             -o "$@" "$<"
 
-all: init $(ALL_DST_FILES) resume.html genindex.html
+all: init $(ALL_DST_FILES) resume.html genindex.html index.html
+
+index.html: index.md _template.html
 
 resume.html: resume.rst resume.css
 	pandoc --section-divs -c ./resume.css -s -o "$@" "$<"
 
-genindex.html: _metadata.sh _metadata.tmpl $(ALL_SRC_FILES)
+genindex.html: _metadata.sh _metadata.tmpl _template.html $(ALL_SRC_FILES)
 	./_metadata.sh | pandoc \
-            --from=gfm \
+            --from=markdown \
             --to html \
             --lua-filter ./_title-to-meta-title.lua \
             --template ./_template.html \
@@ -72,7 +74,7 @@ printline:
 
 # Output source files and meta data for generating indexes.
 metadata:
-	@for file in $(ALL_SRC_FILES); do \
+	@for file in $(ALL_DST_FILES); do \
 	    pandoc \
 		--lua-filter _title-to-meta-title.lua \
 		--template _metadata.tmpl \

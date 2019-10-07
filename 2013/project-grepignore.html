@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            This file was generated from 2013/project-grepignore.md.
+            Do not edit manually.
+        -->
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+                <meta name="date" content="2013-04-28" />
+        
+                <meta name="category" content="computing, unix, zsh" />
+        
+        <title>Setting project-level grep options</title>
+
+        
+                <link rel="stylesheet" href="../base.css">
+        
+        
+            </head>
+    <body>
+        <div class="documentwrapper">
+        <p class="index"><a href="/">Home</a> | <a href="/genindex.html">Posts by category</a></p>
+                <p class="date">2013-04-28</p>
+        
+        <h1 id="setting-project-level-grep-options">Setting project-level grep options</h1>
+        <p><strong>Using Zsh's <code>precmd</code></strong></p>
+        <p>The venerable grep has not aged terribly well giving rise to (the admitedly cool) <a href="http://beyondgrep.com/">Ack</a>. One handy feature of Ack is being able to set options specifically for a single project by placing a dotfile in the project directory. This is easily mimicked for grep using a handy Zsh feature. (This is also possible in Bash, of course, with a bit more code.)</p>
+        <h2 id="grep_options">GREP_OPTIONS</h2>
+        <p>You can set default options for grep in an environment variable named GREP_OPTIONS. For example a nice default to put in your <code>.zshrc</code> file is:</p>
+        <pre><code>GREP_OPTIONS=&quot;--color --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.git&quot;
+        export GREP_OPTIONS</code></pre>
+        <h2 id="dynamically-setting-environment-variables">Dynamically setting environment variables</h2>
+        <p>Zsh has a handy feature called <a href="http://zsh.sourceforge.net/Doc/Release/Functions.html">precmd</a> which is a function that you define in your <code>~/.zshrc</code> file that is run before each time your prompt is drawn to the screen. In fact you can have several such functions if you put them in an array:</p>
+        <pre><code>local -a precmd_functions
+        
+        function grep_options() {
+            GREP_OPTIONS=&quot;--color --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.git&quot;
+            export GREP_OPTIONS
+        }
+        
+        precmd_functions=( grep_options )</code></pre>
+        <p>See where this is going? :)</p>
+        <h2 id="reading-files-into-zsh-arrays">Reading files into Zsh arrays</h2>
+        <p>First-class support for arrays in one thing (of many) that really sets Zsh apart from Bash. Zsh has many internal functions for working with arrays and many internal functions that work with arrays as parameters. (No need for Bash's <code>IFS</code> bullshit.) You can see many such functions by referencing the following two Zsh manpages:</p>
+        <ul>
+        <li>zshexpn(1) under &quot;PARAMETER EXPANSION&quot;</li>
+        <li>zshparam(1) under &quot;ARRAY PARAMETERS&quot;</li>
+        </ul>
+        <p>The <code>(f)</code> parameter referenced in zshparam(1) reads newline-separated records as values into an array. Another, <code>$(&lt;)</code> reads the contents of a file into a variable. Combined you have a one-liner that reads each line of a file into an array:</p>
+        <pre><code>local -a opts
+        opts=( ${(f)&quot;$(&lt; ${HOME}/.grepoptions)&quot;} )</code></pre>
+        <p>Neat. What if you want to add comments to that file too? Obviously, they shouldn't be included in the array. You can see in zshexpn(1) that many of the substitutions that work on strings also work on individual array items if given an array. The <code>${name:#pattern}</code> substitution will remove items from an array that match a pattern. A comment character followed by anything looks like <code>[#]*</code>:</p>
+        <pre><code>local -a opts
+        opts=( ${${(f)&quot;$(&lt; ${HOME}/.grepoptions)&quot;}:#[#]*} )</code></pre>
+        <p>Create a file in your home directory named <code>.grepoptions</code> to hold the options you always want passed to grep and each line will be added to the array:</p>
+        <pre><code>--color
+        --exclude-dir=.svn
+        --exclude-dir=.hg
+        --exclude-dir=.git</code></pre>
+        <h2 id="add-new-values-to-an-array">Add new values to an array</h2>
+        <p>Next modify your shell function to also look for a <code>.grepoptions</code> file in the current directory so its contents can be added to the array (note the <code>+=</code>):</p>
+        <pre><code>local proj_opts=${PWD}/.grepoptions
+        
+        if [[ -r ${proj_opts} ]] ; then
+            opts+=( ${${(f)&quot;$(&lt; &quot;${proj_opts}&quot;)&quot;}:#[#]*} )
+        fi</code></pre>
+        <p>Great. You now have an array containing the aggregate of two <code>.grepoptions</code> files. The last step is to assemble the array back to a string so you can export the GREP_OPTIONS environment variable. Zsh arrays have a join parameter of the form <code>${(j: :)name}</code> where the character between the colons is the character to join with.</p>
+        <h2 id="summary">Summary</h2>
+        <p>Putting everything together you should have something similar to the following in your <code>~/.zshrc</code>:</p>
+        <pre><code>local -a precmd_functions
+        
+        function grep_options() {
+            local -a opts
+            local proj_opts=${PWD}/.grepoptions
+        
+            # Grab the global options
+            opts=( ${(f)&quot;$(&lt; &quot;${HOME}/.grepoptions&quot;)&quot;} )
+        
+            # Grab any project-local options
+            if [[ -r ${proj_opts} ]] ; then
+                opts+=( ${${(f)&quot;$(&lt; &quot;${proj_opts}&quot;)&quot;}:#[#]*} )
+            fi
+        
+            # Assemble and export
+            GREP_OPTIONS=&quot;${(j: :)opts}&quot;
+            export GREP_OPTIONS
+        }
+        
+        precmd_functions=( grep_options )</code></pre>
+        <p>Since this function is executed as a Zsh <code>precmd</code> the value of the GREP_OPTIONS environment variable will change as you cd around the file system. If you have any other <code>precmd</code> functions simply add them to the <code>precmd_functions</code> array to run them all.</p>
+        <p>Here is a example shell session:</p>
+        <pre><code>~  % cd $HOME
+        ~  % echo $GREP_OPTIONS
+        --color --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.git
+        ~  % cd ~/path/to/myproject
+        % cat .grepoptions
+        # Don&#39;t grep any minified JavaScript files
+        --exclude=\*min.js
+        
+        # Don&#39;t grep third-party libs
+        --exclude-dir=lib
+        % echo $GREP_OPTIONS
+        --color --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.git --exclude=\*min.js --exclude-dir=lib</code></pre>
+
+                </div>
+    </body>
+</html>

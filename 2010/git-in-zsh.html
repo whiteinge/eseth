@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            This file was generated from 2010/git-in-zsh.md.
+            Do not edit manually.
+        -->
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+                <meta name="date" content="2010-05-24" />
+        
+                <meta name="category" content="computing, unix, zsh, mercurial" />
+        
+        <title>Git Info in Your Zsh Prompt</title>
+
+        
+                <link rel="stylesheet" href="../base.css">
+        
+        
+            </head>
+    <body>
+        <div class="documentwrapper">
+        <p class="index"><a href="/">Home</a> | <a href="/genindex.html">Posts by category</a></p>
+                <p class="date">2010-05-24</p>
+        
+        <h1 id="git-info-in-your-zsh-prompt">Git Info in Your Zsh Prompt</h1>
+        <p>See also: <a href="./hg-in-zsh.html">HG in Zsh</a></p>
+        <p>I already talked at length about <a href="./hg-in-zsh.html">my Mercurial Zsh prompt</a>. Well I should also show my Git prompt using the same, awesome <code>VCS_Info</code> system that is built into Zsh.</p>
+        <figure>
+        <img src="./git-prompt.png" alt="image" /><figcaption>image</figcaption>
+        </figure>
+        <p><a href="https://github.com/whiteinge/dotfiles/blob/master/.zsh_shouse_prompt">The code can be found on GitHub.</a></p>
+        <h2 id="configuration">Configuration</h2>
+        <p>The required configuration for Git is a little lighter than for Mercurial:</p>
+        <pre><code>zstyle &#39;:vcs_info:*&#39; enable git
+        zstyle &#39;:vcs_info:git*:*&#39; get-revision true
+        zstyle &#39;:vcs_info:git*:*&#39; check-for-changes true
+        
+        # hash changes branch misc
+        zstyle &#39;:vcs_info:git*&#39; formats &quot;(%s) %12.12i %c%u %b%m&quot;
+        zstyle &#39;:vcs_info:git*&#39; actionformats &quot;(%s|%a) %12.12i %c%u %b%m&quot;</code></pre>
+        <h2 id="hooks">Hooks</h2>
+        <p>Like with Mercurial, I’m using hooks to customize the prompt just so. Activate both hooks with:</p>
+        <pre><code>zstyle &#39;:vcs_info:git*+set-message:*&#39; hooks git-st git-stash</code></pre>
+        <h3 id="remote-branch-commits-ahead-of-and-behind">Remote branch &amp; commits ahead-of and behind</h3>
+        <p>I find I really enjoy an at-a-glance reminder if the branch I’m working on is tracking a remote or not. If it is tracking a remote, it’s also a big time saver to see the difference between local and remote commits:</p>
+        <pre><code># Show remote ref name and number of commits ahead-of or behind
+        function +vi-git-st() {
+            local ahead behind remote
+            local -a gitstatus
+        
+            # Are we on a remote-tracking branch?
+            remote=${$(git rev-parse --verify ${hook_com[branch]}@{upstream} \
+                --symbolic-full-name 2&gt;/dev/null)/refs\/remotes\/}
+        
+            if [[ -n ${remote} ]] ; then
+                # for git prior to 1.7
+                # ahead=$(git rev-list origin/${hook_com[branch]}..HEAD | wc -l)
+                ahead=$(git rev-list ${hook_com[branch]}@{upstream}..HEAD 2&gt;/dev/null | wc -l)
+                (( $ahead )) &amp;&amp; gitstatus+=( &quot;${c3}+${ahead}${c2}&quot; )
+        
+                # for git prior to 1.7
+                # behind=$(git rev-list HEAD..origin/${hook_com[branch]} | wc -l)
+                behind=$(git rev-list HEAD..${hook_com[branch]}@{upstream} 2&gt;/dev/null | wc -l)
+                (( $behind )) &amp;&amp; gitstatus+=( &quot;${c4}-${behind}${c2}&quot; )
+        
+                hook_com[branch]=&quot;${hook_com[branch]} [${remote} ${(j:/:)gitstatus}]&quot;
+            fi
+        }</code></pre>
+        <h3 id="show-stashed-changes">Show stashed changes</h3>
+        <p>I tend to stash changes on a whim and forget about them. This handy reminder only shows up if there is a stash:</p>
+        <pre><code># Show count of stashed changes
+        function +vi-git-stash() {
+            local -a stashes
+        
+            if [[ -s ${hook_com[base]}/.git/refs/stash ]] ; then
+                stashes=$(git stash list 2&gt;/dev/null | wc -l)
+                hook_com[misc]+=&quot; (${stashes} stashed)&quot;
+            fi
+        }</code></pre>
+
+                </div>
+    </body>
+</html>

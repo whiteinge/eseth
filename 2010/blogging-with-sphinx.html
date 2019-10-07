@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            This file was generated from 2010/blogging-with-sphinx.md.
+            Do not edit manually.
+        -->
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+                <meta name="date" content="2010-03-17" />
+        
+                <meta name="category" content="computing, python" />
+        
+        <title>Blogging with Sphinx</title>
+
+        
+                <link rel="stylesheet" href="../base.css">
+        
+        
+            </head>
+    <body>
+        <div class="documentwrapper">
+        <p class="index"><a href="/">Home</a> | <a href="/genindex.html">Posts by category</a></p>
+                <p class="date">2010-03-17</p>
+        
+        <h1 id="blogging-with-sphinx">Blogging with Sphinx</h1>
+        <h2 id="excruciatingly-boring-navel-gazing">Excruciatingly Boring Navel-Gazing</h2>
+        <p>It’s been a long time since I’ve done anything with this blog. It went from being on WordPress to being a static-HTML wget dump of a WordPress blog and stayed that way for a couple years.</p>
+        <p>Since I don’t take my blog too seriously, and since I’ve already been writing blog posts in reStructuredText for a few years now (using a WordPress plugin), and since I’ve already been documenting my Python code using the hair-raisingly cool <a href="http://sphinx.pocoo.org/">Sphinx</a> it seemed natural to also want to use Sphinx for my blog; sort of a less special-purpose <a href="http://www.blogofile.com/">Blogofile</a>.</p>
+        <p>If you’re thinking “WTF?” you may want to <a href="http://www.flickr.com/search/?q=shiny+things">move on</a> as I’m not trying to sell anything here.</p>
+        <h2 id="helpful-blog-machinery">Helpful Blog Machinery</h2>
+        <p>Blogs need three things: commenting, tags, and feeds.</p>
+        <h3 id="commenting">Commenting</h3>
+        <p>I will bolt on commenting, maybe Disqus, in the near future.</p>
+        <h3 id="tags">Tags</h3>
+        <p>Tags are kinda similar to an index in concept, so I’m just using Sphinx’s builtin indexing for now. I’d like to be able to more easily work with tagged items so I’m working on a tagging <a href="http://sphinx.pocoo.org/rest.html#directives">directive</a>.</p>
+        <h3 id="feeds">Feeds</h3>
+        <p>Sphinx doesn’t generate RSS so I rolled my own as a Sphinx extension (<a href="https://github.com/whiteinge/eseth/blob/master/ext/feed.py">source</a>).</p>
+        <div class="versionchanged">
+        <dl>
+        <dt>2011-01-03</dt>
+        <dd><p>It now sorts by most recent entries and takes a few configuration options such as not outputting entries older than a certain date or only outputting a maximum number of entries.</p>
+        </dd>
+        </dl>
+        </div>
+        <h3 id="other-crap">Other Crap</h3>
+        <p>I like to entertain my inner-OCD by crafting <a href="https://github.com/whiteinge/dotfiles">dotfiles</a> and as such, <a href="../2005/dotfiles.html">I talk about them a lot on my blog</a>. I wanted a quick way to link to one of my dotfiles, wherever it may be hosted, so I wrote a reStructuredText role to do so. Something like the following will generate the right link to a specific file, of a specific revision, and a specific line in my BitBucket repo:</p>
+        <pre><code>See `line 42 of my ~/barrc
+        &lt;https://github.com/whiteinge/dotfiles/blob/b1e8bfc81b0a/.barrc#L42&gt;`_.</code></pre>
+        <p>If I switch to some other provider or self-host, I simply update the URL in my configuration file.</p>
+        <h2 id="the-source">The Source</h2>
+        <p>This is a work in progress as I’ve only just launched the site. If you’re interested, you can see the actual reStructuredText source for any of these posts by clicking the ‘View Source’ link in the sidebar and you can see the <a href="https://github.com/whiteinge/eseth">entire source for this blog</a> at BitBucket.</p>
+
+                </div>
+    </body>
+</html>

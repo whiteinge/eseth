@@ -22,6 +22,10 @@ pre, .pre, tt, .literal {
     width: 40em;
     margin: 0 auto; text-align: left; }
 
+.documentwrapper img {
+    max-width: 100%;
+}
+
 .bodywrapper {
     overflow: hidden; margin-bottom: 1.5em; }
 

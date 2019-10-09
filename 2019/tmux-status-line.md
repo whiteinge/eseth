@@ -8,6 +8,8 @@ date: '2019-10'
 This is an experiment to move `$PWD` and Git info from my shell prompt into
 tmux pane titles. I'm just trying this on for size for now but it looks pretty:
 
+[https://github.com/whiteinge/dotfiles/commit/984ee79371a4](https://github.com/whiteinge/dotfiles/commit/984ee79371a4)
+
 ![](./tmux-status-line.png)
 
 Pros:

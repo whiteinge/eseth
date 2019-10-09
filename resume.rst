@@ -19,13 +19,35 @@ Learning. I enjoy problems and people that encourage constant education.
 Employment
 ==========
 
+MX
+--
+
+Jan 2018-Present
+
+* Front-end lead for a team focused on writing software consumed directly by
+  financial institutions.
+* Mentored junior team members and new hires. Ran several training workshops
+  including other teams on programming, libraries, programs, and techniques.
+* Spearheaded a company-wide internationalization standardization effort to get
+  front-end, back-end, and mobile teams all using the same stack and
+  translators.
+* Improved the customer-facing documentation website by adding a client-side
+  full-text search index for all available documentation, over just the current
+  document.
+* Architected a front-end application to allow financial institutions
+  easy-access to post, manage, and view reporting for remarketing ads across
+  Facebook and Google's ad networks.
+
 Jane.com
 --------
 
-Nov 2017–Present
+Nov 2017–Dec 2018
 
 * Maintained, monitored, and augmented an internal tool vital to our in-house
   team to coordinate daily deals with sellers.
+* Spearheaded the front-end architecture for a large business-process rewrite
+  of the site. It involved close coordination with the back-end and
+  infrastructure teams.
 
 SaltStack
 ---------

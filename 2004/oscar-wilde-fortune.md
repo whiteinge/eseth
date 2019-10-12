@@ -1,6 +1,10 @@
 ---
 category: 'computing, unix'
 date: '2004-09-23'
+summary: |
+    Oscar Wilde is the greatest author of all time. I can prove it. I compiled
+    my 257 favorite quotes as UNIX fortune cookie for your local BSD Games
+    installation.
 ---
 
 Oscar Wilde fortune cookie

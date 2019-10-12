@@ -1,6 +1,8 @@
 ---
 category: 'computing, unix'
 date: '2009-12-22'
+summary: |
+    A Zsh multi-line prompt featuring the dog from Nethack.
 ---
 
 Nethack Zsh Prompt

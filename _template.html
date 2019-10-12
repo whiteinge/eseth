@@ -19,6 +19,10 @@
 
         <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 
+        $if(summary)$
+        <meta name="description" content="$summary$">
+        $endif$
+
         $if(highlighting-css)$
         <style type="text/css">
             $highlighting-css$

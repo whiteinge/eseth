@@ -1,6 +1,8 @@
 ---
 category: 'computing, unix, zsh'
 date: '2013-04-28'
+summary: |
+    Change GREP_OPTIONS dynamically using Zsh's precmd.
 ---
 
 Setting project-level grep options

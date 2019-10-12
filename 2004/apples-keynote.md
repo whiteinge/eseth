@@ -1,6 +1,8 @@
 ---
 category: 'computing, os x'
 date: '2004-11-08'
+summary: |
+  A pretentious anecdote about a Keynote presentation in school.
 ---
 
 Apple\'s Keynote

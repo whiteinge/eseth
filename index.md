@@ -1,6 +1,9 @@
 # Esoteric Rubbish
 
-_Rambling so utterly bereft of purpose_
+::: {.rubric}
+_Rambling so utterly bereft of purpose or brevity_  
+_with a dash of pretentiousness, egoism, and pedantry._
+:::
 
 ## Recent Entries
 

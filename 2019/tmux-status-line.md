@@ -1,9 +1,9 @@
 ---
 category: 'computing, unix'
-date: '2019-10'
+date: '2019-10-07'
 summary: |
-    An experiment to move status info that usually lives in your shell prompt
-    into tmux pane statuses.
+  An experiment to move status info that usually lives in your shell prompt
+  into tmux pane statuses.
 ---
 
 # tmux Status Line

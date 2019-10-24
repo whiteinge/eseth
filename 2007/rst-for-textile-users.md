@@ -19,22 +19,24 @@ Just use non-alphanumeric characters to underline (or
 under-and-overline) your heading. It doesn\'t matter what you use, just
 be consistent with the character you use for each header level:
 
-    =========
-    Chapter 1
-    =========
+```
+=========
+Chapter 1
+=========
 
-    Section 1.1
-    ===========
+Section 1.1
+===========
 
-    Section 1.2
-    -----------
+Section 1.2
+-----------
 
-    Section 1.3
-    +++++++++++
+Section 1.3
++++++++++++
 
-    =========
-    Chapter 2
-    =========
+=========
+Chapter 2
+=========
+```
 
 Text Styles
 -----------
@@ -51,12 +53,14 @@ Use double backticks for inline code blocks like \"
 `this example where otherwise *special characters* aren't processed` \".
 Dig?
 
-    ::
+```
+::
 
-        A paragraph containing only two colons (or ending in two colons)
-        followed by an indented text block starts a code block.  No
-        ReST processing will happen in this block, so feel free to use
-        funny characters. `!@#$%^&*()_+
+    A paragraph containing only two colons (or ending in two colons)
+    followed by an indented text block starts a code block.  No
+    ReST processing will happen in this block, so feel free to use
+    funny characters. `!@#$%^&*()_+
+```
 
 Links
 -----
@@ -86,27 +90,29 @@ Lists
 
 Syntax:
 
-    #. Lists are a bit trickier in ReST
-    #. than in Markdown or Textile
+```
+#. Lists are a bit trickier in ReST
+#. than in Markdown or Textile
 
-    #. Place a blank line
-    #. between sub-lists
+#. Place a blank line
+#. between sub-lists
 
-       #.   And line the bullet up
-       #.   exactly with the farthest left column of text of the parent
-            list
+   #.   And line the bullet up
+   #.   exactly with the farthest left column of text of the parent
+        list
 
-    * Unordered lists work in
-      exactly the same way
+* Unordered lists work in
+  exactly the same way
 
-    * Just be careful to line the bullets
-      up with the first text column of the parent list.
+* Just be careful to line the bullets
+  up with the first text column of the parent list.
 
-      Also, you can do multi-line bullet items if you're
-      careful of the indentation.
+  Also, you can do multi-line bullet items if you're
+  careful of the indentation.
 
-     Definition Lists are easy
-        Just indent the definition!
+ Definition Lists are easy
+    Just indent the definition!
+```
 
 Images
 ------
@@ -114,25 +120,29 @@ Images
 You can easily include images, along with some useful attributes
 (carefully line up subsequent lines with the parent!):
 
-    .. image:: http://path/to/image.png
-       :alt: alternate text
-       :class: class names
+```
+.. image:: http://path/to/image.png
+   :alt: alternate text
+   :class: class names
+```
 
 Tables
 ------
 
 Banging out simple tables is also very quick:
 
-    =====  =====  ======
-       Inputs     Output
-    ------------  ------
-      A      B    A or B
-    =====  =====  ======
-    False  False  False
-    True   False  True
-    False  True   True
-    True   True   True
-    =====  =====  ======
+```
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
+```
 
 Closing
 -------

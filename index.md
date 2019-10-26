@@ -2,13 +2,28 @@
 
 ::: {.rubric}
 _Rambling so utterly bereft of purpose or brevity_  
-_with a dash of pretentiousness, egoism, and pedantry._
+_or praticality or utility or decorum._
 :::
 
 ## Recent Entries
 
-- [Prompt status in tmux](./2019/tmux-status-line.html)
-- [Project-level grep ignores](./2013/project-grepignore.html)
-- [Nethack Prompt](./2009/nethack-term.html)
-- [Git in Zsh](./2010/git-in-zsh.html)
-- [HG in Zsh](./2010/hg-in-zsh.html)
+``` {.run}
+#!/bin/sh
+< _metadata_cache sort -n -r -k2 \
+    | head -4 \
+    | awk -F'\t' '{ printf("- [%s](/%s)\n", $3, $1) }'
+```
+
+## Archives
+
+``` {.run}
+#!/bin/sh
+ffind . -type d -name '20*' -printf '%P\n' \
+    | sort -n -r \
+    | awk 'NR != 1 { printf(", ") } { printf("[%s](%s)", $0, $0) }'
+```
+
+## About Me
+
+* [Code](https://github.com/whiteinge/).
+* [Presentations](https://github.com/whiteinge/presentations/#readme).

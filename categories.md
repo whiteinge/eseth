@@ -1,7 +1,8 @@
-#!/usr/bin/env sh
-# Create the posts index(es) as Markdown
+# Posts by Category
 
-make metadata | awk -F'\t' '
+``` {.run}
+#!/usr/bin/env sh
+awk -F'\t' '
 {
     file=$1
     title=$3
@@ -15,8 +16,6 @@ make metadata | awk -F'\t' '
 }
 
 END {
-    printf("\n# Posts by Category\n\n")
-
     asorti(cate_index, cate_index_sorted)
 
     for (j in cate_index_sorted) {
@@ -31,4 +30,5 @@ END {
         }
     }
 }
-'
+' < _metadata_cache
+```

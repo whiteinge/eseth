@@ -12,13 +12,17 @@
 
 RST_SRC_FILES = $(wildcard */*.rst)
 MD_SRC_FILES = $(wildcard */*.md)
-YEAR_DIRS = $(wildcard 20*)
+SRC_FILES = $(RST_SRC_FILES) $(MD_SRC_FILES)
 
-ALL_SRC_FILES += $(RST_SRC_FILES)
-ALL_SRC_FILES += $(MD_SRC_FILES)
-
+ALL_SRC_FILES = $(filter-out 20%/index.md, $(SRC_FILES))
 ALL_DST_FILES = $(addsuffix .html, $(basename $(ALL_SRC_FILES)))
-ALL_YEAR_FILES = $(addsuffix /index.html, $(YEAR_DIRS))
+
+YEAR_INDEXES = $(addsuffix /index.html, $(wildcard 20*))
+
+ALL_GENERATED_FILES = $(ALL_DST_FILES)
+ALL_GENERATED_FILES += _metadata_cache
+ALL_GENERATED_FILES += $(YEAR_INDEXES)
+ALL_GENERATED_FILES += resume.html categories.html index.html
 
 TEMPLATE_FILE = _template.html
 
@@ -37,55 +41,23 @@ TEMPLATE_FILE = _template.html
 	pandoc \
             --from=markdown \
             --to html \
+            --lua-filter ./_run.lua \
+            --lua-filter ./_include.lua \
             --lua-filter ./_title-to-meta-title.lua \
             --template ./$(TEMPLATE_FILE) \
             -c "../base.css" \
             -o "$@" "$<"
 
-all: init $(ALL_DST_FILES) resume.html categories.html index.html $(ALL_YEAR_FILES) years.html
+all: init $(ALL_GENERATED_FILES)
 
-index.html: index.md _template.html
+index.html: index.md _template.html _metadata_cache
+
+categories.html: _metadata_cache
+
+$(YEAR_INDEXES): _metadata_cache
 
 resume.html: resume.rst resume.css
 	pandoc --section-divs -c ./resume.css -s -o "$@" "$<"
-
-years.html: $(YEAR_DIRS)
-	$(shell { printf '# Posts by Year\n\n'; \
-	    printf '%s\n' $(addprefix "- ", $(join \
-		$(patsubst %, "[%]", $(YEAR_DIRS)), \
-		$(patsubst %, "(%)", $(YEAR_DIRS)) \
-	    )); } | sort -r -n | pandoc \
-		--from=markdown \
-		--to html \
-		--lua-filter ./_title-to-meta-title.lua \
-		--template ./_template.html \
-		-c "./base.css" \
-		-o "$@" )
-
-categories.html: _meta_by_category.sh _metadata.tmpl _template.html $(ALL_SRC_FILES)
-	./_meta_by_category.sh | pandoc \
-            --from=markdown \
-            --to html \
-            --lua-filter ./_title-to-meta-title.lua \
-            --template ./_template.html \
-            -c "./base.css" \
-            -o "$@"
-
-# By-year index files.
-%/index.html: %/*.html
-	$(shell printf '%s\n' $^ \
-	    | xargs -L1 pandoc \
-		--lua-filter _title-to-meta-title.lua \
-		--template _metadata.tmpl \
-		--to plain \
-	    | ./_meta_by_year.sh \
-	    | pandoc \
-		--from=markdown \
-		--to html \
-		--lua-filter ./_title-to-meta-title.lua \
-		--template ./_template.html \
-		-c "../base.css" \
-		-o "$@" )
 
 init:
 	@command -v pandoc > /dev/null 2>&1 \
@@ -98,18 +70,19 @@ $(ALL_DST_FILES): $(TEMPLATE_FILE)
 # Remove all the generated HTML files.
 # (Non-generated files will not be touched.)
 clean:
-	rm -f $(ALL_DST_FILES) resume.html categories.html $(ALL_YEAR_FILES) years.html
-
-# Print defined variables for debugging.
-printline:
-	@echo $(ALL_YEAR_FILES)
+	rm -rf $(ALL_GENERATED_FILES) _build
 
 # Output source files and meta data for generating indexes.
-metadata:
-	@for file in $(ALL_DST_FILES); do \
-	    pandoc \
-		--lua-filter _title-to-meta-title.lua \
-		--template _metadata.tmpl \
-		--to plain \
-		$$file ; \
+_metadata_cache: $(ALL_DST_FILES)
+	rm -f $@
+	@for file in $^; do \
+	    pandoc --template _metadata.tmpl --to plain $$file >> $@; \
 	done
+
+deploy: $(ALL_GENERATED_FILES)
+	git checkout gh-pages
+	git checkout master -- .
+	git commit --amend
+
+printline:
+	@echo $(ALL_SRC_FILES)

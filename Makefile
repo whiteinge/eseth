@@ -22,7 +22,7 @@ YEAR_INDEXES = $(addsuffix /index.html, $(wildcard 20*))
 ALL_GENERATED_FILES = $(ALL_DST_FILES)
 ALL_GENERATED_FILES += _metadata_cache
 ALL_GENERATED_FILES += $(YEAR_INDEXES)
-ALL_GENERATED_FILES += resume.html categories.html index.html
+ALL_GENERATED_FILES += resume.html categories.html index.html rss.xml
 
 TEMPLATE_FILE = _template.html
 
@@ -56,6 +56,9 @@ categories.html: _metadata_cache
 
 $(YEAR_INDEXES): _metadata_cache
 
+rss.xml: _metadata_cache
+	./_make_rss.sh > $@
+
 resume.html: resume.rst resume.css
 	pandoc --section-divs -c ./resume.css -s -o "$@" "$<"
 
@@ -79,8 +82,14 @@ _metadata_cache: $(ALL_DST_FILES)
 	    pandoc --template _metadata.tmpl --to plain $$file >> $@; \
 	done
 
+# FIXME: is there a way to commit these to gh-pages without changing branches?
 deploy: $(ALL_GENERATED_FILES)
+	git add -f $(ALL_GENERATED_FILES)
+	git commit -m 'Generate site'
+	git reset HEAD~1
 	git checkout gh-pages
+	git reset --hard HEAD~1
+	git cherry-pick ORIG_HEAD
 	git checkout master -- .
 	git commit --amend
 

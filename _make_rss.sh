@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+tab=$(printf '\t')
+
 printf '<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -14,7 +16,7 @@ printf '<?xml version="1.0" encoding="UTF-8"?>
 ' "$(date -R)"
 
 < _metadata_cache sort -n -r -k2 | head -10 \
-| while read -r pfile pdate ptitle pcategories; do
+| while IFS="$tab" read -r pfile pdate ptitle pcategories; do
     printf '<item>\n'
         printf '<title>%s</title>\n' "$ptitle"
         printf '<link>https://www.eseth.org/%s</link>\n' "$pfile"

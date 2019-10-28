@@ -2,8 +2,8 @@
 category: 'computing, unix, zsh, mercurial'
 date: '2010-05-24'
 summary: |
-    Zsh's built-in vcs_info system is an amazing, flexible, and extendable
-    system for putting Git information in your shell prompt.
+  Zsh's built-in vcs_info system is an amazing, flexible, and extendable
+  system for putting Git information in your shell prompt.
 ---
 
 Git Info in Your Zsh Prompt

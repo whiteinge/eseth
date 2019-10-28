@@ -1,6 +1,6 @@
 ---
 category: 'computing, web'
-date: 2005
+date: 2005-01-01
 ---
 
 Pushing your limits

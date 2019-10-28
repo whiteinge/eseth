@@ -1,6 +1,6 @@
 ---
 category: 'computing, python'
-date: 2008
+date: 2008-01-01
 ---
 
 Pimping out your .pythonrc.py

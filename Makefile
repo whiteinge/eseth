@@ -86,7 +86,7 @@ _metadata_cache: $(ALL_DST_FILES)
 deploy: $(ALL_GENERATED_FILES)
 	git add -f $(ALL_GENERATED_FILES)
 	git commit -m 'Generate site'
-	git reset HEAD~1
+	git reset --hard HEAD~1
 	git checkout gh-pages
 	git reset --hard HEAD~1
 	git cherry-pick HEAD@{3}

@@ -89,7 +89,7 @@ deploy: $(ALL_GENERATED_FILES)
 	git reset HEAD~1
 	git checkout gh-pages
 	git reset --hard HEAD~1
-	git cherry-pick ORIG_HEAD
+	git cherry-pick HEAD@{3}
 	git checkout master -- .
 	git commit --amend
 

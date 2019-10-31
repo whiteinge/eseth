@@ -15,7 +15,7 @@ printf '<?xml version="1.0" encoding="UTF-8"?>
     <ttl>40</ttl>
 ' "$(date -R)"
 
-< _metadata_cache sort -n -r -k2 | head -10 \
+< _metadata_cache sort -r -k2 | head -10 \
 | while IFS="$tab" read -r pfile pdate ptitle pcategories; do
     printf '<item>\n'
         printf '<title>%s</title>\n' "$ptitle"

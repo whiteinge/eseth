@@ -9,7 +9,7 @@ _or praticality or utility or decorum._
 
 ``` {.run}
 #!/bin/sh
-< _metadata_cache sort -n -r -k2 \
+< _metadata_cache sort -r -k2 \
     | head -4 \
     | awk -F'\t' '{ printf("- [%s](/%s)\n", $3, $1) }'
 ```

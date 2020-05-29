@@ -22,10 +22,6 @@ pre, .pre, tt, .literal {
 .documentwrapper img { max-width: 100%; }
 
 h1,
-h2,
-.rubric { text-align: center; }
-
-h1,
 h2 {
     color: black;
     text-transform: uppercase; text-shadow: 0 0 1px #666677;

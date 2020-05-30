@@ -1,66 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!--
-            This file was generated from $sourcefile$.
-            Do not edit manually.
-        -->
         <meta charset="utf-8" />
-        <meta name="generator" content="pandoc" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-        <link rel="alternate" type="application/rss+xml" href="https://www.eseth.org/rss.xml">
+        <link rel="alternate" type="application/rss+xml" href="xROOT/rss.xml">
+        <link rel="stylesheet" href="/base.css">
 
-        $if(date-meta)$
-        <meta name="date" content="$date$" />
-        $endif$
-
-        $if(category)$
-        <meta name="category" content="$category$" />
-        $endif$
-
-        <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-
-        $if(summary)$
-        <meta name="description" content="$summary$">
-        $endif$
-
-        $if(highlighting-css)$
-        <style type="text/css">
-            $highlighting-css$
-        </style>
-        $endif$
-
-        $for(css)$
-        <link rel="stylesheet" href="$css$">
-        $endfor$
-
-        $if(math)$
-        $math$
-        $endif$
-
-        $for(header-includes)$
-        $header-includes$
-        $endfor$
+        <meta name="description" content="xSUMMARY">
+        <title>xTITLE</title>
     </head>
     <body>
-        <div class="documentwrapper">
+        <div class="documentwrapper" itemscope itemtype="https://schema.org/BlogPosting">
         <p class="index">
             <a href="/">Home</a>
             | <a href="/categories.html">Posts by Category</a>
         </p>
-        $if(date)$
-        <p class="date">$date$</p>
-        $endif$
+        m4_ifelse(xDATE, {"xDATE"}, {""}, {"
+        <p class="date"><time itemprop="datePublished">xDATE</time></p>
+        "})
 
-        <article>
-        $body$
+        <article itemprop="articleBody">
+            m4_undivert(xUNDIVERT)
         </article>
-
-        $if(toc)$
-        <nav id="$idprefix$TOC">
-            $table-of-contents$
-        </nav>
-        $endif$
         </div>
     </body>
 </html>

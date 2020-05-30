@@ -1,7 +1,6 @@
 # Posts by Category
 
-``` {.run}
-#!/usr/bin/env sh
+m4_esyscmd({"
 awk -F'\t' '
 {
     file=$1
@@ -31,4 +30,4 @@ END {
     }
 }
 ' < _metadata_cache
-```
+"})

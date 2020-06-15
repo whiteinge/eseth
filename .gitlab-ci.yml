@@ -1,0 +1,10 @@
+image: alpine
+
+pages:
+  script:
+  - apk add coreutils findutils gawk make m4
+  - apk add discount --repository=https://alpine.global.ssl.fastly.net/alpine/edge/community
+  - make public
+  artifacts:
+    paths:
+    - public

@@ -7,7 +7,7 @@
 # new HTML into the site template. The frozen m4 files cache metadata to avoid
 # needing to reprocess the whole file.
 
-.PHONY: printline
+.PHONY: init printline public
 .SUFFIXES: .m4f .mdhtml .md .rst .html
 .PRECIOUS: %.mdhtml
 
@@ -42,6 +42,10 @@ rss.xml: _metadata_cache
 
 # resume.html: resume.rst resume.css
 # 	pandoc --section-divs -c ./resume.css -s -o "$@" "$<"
+
+public: all
+	mkdir -p public
+	cp -r base.css categories.html index.html rss.xml 20* public
 
 init:
 	@command -v m4 > /dev/null 2>&1 \

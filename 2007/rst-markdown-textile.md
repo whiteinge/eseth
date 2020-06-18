@@ -1,7 +1,6 @@
----
-category: computing
-date: '2007-04-10'
----
+TITLE({"RestructuredText, Markdown, and Textile (and typography)"})
+CATEGORY({"computing"})
+DATE({"2007-04-10"})
 
 RestructuredText, Markdown, and Textile (and typography)
 ========================================================

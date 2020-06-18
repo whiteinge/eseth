@@ -1,9 +1,6 @@
----
-category: 'computing, web'
-date: '2004-08-21'
-summary: |
-  Lynx and the Semantic Web
----
+TITLE({"Lynx and the Semantic Web"})
+CATEGORY({"computing, web"})
+DATE({"2004-08-21"})
 
 # Can Lynx be used today?
 

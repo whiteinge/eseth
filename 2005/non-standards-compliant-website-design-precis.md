@@ -1,7 +1,6 @@
----
-category: 'computing, web'
-date: '2005-01-26'
----
+TITLE({"Non-standards compliant website design précis"})
+CATEGORY({"computing, web"})
+DATE({"2005-01-26"})
 
 Non-standards compliant website design précis
 =============================================

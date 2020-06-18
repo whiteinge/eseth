@@ -1,7 +1,6 @@
----
-category: personal
-date: '2006-06-12'
----
+TITLE({"Back from Brazil"})
+CATEGORY({"personal"})
+DATE({"2006-06-12"})
 
 Back from Brazil
 ================

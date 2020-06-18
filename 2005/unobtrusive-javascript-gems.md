@@ -1,7 +1,6 @@
----
-category: 'computing, web, javascript'
-date: '2005-03-02'
----
+TITLE({"Unobtrusive JavaScript Gems"})
+CATEGORY({"computing, web, javascript"})
+DATE({"2005-03-02"})
 
 Unobtrusive JavaScript Gems
 ===========================

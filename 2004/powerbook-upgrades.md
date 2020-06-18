@@ -1,7 +1,6 @@
----
-category: 'computing, os x'
-date: '2004-12-23'
----
+TITLE({"Powerbook Upgrades"})
+CATEGORY({"computing, os x"})
+DATE({"2004-12-23"})
 
 Powerbook Upgrades
 ==================

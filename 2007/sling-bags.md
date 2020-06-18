@@ -1,7 +1,6 @@
----
-category: computing
-date: '2007-01-01'
----
+TITLE({"Sling laptop bags, a review"})
+CATEGORY({"computing"})
+DATE({"2007-01-01"})
 
 Sling laptop bags, a review
 ===========================

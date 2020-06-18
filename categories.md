@@ -1,9 +1,12 @@
+TITLE({"Posts by Category"})
+
 # Posts by Category
 
 m4_esyscmd({"
-awk -F'\t' '
+awk '
+BEGIN { FS="\t" }
 {
-    file=$1
+    file=$1; sub(/\.md$/, ".html", file)
     title=$3
     split($4, categories, ", ")
 

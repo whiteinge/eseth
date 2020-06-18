@@ -1,10 +1,7 @@
----
-category: 'computing, unix'
-date: '2019-10-07'
-summary: |
-  An experiment to move status info that usually lives in your shell prompt
-  into tmux pane statuses.
----
+TITLE({"tmux Status Line"})
+CATEGORY({"computing, unix"})
+DATE({"2019-10-07"})
+SUMMARY({"An experiment to move status info that usually lives in your shell prompt into tmux pane statuses."})
 
 # tmux Status Line
 

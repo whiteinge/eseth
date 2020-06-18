@@ -1,7 +1,6 @@
----
-category: typography
-date: '2005-12-15'
----
+TITLE({"The Elements of Typographic Style"})
+CATEGORY({"typography"})
+DATE({"2005-12-15"})
 
 The Elements of Typographic Style
 =================================

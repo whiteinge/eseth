@@ -1,7 +1,6 @@
----
-category: 'computing, web'
-date: '2005-12-06'
----
+TITLE({"Viewing the DOM Source with Firefox"})
+CATEGORY({"computing, web"})
+DATE({"2005-12-06"})
 
 Viewing the DOM Source with Firefox
 ===================================

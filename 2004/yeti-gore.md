@@ -1,7 +1,6 @@
----
-category: computing
-date: '2004-12-16'
----
+TITLE({"Yeti Gore Flash game"})
+CATEGORY({"computing"})
+DATE({"2004-12-16"})
 
 Yeti Gore Flash game
 ====================

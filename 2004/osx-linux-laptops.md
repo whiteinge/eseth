@@ -1,7 +1,6 @@
----
-category: 'computing, os x, unix'
-date: 2004-01-01
----
+TITLE({"OS X vs. Linux and Linux on Laptops"})
+CATEGORY({"computing, os x, unix"})
+DATE({"2004-01-01"})
 
 OS X vs. Linux and Linux on Laptops
 ===================================

@@ -1,7 +1,6 @@
----
-category: 'computing, web'
-date: '2007-09-06'
----
+TITLE({"Freebase"})
+CATEGORY({"computing, web"})
+DATE({"2007-09-06"})
 
 Freebase
 ========

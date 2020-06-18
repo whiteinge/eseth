@@ -1,7 +1,6 @@
----
-category: 'computing, os x'
-date: '2006-10-26'
----
+TITLE({"The Problem with Macs is Apple"})
+CATEGORY({"computing, os x"})
+DATE({"2006-10-26"})
 
 The Problem with Macs is Apple
 ==============================

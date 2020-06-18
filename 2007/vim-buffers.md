@@ -1,11 +1,7 @@
----
-category: 'computing, vim'
-date: '2007-04-09'
-summary: |
-  Vim buffers go in Vim windows which go in Vim tabs. Sometimes they're
-  hidden, sometimes one appears in multiple windows. It works a bit
-  differently from more "modern" text editors.
----
+TITLE({"How I learned to stop worrying and love Vim buffers"})
+CATEGORY({"computing, vim"})
+DATE({"2007-04-09"})
+SUMMARY({"Vim buffers go in Vim windows which go in Vim tabs. Sometimes they're hidden, sometimes one appears in multiple windows. It works a bit differently from more "modern" text editors."})
 
 How I learned to stop worrying and love Vim buffers
 ===================================================

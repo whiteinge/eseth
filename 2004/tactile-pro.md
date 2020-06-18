@@ -1,7 +1,6 @@
----
-category: computing
-date: 2004-01-01
----
+TITLE({"The Tactile Pro"})
+CATEGORY({"computing"})
+DATE({"2004-01-01"})
 
 The Tactile Pro
 ===============

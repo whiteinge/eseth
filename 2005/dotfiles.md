@@ -1,7 +1,6 @@
----
-category: 'computing, unix, zsh, screen, vim'
-date: '2005-10-08'
----
+TITLE({"Dotfiles"})
+CATEGORY({"computing, unix, zsh, screen, vim"})
+DATE({"2005-10-08"})
 
 Dotfiles
 ========

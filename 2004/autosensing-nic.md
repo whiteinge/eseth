@@ -1,7 +1,6 @@
----
-category: 'computing, os x'
-date: 2004-01-01
----
+TITLE({"Auto-sensing PowerBook network port"})
+CATEGORY({"computing, os x"})
+DATE({"2004-01-01"})
 
 Auto-sensing PowerBook network port
 ===================================

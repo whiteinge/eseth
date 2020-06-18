@@ -1,10 +1,7 @@
----
-category: 'computing, unix'
-date: '2019-10-30'
-summary: |
-  Use an external fuzzy-finder as a replacement for writing burdensome and slow
-  shell completion functions.
----
+TITLE({"Use an External Fuzzy-finder for CLI Completion"})
+CATEGORY({"computing, unix"})
+DATE({"2019-10-30"})
+SUMMARY({"Use an external fuzzy-finder as a replacement for writing burdensome and slow shell completion functions."})
 
 # Use an External Fuzzy-finder for CLI Completion
 

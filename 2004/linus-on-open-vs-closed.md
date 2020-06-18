@@ -1,9 +1,6 @@
----
-category: 'computing, unix'
-date: '2004-08-18'
-summary: |
-  Linus Torvalds on open source vs closed
----
+TITLE({"Linus Torvalds on open source vs closed"})
+CATEGORY({"computing, unix"})
+DATE({"2004-08-18"})
 
 # Linus Torvalds on Open Source vs Closed
 

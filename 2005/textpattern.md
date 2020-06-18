@@ -1,7 +1,6 @@
----
-category: 'computing, web'
-date: '2005-10-26'
----
+TITLE({"Textpattern"})
+CATEGORY({"computing, web"})
+DATE({"2005-10-26"})
 
 Textpattern
 ===========

@@ -1,7 +1,6 @@
----
-category: gaming
-date: '2004-09-21'
----
+TITLE({"d20 Future book review"})
+CATEGORY({"gaming"})
+DATE({"2004-09-21"})
 
 d20 Future book review
 ======================

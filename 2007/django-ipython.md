@@ -1,7 +1,6 @@
----
-category: 'computing, web, django, python'
-date: '2007-01-28'
----
+TITLE({"Learning Django with IPython"})
+CATEGORY({"computing, web, django, python"})
+DATE({"2007-01-28"})
 
 Learning Django with IPython
 ============================

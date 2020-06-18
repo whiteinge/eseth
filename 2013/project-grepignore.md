@@ -1,9 +1,7 @@
----
-category: 'computing, unix, zsh'
-date: '2013-04-28'
-summary: |
-  Change GREP_OPTIONS dynamically using Zsh's precmd.
----
+TITLE({"Setting project-level grep options"})
+CATEGORY({"computing, unix, zsh"})
+DATE({"2013-04-28"})
+SUMMARY({"Change GREP_OPTIONS dynamically using Zshs precmd."})
 
 Setting project-level grep options
 ==================================

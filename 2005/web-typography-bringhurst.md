@@ -1,7 +1,6 @@
----
-category: 'computing, typography, web'
-date: '2005-12-14'
----
+TITLE({"Web Typography, Bringhurst-style"})
+CATEGORY({"computing, typography, web"})
+DATE({"2005-12-14"})
 
 Web Typography, Bringhurst-style
 ================================

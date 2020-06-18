@@ -1,7 +1,6 @@
----
-category: computing
-date: '2007-10-11'
----
+TITLE({"ReST for Markdown and Textile Users"})
+CATEGORY({"computing"})
+DATE({"2007-10-11"})
 
 ReST for Markdown and Textile Users
 ===================================

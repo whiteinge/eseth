@@ -1,7 +1,6 @@
----
-category: 'computing, python'
-date: '2010-03-17'
----
+TITLE({"Blogging with Sphinx"})
+CATEGORY({"computing, python"})
+DATE({"2010-03-17"})
 
 Blogging with Sphinx
 ====================

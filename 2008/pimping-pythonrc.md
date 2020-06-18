@@ -1,7 +1,6 @@
----
-category: 'computing, python'
-date: 2008-01-01
----
+TITLE({"Pimping out your .pythonrc.py"})
+CATEGORY({"computing, python"})
+DATE({"2008-01-01"})
 
 Pimping out your .pythonrc.py
 =============================

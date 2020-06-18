@@ -1,7 +1,6 @@
----
-category: 'computing, web'
-date: '2007-05-20'
----
+TITLE({"Cool URIs don't change; so what's considered 'cool'?"})
+CATEGORY({"computing, web"})
+DATE({"2007-05-20"})
 
 Cool URIs don\'t change; so what\'s considered \'cool\'?
 ========================================================

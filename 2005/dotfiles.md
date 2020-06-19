@@ -37,15 +37,9 @@ computer and typing `dotsync` to have your shell, editor, and browser
 preferences and bookmarks instantly configured just they way you like
 'em. :-)
 
-::: {.note}
-::: {.admonition-title}
-Note
-:::
-
-Update 2009-12-16
+_Update 2009-12-16_
 
 I have long-since switched from the home-rolled dotsync() to keeping my
 \*rc files under version control.
-:::
 
 ![My terminal running Gnu screen and Vim](./colorterm.jpg)

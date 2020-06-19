@@ -2,9 +2,7 @@ TITLE(xSITE_TITLE)
 
 # xSITE_TITLE
 
-::: {.rubric}
 <em>xSITE_RUBRIC</em>
-:::
 
 ## Recent Entries
 

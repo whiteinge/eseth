@@ -44,14 +44,11 @@ work with tagged items so I'm working on a tagging
 Sphinx doesn't generate RSS so I rolled my own as a Sphinx extension
 ([source](https://github.com/whiteinge/eseth/blob/master/ext/feed.py)).
 
-::: {.versionchanged}
+_Update: 2011-01-03_
 
-2011-01-03
-
-:   It now sorts by most recent entries and takes a few configuration
-    options such as not outputting entries older than a certain date or
-    only outputting a maximum number of entries.
-:::
+It now sorts by most recent entries and takes a few configuration options such
+as not outputting entries older than a certain date or only outputting
+a maximum number of entries.
 
 ### Other Crap
 

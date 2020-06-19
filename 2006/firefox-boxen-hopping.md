@@ -5,21 +5,15 @@ DATE({"2006-03-30"})
 Firefox and boxen-hopping
 =========================
 
-::: {.note}
-::: {.admonition-title}
-Note
-:::
+_Update 2006-12-20_
 
-Update 2006-12-20
-
-Firefox *is* very easy to personalize via configuration files. I've
+_Firefox *is* very easy to personalize via configuration files. I've
 found the `userChrome.css` and `userPref.js` files to be surprisingly
 capable, I've added them as well as my bookmarks file to my
 [dotsync](https://github.com/whiteinge/dotfiles/blob/6a2377c/.zshrc#L228)
-for a (very) minimal Firefox UI footprint (pictured).
+for a (very) minimal Firefox UI footprint (pictured)._
 
-The original post follows.
-:::
+_The original post follows._
 
 ![A minimal Firefox window layout](./firefox-layout.jpg)
 

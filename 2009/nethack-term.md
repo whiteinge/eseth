@@ -1,9 +1,7 @@
----
-category: 'computing, unix'
-date: '2009-12-22'
-summary: |
-  A Zsh multi-line prompt featuring the dog from Nethack.
----
+TITLE({"Nethack Zsh Prompt"})
+CATEGORY({"computing, unix"})
+DATE({"2009-12-22"})
+SUMMARY({"A Zsh multi-line prompt featuring the dog from Nethack."})
 
 Nethack Zsh Prompt
 ==================
@@ -126,7 +124,7 @@ how many characters are in the string:
 
     i_width=${#${(%)i_width}}
 
-\$COLUMNS is automatically set to the width of the terminal window;
+$COLUMNS is automatically set to the width of the terminal window;
 finally, we can find the difference of the two variables and see how
 much filler we're going to need:
 

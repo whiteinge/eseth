@@ -1,7 +1,6 @@
----
-category: 'computing, typography, web'
-date: '2005-12-14'
----
+TITLE({"Web Typography, Bringhurst-style"})
+CATEGORY({"computing, typography, web"})
+DATE({"2005-12-14"})
 
 Web Typography, Bringhurst-style
 ================================
@@ -25,18 +24,3 @@ currently unsupported in Internet Explorer, to indent sub-paragraphs:
         margin-top: 0;
         text-indent: 1.5em;
     }
-
-Archived Comments
------------------
-
-Matt
-
-:   Most excellent!
-
-    I have actually used the aforementioned CSS to indent
-    sub-paragraphs---very cool.
-
-    In my spare time, I would like to dedicate some effort to studying
-    the arcane art of CSS.
-
-    :P

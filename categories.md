@@ -1,10 +1,12 @@
+TITLE({"Posts by Category"})
+
 # Posts by Category
 
-``` {.run}
-#!/usr/bin/env sh
-awk -F'\t' '
+m4_esyscmd({"
+awk '
+BEGIN { FS="\t" }
 {
-    file=$1
+    file=$1; sub(/\.md$/, ".html", file)
     title=$3
     split($4, categories, ", ")
 
@@ -31,4 +33,4 @@ END {
     }
 }
 ' < _metadata_cache
-```
+"})

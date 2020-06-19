@@ -1,14 +1,12 @@
----
-category: 'computing, unix, zsh'
-date: '2013-04-28'
-summary: |
-  Change GREP_OPTIONS dynamically using Zsh's precmd.
----
+TITLE({"Setting project-level grep options"})
+CATEGORY({"computing, unix, zsh"})
+DATE({"2013-04-28"})
+SUMMARY({"Change GREP_OPTIONS dynamically using Zshs precmd."})
 
 Setting project-level grep options
 ==================================
 
-**Using Zsh\'s `precmd`**
+**Using Zsh's `precmd`**
 
 The venerable grep has not aged terribly well giving rise to (the
 admitedly cool) [Ack](http://beyondgrep.com/). One handy feature of Ack
@@ -17,11 +15,11 @@ placing a dotfile in the project directory. This is easily mimicked for
 grep using a handy Zsh feature. (This is also possible in Bash, of
 course, with a bit more code.)
 
-GREP\_OPTIONS
+GREP_OPTIONS
 -------------
 
 You can set default options for grep in an environment variable named
-GREP\_OPTIONS. For example a nice default to put in your `.zshrc` file
+GREP_OPTIONS. For example a nice default to put in your `.zshrc` file
 is:
 
     GREP_OPTIONS="--color --exclude-dir=.svn --exclude-dir=.hg --exclude-dir=.git"
@@ -53,11 +51,11 @@ Reading files into Zsh arrays
 First-class support for arrays in one thing (of many) that really sets
 Zsh apart from Bash. Zsh has many internal functions for working with
 arrays and many internal functions that work with arrays as parameters.
-(No need for Bash\'s `IFS` bullshit.) You can see many such functions by
+(No need for Bash's `IFS` bullshit.) You can see many such functions by
 referencing the following two Zsh manpages:
 
--   zshexpn(1) under \"PARAMETER EXPANSION\"
--   zshparam(1) under \"ARRAY PARAMETERS\"
+-   zshexpn(1) under "PARAMETER EXPANSION"
+-   zshparam(1) under "ARRAY PARAMETERS"
 
 The `(f)` parameter referenced in zshparam(1) reads newline-separated
 records as values into an array. Another, `$(<)` reads the contents of a
@@ -68,7 +66,7 @@ of a file into an array:
     opts=( ${(f)"$(< ${HOME}/.grepoptions)"} )
 
 Neat. What if you want to add comments to that file too? Obviously, they
-shouldn\'t be included in the array. You can see in zshexpn(1) that many
+shouldn't be included in the array. You can see in zshexpn(1) that many
 of the substitutions that work on strings also work on individual array
 items if given an array. The `${name:#pattern}` substitution will remove
 items from an array that match a pattern. A comment character followed
@@ -101,7 +99,7 @@ the `+=`):
 
 Great. You now have an array containing the aggregate of two
 `.grepoptions` files. The last step is to assemble the array back to a
-string so you can export the GREP\_OPTIONS environment variable. Zsh
+string so you can export the GREP_OPTIONS environment variable. Zsh
 arrays have a join parameter of the form `${(j: :)name}` where the
 character between the colons is the character to join with.
 
@@ -133,7 +131,7 @@ following in your `~/.zshrc`:
     precmd_functions=( grep_options )
 
 Since this function is executed as a Zsh `precmd` the value of the
-GREP\_OPTIONS environment variable will change as you cd around the file
+GREP_OPTIONS environment variable will change as you cd around the file
 system. If you have any other `precmd` functions simply add them to the
 `precmd_functions` array to run them all.
 
@@ -145,7 +143,7 @@ Here is a example shell session:
     ~  % cd ~/path/to/myproject
     % cat .grepoptions
     # Don't grep any minified JavaScript files
-    --exclude=\*min.js
+    --exclude=*min.js
 
     # Don't grep third-party libs
     --exclude-dir=lib

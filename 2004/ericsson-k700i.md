@@ -1,7 +1,6 @@
----
-category: mobiles
-date: '2004-12-26'
----
+TITLE({"Sony Ericsson K700i"})
+CATEGORY({"mobiles"})
+DATE({"2004-12-26"})
 
 Sony Ericsson K700i
 ===================
@@ -14,7 +13,7 @@ K700i](http://developer.sonyericsson.com/site/global/products/phones/k700/p_k700
 
 ![Sony Ericsson K700i](./k700.jpg)
 
-It works fabulously with my Apple Powerbook. I\'m able to synchronise my
+It works fabulously with my Apple Powerbook. I'm able to synchronise my
 calendar and address book over Bluetooth, with only a [few
 bugs](http://www.esato.com/board/viewtopic.php?topic=61888&start=45#post859904)
 that are being worked out. I can use the phone as a [remote
@@ -28,12 +27,12 @@ size-appropriate format is a three-click maneuver.
 
 The little J2ME interpreter is pretty speedy for a phone, but
 unfortunately not fast enough to run a playable [NES
-emulator](http://www.vampent.com/emu.htm). I\'ve got an SSH client on
-there, but at \$0.03 per kilobyte of data transfer through AT&T, I
-can\'t imagine I\'ll be using it much.
+emulator](http://www.vampent.com/emu.htm). I've got an SSH client on
+there, but at $0.03 per kilobyte of data transfer through AT&T, I
+can't imagine I'll be using it much.
 
-It includes an FM radio since it\'s a trivial energy-drain on the
-battery, but the hands-free kit cords double as the antenna and won\'t
+It includes an FM radio since it's a trivial energy-drain on the
+battery, but the hands-free kit cords double as the antenna and won't
 work without which is a shame since they are constantly tangled. I
 intend on picking up a wireless Bluetooth headset soon. The white LED
 flash doubles as a decent flashlight, and the camera has a variety of

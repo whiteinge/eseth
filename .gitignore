@@ -1,3 +1,8 @@
+/public
+
+*.m4f
+*.mdhtml
+
 /_metadata_cache
 /20*/*.html
 /categories.html

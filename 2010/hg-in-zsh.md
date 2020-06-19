@@ -1,10 +1,7 @@
----
-category: 'computing, unix, zsh, mercurial'
-date: '2010-05-24'
-summary: |
-  Zsh's built-in vcs_info system is an amazing, flexible, and extendable
-  system for putting Mercurial information in your shell prompt.
----
+TITLE({"Mercurial Info in Your Zsh Prompt"})
+CATEGORY({"computing, unix, zsh, mercurial"})
+DATE({"2010-05-24"})
+SUMMARY({"Zsh's built-in vcs_info system is an amazing, flexible, and extendable system for putting Mercurial information in your shell prompt."})
 
 Mercurial Info in Your Zsh Prompt
 =================================
@@ -43,15 +40,14 @@ It is also highly customizable.
         autoload -Uz vcs_info
         zstyle ':vcs_info:*' enable hg git bzr svn
 
-2.  Put \${vcs\_info\_msg\_0\_} somewhere in your \$PS1.
+2.  Put `${vcs_info_msg_0_}` somewhere in your $PS1.
 3.  Test it by going into a local repository directory. Your prompt
     should look something like this:
 
         you@host ~/src/yourcode  (hg)-[default]-
         %
 
-4.  Be amazed and suddenly feel compelled to send [Frank
-    Terbeck](http://bewatermyfriend.org) a valentine to say thanks for
+4.  Be amazed and suddenly feel compelled to send [Frank Terbeck](http://bewatermyfriend.org) a valentine to say thanks for
     writing `VCS_Info`.
 
 `VCS_Info` Mercurial Support
@@ -62,16 +58,12 @@ the changeset ID, local revision number, current branch, and the topmost
 applied [mq](http://mercurial.selenic.com/wiki/MqExtension) patch. Here
 are the new features:
 
-::: {.warning}
-::: {.admonition-title}
-Warning
-:::
+_Warning_
 
 Many features in `VCS_Info` are disabled by default for performance
 reasons. Most of the below styles require customizing your `formats` and
 `actionformats` zstyles at least. Look at my customizations below and
 give zshcontrib(1) a read before you give up or complain.
-:::
 
 ### Support for the Bookmarks extension
 
@@ -111,13 +103,9 @@ which goes a little faster but doesn't look for changes.
 
 ![image](./vcs-hexdump.png)
 
-::: {.note}
-::: {.admonition-title}
-Note
-:::
+_Note_
 
 You cannot retrieve the local revision number with hexdump.
-:::
 
 ### Display the current action
 
@@ -204,15 +192,11 @@ The hook looks like this:
         fi
     }
 
-::: {.note}
-::: {.admonition-title}
-Note
-:::
+_Note_
 
 The reason this functionality isn't in the core backend is because the
 branchheads.cache isn't updated with every hg operation so on occasion
 it will give a false positive. Most of the time it is Good Enough®.
-:::
 
 Putting it All Together
 -----------------------
@@ -260,7 +244,7 @@ Try the New Features Now! {#dont-wait}
 
 These new features are still unreleased (as of Zsh 4.3.10). You don't
 have to wait for the next release of Zsh to try them. Full instructions
-to keep a local checkout from CVS are located in the [vcs\_info-examples
+to keep a local checkout from CVS are located in the [vcs_info-examples
 file](http://zsh.git.sourceforge.net/git/gitweb.cgi?p=zsh/zsh;a=blob;f=Misc/vcs_info-examples).
 
 *tl;dr*:
@@ -270,7 +254,7 @@ file](http://zsh.git.sourceforge.net/git/gitweb.cgi?p=zsh/zsh;a=blob;f=Misc/vcs_
     tarball from the Git mirror and untar it.
 2.  Put the `Functions/VCS_Info` directory from the archive somewhere.
     `~/.zfuncs` is a good place.
-3.  Point your Zsh at that directory (requires extended\_glob to be
+3.  Point your Zsh at that directory (requires extended_glob to be
     set):
 
         fpath=( ~/.zfuncs ~/.zfuncs/VCS_Info/**/*~*/(CVS)#(/) $fpath )

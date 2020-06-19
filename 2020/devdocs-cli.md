@@ -1,9 +1,7 @@
----
-category: 'computing, unix'
-date: '2020-01-25'
-summary: |
-  Browse devdocs.io from the CLI with a fuzzy-finder and Lynx
----
+TITLE({"Browse devdocs.io from the CLI"})
+CATEGORY({"computing, unix"})
+DATE({"2020-01-25"})
+SUMMARY({"Browse devdocs.io from the CLI with a fuzzy-finder and Lynx"})
 
 # Browse devdocs.io from the CLI
 

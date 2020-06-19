@@ -5,7 +5,7 @@ DATE({"2005-10-26"})
 Textpattern
 ===========
 
-Although I have no qualms with WordPress, I\'ve always been very curious
+Although I have no qualms with WordPress, I've always been very curious
 about [Textpattern](http://textpattern.com/) since it is made by the
 people who freely gifted [A Humane Web Text
 Generator](http://textism.com/tools/textile/) on the undeserving web.
@@ -25,13 +25,13 @@ Textpattern has solid documentation and community support. Of the few
 prepackaged themes I installed all of them seemed unnecessarily complex
 evidenced by huge, detailed INSTALL files that required overwriting the
 current theme (or painstakingly copying each relevant code from the
-\'pages\', \'forms\', and \'style\' menus). Additionally the \'Forms\'
+'pages', 'forms', and 'style' menus). Additionally the 'Forms'
 menu was typically broken into almost a dozen seperate sections.
 
 CSS, Javascript, plugins, and theme structure are all stored in the
 database which make quick edits by a console-jockey impossible which is
 the feature that bothered me most. However, the admin interface is
-quickly navigable once you\'re familiar with Textpattern\'s semantic
+quickly navigable once you're familiar with Textpattern's semantic
 naming peculiarities and it even features an integrated CSS editor of
 sorts.
 

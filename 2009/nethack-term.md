@@ -124,7 +124,7 @@ how many characters are in the string:
 
     i_width=${#${(%)i_width}}
 
-\$COLUMNS is automatically set to the width of the terminal window;
+$COLUMNS is automatically set to the width of the terminal window;
 finally, we can find the difference of the two variables and see how
 much filler we're going to need:
 

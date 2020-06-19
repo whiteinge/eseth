@@ -13,9 +13,9 @@ Specifically pay attention to the Absolute/relative Positioning,
 Double-Rollovers, Faux-columns and, Sliding Doors methods. It starts a
 little slow, but go with it (and play with the examples).
 
-On a side-note: at first I didn\'t pay much attention to the
-CSS-slide-shows-instead-of-PowerPoint, but it\'s really starting to grow
-on me. This presentation doesn\'t use it, but Erik Meyer has an
+On a side-note: at first I didn't pay much attention to the
+CSS-slide-shows-instead-of-PowerPoint, but it's really starting to grow
+on me. This presentation doesn't use it, but Erik Meyer has an
 excellent packaged solution to putting together your own
 [CSS-Presentations](http://www.meyerweb.com/eric/tools/s5/s5-intro.html).
 Go through the first few slides at least to get a feel for the

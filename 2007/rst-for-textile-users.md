@@ -15,7 +15,7 @@ Headers
 -------
 
 Just use non-alphanumeric characters to underline (or
-under-and-overline) your heading. It doesn\'t matter what you use, just
+under-and-overline) your heading. It doesn't matter what you use, just
 be consistent with the character you use for each header level:
 
 ```
@@ -46,11 +46,15 @@ Text Styles
 
 Block quotes are just:
 
-\> Indented paragraphs, \> \>\> and they may nest.
+```
+> Indented paragraphs,
+> >> and they may nest.
+```
 
-Use double backticks for inline code blocks like \"
-`this example where otherwise *special characters* aren't processed` \".
-Dig?
+Use double backticks for inline code blocks like
+```
+`this example where otherwise *special characters* aren't processed`. Dig?
+```
 
 ```
 ::
@@ -146,18 +150,18 @@ True   True   True
 Closing
 -------
 
-If this quickref peaked your interest hit up the [ReST
-specification](http://docutils.sourceforge.net/rst.html). It\'s not very
-easy to read, but it\'s worth it. You can use alternate syntaxes for
+If this quickref piqued your interest hit up the [ReST
+specification](http://docutils.sourceforge.net/rst.html). It's not very
+easy to read, but it's worth it. You can use alternate syntaxes for
 marking-up lists, for example. There are many built-in mechanisms for
-marking-up meta data such as for HTML \<meta\> tags. There\'s a robust
+marking-up meta data such as for HTML `<meta>` tags. There's a robust
 footnote and citation syntax. ReST generates references to key elements
-in your document so you can link to them. Docutils\' `rst2html.py` can
+in your document so you can link to them. Docutils' `rst2html.py` can
 start numbering headings at any level so you can seamlessly fit ReST
 docs into your site hierarchy.
 
 The reason ReST is preferable to Markdown or Textile is that it *can* be
-written as simply as the lighter-weight markup languages if you\'re
-working on simple docs\-\--but it doesn\'t have to be. You may
+written as simply as the lighter-weight markup languages if you're
+working on simple docs--but it doesn't have to be. You may
 appreciate that down the road when you find you suddenly need one of
 your docs in PDF or XML format.

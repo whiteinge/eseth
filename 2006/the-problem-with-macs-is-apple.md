@@ -8,16 +8,15 @@ The Problem with Macs is Apple
 The Problem with Macs is Apple, or rather that Apple is a
 hardware-driven company.
 
-I've been gearing up to purchase one of the new sub-\$1k iBooks, and on
+I've been gearing up to purchase one of the new sub-$1k iBooks, and on
 a whim decided to Google for iBook vs Powerbook---if I hadn't I'd be in
 for a nasty surprise in a few weeks because I only have experience with
 Powerbooks.
 
 There are a few potentially deal-breaking differences between Apple's
 two laptop families that exist, largely I suspect, only for business not
-technical reasons. (Sources: 1
-\<<http://www.pbzone.com/ibookspanning.shtml>\>, 2
-\<<http://www.powerbookcentral.com/news/viewnews.cgi?id=EpAlFylZEFaKniQfFi>\>).
+technical reasons. (Sources: [1](http://www.pbzone.com/ibookspanning.shtml),
+[2](http://www.powerbookcentral.com/news/viewnews.cgi?id=EpAlFylZEFaKniQfFi)).
 
 > 1.  iBooks do not support closed-lid operation. If you close the lid
 >     it will go to sleep. Powerbooks can be connected to an alternate
@@ -34,7 +33,7 @@ technical reasons. (Sources: 1
 > 4.  Lastly, lastly: Also I've heard rumors that the VGA-out adapter is
 >     an optional accessory!
 
-There's a \$400 price difference between the low-end 12" iBook and 12"
+There's a $400 price difference between the low-end 12" iBook and 12"
 Powerbook, but I think it might be worth the money. Being limited to
 1024×768 isn't terrible on a laptop (esp. given my current Picturebook's
 display of 1024×480...), but it is terrible if you can't expand that by

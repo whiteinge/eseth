@@ -5,19 +5,19 @@ DATE({"2008-01-01"})
 Pimping out your .pythonrc.py
 =============================
 
-I don\'t wanna be hatin\' on [IPython](http://ipython.scipy.org/moin/),
-but I don\'t use it. I often favor fairly extreme minimalism in
+I don't wanna be hatin' on [IPython](http://ipython.scipy.org/moin/),
+but I don't use it. I often favor fairly extreme minimalism in
 computing. Why install something if you can accomplish the same (or good
 enough) with what you have available? IPython has quite a lot of
 features and syntactic-sugar, but it is overkill for my needs. Instead
-I\'ve been slowly crafting my
+I've been slowly crafting my
 [pythonrc.py](https://github.com/whiteinge/dotfiles/blob/master/.pythonrc.py)
 to give the built-in Python shell color, tab completion, saving and
 searching a history, pretty printing, and the ability to start an
 external editor.
 
 It should be said that this code is not especially interesting, and a
-lot of this is very straightforward readline configuration \-- but it
+lot of this is very straightforward readline configuration -- but it
 seems that a lot of people are unfamiliar with the basics, so here is my
 set up.
 
@@ -29,12 +29,12 @@ which does the rest.
 
 You will almost certainly want to strip things out of my
 [inputrc](https://github.com/whiteinge/dotfiles/blob/master/.inputrc)
-that you don\'t use or enjoy, like vi-mode. Note the conditional for
+that you don't use or enjoy, like vi-mode. Note the conditional for
 Python in case you want any key-bindings specific to the Python shell.
 
 The
 [inputrc](https://github.com/whiteinge/dotfiles/blob/master/.inputrc)
-should be somewhat self-explanatory. For the options that aren\'t check
+should be somewhat self-explanatory. For the options that aren't check
 out the [GNU Bash Reference
 Manual](http://www.network-theory.co.uk/docs/bashref/ReadlineInitFileSyntax.html).
 Also Google is your friend. For example if you want to use page-up and
@@ -47,8 +47,8 @@ commands:
 Now you can type in the first few characters of a previous command, hit
 your `history-search-backward` key and, voila, you get the full command.
 You can also search your history for a pattern using the normal keys for
-that \-- for vi-mode hit `esc` to get in Normal mode then press `?`
-followed by the search term. (I don\'t know the search command for the
+that -- for vi-mode hit `esc` to get in Normal mode then press `?`
+followed by the search term. (I don't know the search command for the
 regular Emacs shell mode.)
 
 A very cool thing about the

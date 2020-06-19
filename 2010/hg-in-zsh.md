@@ -40,7 +40,7 @@ It is also highly customizable.
         autoload -Uz vcs_info
         zstyle ':vcs_info:*' enable hg git bzr svn
 
-2.  Put \${vcs\_info\_msg\_0\_} somewhere in your \$PS1.
+2.  Put `${vcs_info_msg_0_}` somewhere in your $PS1.
 3.  Test it by going into a local repository directory. Your prompt
     should look something like this:
 
@@ -257,7 +257,7 @@ Try the New Features Now! {#dont-wait}
 
 These new features are still unreleased (as of Zsh 4.3.10). You don't
 have to wait for the next release of Zsh to try them. Full instructions
-to keep a local checkout from CVS are located in the [vcs\_info-examples
+to keep a local checkout from CVS are located in the [vcs_info-examples
 file](http://zsh.git.sourceforge.net/git/gitweb.cgi?p=zsh/zsh;a=blob;f=Misc/vcs_info-examples).
 
 *tl;dr*:
@@ -267,7 +267,7 @@ file](http://zsh.git.sourceforge.net/git/gitweb.cgi?p=zsh/zsh;a=blob;f=Misc/vcs_
     tarball from the Git mirror and untar it.
 2.  Put the `Functions/VCS_Info` directory from the archive somewhere.
     `~/.zfuncs` is a good place.
-3.  Point your Zsh at that directory (requires extended\_glob to be
+3.  Point your Zsh at that directory (requires extended_glob to be
     set):
 
         fpath=( ~/.zfuncs ~/.zfuncs/VCS_Info/**/*~*/(CVS)#(/) $fpath )

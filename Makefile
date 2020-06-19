@@ -37,7 +37,7 @@ _metadata_cache: $(MTA)
 
 $(IDX): _metadata_cache
 
-rss.xml: _metadata_cache
+rss.xml: _metadata_cache _make_rss.sh
 	./_make_rss.sh | m4 -P _macros.m4 - > $@
 
 # resume.html: resume.rst resume.css

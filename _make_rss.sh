@@ -17,17 +17,18 @@ printf '<?xml version="1.0" encoding="UTF-8"?>
 
 < _metadata_cache sort -r -k2 | grep -v xDATE | head -10 \
 | while IFS="$tab" read -r pfile pdate ptitle pcategories; do
-    fname=$(printf "%s\n" "$pfile" | sed -e 's/\.md$/.mdhtml/')
+    fname=$(printf "%s\n" "$pfile" | sed -e 's/\.md$/.html/')
+    iname=$(printf "%s\n" "$pfile" | sed -e 's/\.md$/.mdhtml/')
     fpath=$(dirname "$pfile")
     printf '<item>\n'
         printf '<title>%s</title>\n' "$ptitle"
         printf '<link>xROOT/%s</link>\n' "$pfile"
         printf '<description><![CDATA[\n'
-        cat "$fname" \
+        cat "$iname" \
             | sed -e 's/src="\.\//src="xROOT\/'"$fpath"'\//g'
         printf ']]></description>\n'
         printf '<pubDate>%s</pubDate>\n' "$(date -d"$pdate" -R)"
-        printf '<guid>xROOT/%s</guid>\n' "$pfile"
+        printf '<guid>xROOT/%s</guid>\n' "$fname"
     printf '</item>\n'
 done
 

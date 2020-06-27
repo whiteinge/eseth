@@ -2,7 +2,6 @@ html { background: #fff; }
 
 body {
     font-size: large; color: #000;
-    font-family: Palatino, Georgia, Times, "Times New Roman";
 }
 
 pre, .pre, tt, .literal {
@@ -26,7 +25,6 @@ h2 {
     color: black;
     text-transform: uppercase; text-shadow: 0 0 1px #666677;
     border-bottom: none;
-    font-family: Palatino,Georgia,Times,"Times New Roman"; }
 
 a, 
 a:link,

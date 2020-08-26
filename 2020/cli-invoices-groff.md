@@ -106,5 +106,5 @@ preinstalled on your computer. :-)
 
 That's it. Oh, and if you'd prefer to keep your time in a plain text format
 look at this [invoice
-script](https://github.com/whiteinge/dotfiles/blob/1afeb7462a8fb4ce310f2781fa4b333447691cf8/bin/invoice)
+script](https://github.com/whiteinge/dotfiles/blob/d6a9b0b5c40ea5dbb8aefd98f434f941b5d3f447/bin/invoice)
 and feel free to use it as-is or adapt it to your needs.

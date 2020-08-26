@@ -1,6 +1,6 @@
-TITLE({"Non-standards compliant website design précis"})
-CATEGORY({"computing, web"})
-DATE({"2005-01-26"})
+m4TITLE({"Non-standards compliant website design précis"})
+m4CATEGORY({"computing, web"})
+m4DATE({"2005-01-26"})
 
 Non-standards compliant website design précis
 =============================================

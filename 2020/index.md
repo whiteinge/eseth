@@ -1,4 +1,4 @@
-TITLE({"Blog posts from 2020"})
+m4TITLE({"Blog posts from 2020"})
 
 # 2020
 

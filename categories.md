@@ -1,4 +1,4 @@
-TITLE({"Posts by Category"})
+m4TITLE({"Posts by Category"})
 
 # Posts by Category
 

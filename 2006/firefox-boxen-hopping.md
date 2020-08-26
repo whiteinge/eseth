@@ -1,6 +1,6 @@
-TITLE({"Firefox and boxen-hopping"})
-CATEGORY({"computing, web"})
-DATE({"2006-03-30"})
+m4TITLE({"Firefox and boxen-hopping"})
+m4CATEGORY({"computing, web"})
+m4DATE({"2006-03-30"})
 
 Firefox and boxen-hopping
 =========================

@@ -1,6 +1,6 @@
-TITLE({"The Tactile Pro"})
-CATEGORY({"computing"})
-DATE({"2004-01-01"})
+m4TITLE({"The Tactile Pro"})
+m4CATEGORY({"computing"})
+m4DATE({"2004-01-01"})
 
 The Tactile Pro
 ===============

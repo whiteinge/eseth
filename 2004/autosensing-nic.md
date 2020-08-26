@@ -1,6 +1,6 @@
-TITLE({"Auto-sensing PowerBook network port"})
-CATEGORY({"computing, os x"})
-DATE({"2004-01-01"})
+m4TITLE({"Auto-sensing PowerBook network port"})
+m4CATEGORY({"computing, os x"})
+m4DATE({"2004-01-01"})
 
 Auto-sensing PowerBook network port
 ===================================

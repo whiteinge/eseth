@@ -1,6 +1,6 @@
-TITLE({"OS X vs. Linux and Linux on Laptops"})
-CATEGORY({"computing, os x, unix"})
-DATE({"2004-01-01"})
+m4TITLE({"OS X vs. Linux and Linux on Laptops"})
+m4CATEGORY({"computing, os x, unix"})
+m4DATE({"2004-01-01"})
 
 OS X vs. Linux and Linux on Laptops
 ===================================

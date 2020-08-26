@@ -1,6 +1,6 @@
-TITLE({"Learning Django with IPython"})
-CATEGORY({"computing, web, django, python"})
-DATE({"2007-01-28"})
+m4TITLE({"Learning Django with IPython"})
+m4CATEGORY({"computing, web, django, python"})
+m4DATE({"2007-01-28"})
 
 Learning Django with IPython
 ============================

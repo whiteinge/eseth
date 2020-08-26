@@ -1,6 +1,6 @@
-TITLE({"How to buy a standard in 10 days"})
-CATEGORY({"computing"})
-DATE({"2008-04-03"})
+m4TITLE({"How to buy a standard in 10 days"})
+m4CATEGORY({"computing"})
+m4DATE({"2008-04-03"})
 
 How to buy a standard in 10 days
 ================================

@@ -1,6 +1,6 @@
-TITLE({"Blogging with Sphinx"})
-CATEGORY({"computing, python"})
-DATE({"2010-03-17"})
+m4TITLE({"Blogging with Sphinx"})
+m4CATEGORY({"computing, python"})
+m4DATE({"2010-03-17"})
 
 Blogging with Sphinx
 ====================

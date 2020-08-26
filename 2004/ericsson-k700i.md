@@ -1,6 +1,6 @@
-TITLE({"Sony Ericsson K700i"})
-CATEGORY({"mobiles"})
-DATE({"2004-12-26"})
+m4TITLE({"Sony Ericsson K700i"})
+m4CATEGORY({"mobiles"})
+m4DATE({"2004-12-26"})
 
 Sony Ericsson K700i
 ===================

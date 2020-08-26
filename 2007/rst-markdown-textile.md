@@ -1,6 +1,6 @@
-TITLE({"RestructuredText, Markdown, and Textile (and typography)"})
-CATEGORY({"computing"})
-DATE({"2007-04-10"})
+m4TITLE({"RestructuredText, Markdown, and Textile (and typography)"})
+m4CATEGORY({"computing"})
+m4DATE({"2007-04-10"})
 
 RestructuredText, Markdown, and Textile (and typography)
 ========================================================

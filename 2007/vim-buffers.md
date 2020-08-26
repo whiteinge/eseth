@@ -1,7 +1,7 @@
-TITLE({"How I learned to stop worrying and love Vim buffers"})
-CATEGORY({"computing, vim"})
-DATE({"2007-04-09"})
-SUMMARY({"Vim buffers go in Vim windows which go in Vim tabs. Sometimes they're hidden, sometimes one appears in multiple windows. It works a bit differently from more "modern" text editors."})
+m4TITLE({"How I learned to stop worrying and love Vim buffers"})
+m4CATEGORY({"computing, vim"})
+m4DATE({"2007-04-09"})
+m4SUMMARY({"Vim buffers go in Vim windows which go in Vim tabs. Sometimes they're hidden, sometimes one appears in multiple windows. It works a bit differently from more "modern" text editors."})
 
 # How I learned to stop worrying and love Vim buffers
 

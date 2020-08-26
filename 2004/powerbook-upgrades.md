@@ -1,6 +1,6 @@
-TITLE({"Powerbook Upgrades"})
-CATEGORY({"computing, os x"})
-DATE({"2004-12-23"})
+m4TITLE({"Powerbook Upgrades"})
+m4CATEGORY({"computing, os x"})
+m4DATE({"2004-12-23"})
 
 Powerbook Upgrades
 ==================

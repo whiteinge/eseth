@@ -1,6 +1,6 @@
-TITLE({"The Problem with Macs is Apple"})
-CATEGORY({"computing, os x"})
-DATE({"2004-01-01"})
+m4TITLE({"The Problem with Macs is Apple"})
+m4CATEGORY({"computing, os x"})
+m4DATE({"2004-01-01"})
 
 The Problem with Macs is Apple
 ==============================

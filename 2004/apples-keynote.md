@@ -1,7 +1,7 @@
-TITLE({"Apple's Keynote"})
-CATEGORY({"computing, os x"})
-DATE({"2004-11-08"})
-SUMMARY({"A pretentious anecdote about a Keynote presentation in school."})
+m4TITLE({"Apple's Keynote"})
+m4CATEGORY({"computing, os x"})
+m4DATE({"2004-11-08"})
+m4SUMMARY({"A pretentious anecdote about a Keynote presentation in school."})
 
 Apple's Keynote
 ================

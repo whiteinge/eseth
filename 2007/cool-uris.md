@@ -1,6 +1,6 @@
-TITLE({"Cool URIs don't change; so what's considered 'cool'?"})
-CATEGORY({"computing, web"})
-DATE({"2007-05-20"})
+m4TITLE({"Cool URIs don't change; so what's considered 'cool'?"})
+m4CATEGORY({"computing, web"})
+m4DATE({"2007-05-20"})
 
 Cool URIs don't change; so what's considered 'cool'?
 ========================================================

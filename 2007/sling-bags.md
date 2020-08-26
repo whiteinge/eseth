@@ -1,6 +1,6 @@
-TITLE({"Sling laptop bags, a review"})
-CATEGORY({"computing"})
-DATE({"2007-01-01"})
+m4TITLE({"Sling laptop bags, a review"})
+m4CATEGORY({"computing"})
+m4DATE({"2007-01-01"})
 
 Sling laptop bags, a review
 ===========================

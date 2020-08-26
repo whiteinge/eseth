@@ -1,4 +1,4 @@
-TITLE({"Blog posts from 2008"})
+m4TITLE({"Blog posts from 2008"})
 
 # 2008
 

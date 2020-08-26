@@ -1,6 +1,6 @@
-TITLE({"ReST for Markdown and Textile Users"})
-CATEGORY({"computing"})
-DATE({"2007-10-11"})
+m4TITLE({"ReST for Markdown and Textile Users"})
+m4CATEGORY({"computing"})
+m4DATE({"2007-10-11"})
 
 ReST for Markdown and Textile Users
 ===================================

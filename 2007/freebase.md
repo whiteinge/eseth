@@ -1,6 +1,6 @@
-TITLE({"Freebase"})
-CATEGORY({"computing, web"})
-DATE({"2007-09-06"})
+m4TITLE({"Freebase"})
+m4CATEGORY({"computing, web"})
+m4DATE({"2007-09-06"})
 
 Freebase
 ========

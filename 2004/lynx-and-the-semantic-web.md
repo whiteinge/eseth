@@ -1,6 +1,6 @@
-TITLE({"Lynx and the Semantic Web"})
-CATEGORY({"computing, web"})
-DATE({"2004-08-21"})
+m4TITLE({"Lynx and the Semantic Web"})
+m4CATEGORY({"computing, web"})
+m4DATE({"2004-08-21"})
 
 # Can Lynx be used today?
 

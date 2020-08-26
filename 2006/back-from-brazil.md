@@ -1,6 +1,6 @@
-TITLE({"Back from Brazil"})
-CATEGORY({"personal"})
-DATE({"2006-06-12"})
+m4TITLE({"Back from Brazil"})
+m4CATEGORY({"personal"})
+m4DATE({"2006-06-12"})
 
 Back from Brazil
 ================

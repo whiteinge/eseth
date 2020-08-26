@@ -1,6 +1,6 @@
-TITLE({"Linus Torvalds on open source vs closed"})
-CATEGORY({"computing, unix"})
-DATE({"2004-08-18"})
+m4TITLE({"Linus Torvalds on open source vs closed"})
+m4CATEGORY({"computing, unix"})
+m4DATE({"2004-08-18"})
 
 # Linus Torvalds on Open Source vs Closed
 

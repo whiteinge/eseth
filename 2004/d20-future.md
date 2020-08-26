@@ -1,6 +1,6 @@
-TITLE({"d20 Future book review"})
-CATEGORY({"gaming"})
-DATE({"2004-09-21"})
+m4TITLE({"d20 Future book review"})
+m4CATEGORY({"gaming"})
+m4DATE({"2004-09-21"})
 
 d20 Future book review
 ======================

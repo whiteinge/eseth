@@ -1,7 +1,7 @@
-TITLE({"Git Info in Your Zsh Prompt"})
-CATEGORY({"computing, unix, zsh, mercurial"})
-DATE({"2010-05-24"})
-SUMMARY({"Zsh's built-in vcs_info system is an amazing, flexible, and extendable system for putting Git information in your shell prompt."})
+m4TITLE({"Git Info in Your Zsh Prompt"})
+m4CATEGORY({"computing, unix, zsh, mercurial"})
+m4DATE({"2010-05-24"})
+m4SUMMARY({"Zsh's built-in vcs_info system is an amazing, flexible, and extendable system for putting Git information in your shell prompt."})
 
 Git Info in Your Zsh Prompt
 ===========================

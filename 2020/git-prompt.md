@@ -73,7 +73,7 @@ END {
 ```
 
 I wrote one as a custom [git prompt
-script](https://github.com/whiteinge/dotfiles/blob/59e61819c6278fcf21b7577d994f597d4be3b9bb/bin/git-prompt)
+script](https://github.com/whiteinge/dotfiles/blob/1afeb7462a8fb4ce310f2781fa4b333447691cf8/bin/git-prompt)
 to use tmux or ansi color escapes:
 
 ![git-prompt script](./git-prompt.png)

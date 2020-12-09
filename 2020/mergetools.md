@@ -35,7 +35,7 @@ The common mistake these tools make is implicit in the description of `MERGED`:
 Git automatically resolves a bunch of stuff and that hard work is _only_
 represented in `MERGED`.
 
-_The only file you should use to resolve a merge conflict is `MERGED`._
+_The only file you should diff in a merge conflict is `MERGED`._
 
 The other files are useful to understand the history leading up to the
 conflict. You can and should read the relevant parts from those files. You

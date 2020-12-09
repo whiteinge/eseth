@@ -17,30 +17,37 @@ pre, .pre, tt, .literal {
 }
 
 .documentwrapper { text-align: left; }
-
 .documentwrapper img { max-width: 100%; }
+.documentwrapper table { width: 100%; max-width: 100%; }
 
 h1,
 h2 {
     color: black;
-    text-transform: uppercase; text-shadow: 0 0 1px #666677;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px #666677;
     border-bottom: none;
+}
 
 a, 
 a:link,
 a:visited {
-    color: #2F2F2F; text-decoration: underline; }
-
-a:hover {
-    color: #4f4f4f; }
+    color: #2F2F2F;
+    text-decoration: underline;
+}
+a:hover { color: #4f4f4f; }
 
 .header h1,
 .header h1 a { color: black; }
 
 .footer {
-    font-size: smaller; color: gray;
-    margin: 1.5em 0 2em 0; }
+    font-size: smaller;
+    color: gray;
+    margin: 1.5em 0 2em 0;
+}
 
+hr {
+    margin: 3.5em auto;
+}
 
 /* Sphinx styles */
 div.admonition p.admonition-title + p {
@@ -105,6 +112,10 @@ tt {
 
 th {
     background-color: #ede;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ccc;
 }
 
 .warning tt {

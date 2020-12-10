@@ -126,9 +126,14 @@ for even more understanding.
 
 ## Summary
 
-Mergetools: please continue to display `LOCAL` and `REMOTE`! Please display
-`BASE`. Please highlight the relevant sections of those files. But *don't*
-include those files in the diff. It doesn't help.
+Mergetool authors:
+
+Please continue to display `LOCAL` and `REMOTE`! Please display `BASE`. Please
+highlight the relevant sections of those files. But **don't** include those
+files in the diff. It doesn't help.
+
+**Do** show the "left" and "right" sides of the conflict markers as a two-way
+diff. Allow the user to grab individual changes from either side.
 
 I want this technique adopted by every tool. Software is hard. The world will
 be a better place if it's easier to avoid accidentally losing changes during

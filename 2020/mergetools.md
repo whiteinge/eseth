@@ -247,6 +247,27 @@ I would _love_ to see a two-way diff between each side of `MERGED` in the
 middle, bookended by `LOCAL` and `REMOTE` with those wisp lines to direct your
 eyes to the relevant sections. **It could be greatness.**
 
+### SmartGit
+
+Wrong, but close. SmartGit shows the merge conflicts but like some of the other
+more sophisticated graphical tools it does so in a way that brilliantly removes
+visual clutter.
+
+![](./mergetools/SmartGit.png)
+
+If SmartGit displayed each side of the merge conflict with the same visual
+flair it could be amazing. The tool does an excellent job of navigating
+a repository and giving easy-access to history. This is exactly the kind of
+tool that helps new programmers to see what needs to happen and helps seasoned
+programmers find relevant info quickly. So close!
+
+### Fork
+
+Wrong. Fork displays the traditional three-way `LOCAL`, `REMOTE`, merge
+conflicts which isn't helpful in resolving the conflict.
+
+![](./mergetools/Fork.png)
+
 ### P4Merge
 
 Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. Like with Sublime the

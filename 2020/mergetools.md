@@ -92,7 +92,7 @@ the exact same problem just with fewer awful colors.
 ## Solution
 
 The goal of this post is to encourage all mergetools to adopt some variant of
-the simple approach of "unmerging" `MERGED`.
+the simple approach of "unmerging" `MERGED` and diffing both halves.
 
 **A file containing conflict markers is a two-way diff.**
 
@@ -116,13 +116,17 @@ suddenly becomes much, much more clear and obvious.
 
 ![](./mergetools/vimdiff-two-way.png)
 
-**The only file you should diff in a merge conflict is `MERGED`.**
-
 `LOCAL` and `REMOTE` and `BASE` are very useful to understand the history
-leading up to the conflict. You can and should read the relevant parts from
+leading up to the conflict. You can (and should!) read the relevant parts from
 those files. You should use [Git's merge
 log](https://www.git-scm.com/book/en/v2/Git-Tools-Advanced-Merging#_merge_log)
-for even more understanding.
+for even more understanding. You should even individually compare the relevant
+sections of thsoe files with the left or right half of `MERGED` -- and maybe
+that does mean _temporarily_ showing a diff between them.
+
+After you understand the history of the conflict and when it comes time to
+resolve those conflicts, you should only resolve them as a diff between the
+left half of `MERGED` and the right half of `MERGED`.
 
 ## Summary
 
@@ -150,7 +154,7 @@ others to the list over time.
 I'm using [a script in the `diffconflicts` repository that generates subtle
 merge
 conflicts](https://github.com/whiteinge/diffconflicts/tree/master/_utils#readme).
-Here are some things to watch out for in a good mergetool:
+Here are some results to watch out for in a good mergetool:
 
 1.  The `bri1lig` -> `brillig` conflict was automatically resolved. It should
     not be shown to the user.
@@ -175,74 +179,117 @@ sometimes also against `BASE`. _All of them._
 
 ### Araxis
 
-Wrong.
+Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
+of which Git already resolved, and those resolutions in `MERGED` are not even
+present at all.
 
 ![](./mergetools/araxis.png)
 
 ### Beyond Compare
 
-Wrong.
+Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
+of which Git already resolved. The bottom pane is an odd jumble of multiple
+versions from all three files and completely ignores the resolutions Git
+already performed. In addition the bottom pane is diffed against the above
+three which makes the highlighted changes meaningless.
 
 ![](./mergetools/beyond-compare.png)
 
 Beyond compare has a "show conflicts" mode which removes some noise, but it
-still only show conflicts between local and remote, ignoring merged and
+still only show conflicts between `LOCAL` and `REMOTE`, ignoring `MERGED` and
 repeating automatically resolved conflicts.
 
 ### DiffMerge
 
-Wrong.
+Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
+of which Git already resolved, and those resolutions in `MERGED` are not even
+present at all.
 
 ![](./mergetools/DiffMerge.png)
 
-ScourgeGear DiffMerge automatically resolves conflicts itself. But we already
-have Git and Git already did that work and Git did it slightly better.
+DiffMerge automatically resolves conflicts itself by also looking at `BASE` and
+while it did resolve some conflicts Git did a much, much better job.
 
 ### kdiff3
 
-Wrong.
+Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
+of which Git already resolved, and those resolutions in `MERGED` are not even
+present at all. The bottom pane unhelpfully shows the conflicts as `<Merge
+Conflicts>` and doesn't try to show them at all.
 
 ![](./mergetools/kdiff3.png)
 
 ### Meld
 
-Wrong.
+Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
+of which Git already resolved, and those resolutions in `MERGED` are not even
+present at all. The lack of character-level differences just shows solid blocks
+of changes that don't help with resolution at all or even a little bit.
 
 ![](./mergetools/meld.png)
 
 ### Sublime Merge
 
-Wrong. (But gorgeous!)
+Wrong. (But gorgeous!) Diffs `LOCAL` against `REMOTE` against `BASE` or
+`MERGED`. It hides the conflicts behind an unhelpful `CONFLICT` marker.
 
 ![](./mergetools/Sublime-Merge.png)
 
-Sublime Merge gets it wrong like most the others, however the way it represents
-differences is much less visually distracting. Unfortunately it doesn't try to
-display complex conflicts at all, and you can only choose "hunks" of a conflict
-which makes grabbing part of one change and part of another very difficult.
+Sublime Merge gets it wrong like most the others however the way it represents
+differences is much less visually distracting. It's tantalizing close to being
+useful in grasping the history of the conflict at-a-glance.
+
+Unfortunately it doesn't try to display complex conflicts at all, and you can
+only choose "hunks" of a conflict which makes grabbing part of one change and
+part of another very difficult.
+
+I would _love_ to see a two-way diff between each side of `MERGED` in the
+middle, bookended by `LOCAL` and `REMOTE` with those whisp lines to direct your
+eyes to the relevant sections. **It could be greatness.**
 
 ### tkdiff
 
-Wrong.
+Wrong. (But closer!) A two-way diff between `LOCAL` and `REMOTE` but it appears
+to have also used `BASE` and resolved _some_ of the conflicts by itself. The
+two-way diff and character-level difference highlights make the resolution
+steps very, very clear and straightforward.
 
 ![](./mergetools/tkdiff.png)
 
+An effort worthy of praise and if we were diffing files without Git it would be
+a useful tool indeed. Unfortunately Git resolved those conflicts better and we
+don't see that work reflected anywhere here.
+
+So close!
+
 ### vimdiff
 
-Wrong. So, so wrong.
+Wrong. So, so wrong. A four-way diff between `LOCAL`, `BASE`, `REMOTE`, and
+`MERGED` make this a solid block of unhelpful red. The resolution must be
+performed in the bottom pane by manually editing the conflict markers. The diff
+tells you nothing and the resolution is every bit as hard as doing it without
+a mergetool.
 
 ![](./mergetools/vimdiff-three-way.png)
 
 ### VS Code
 
-So very close.
+So very, very close! A two-way diff between each side of `MERGED`! Exactly what
+you'd want to resolve the conflicts.
 
 ![](./mergetools/vscode.png)
 
-If you use VS Code to open `MERGED` and then click "compare changes" it
-displays exactly what you'd want to see to resolve the conflict. Unfortunately
-it opens that as a new, read-only view so you can't edit the changes and must
-go back to the file with conflict markers to make the fix.
+Unfortunately you must first view the file with the conflict markers, then
+avoid the temptation to of clicking the easy-buttons that just choose all the
+changes in one side or the other, and then click the "compare changes" button.
+
+But then _tragically_ it opens the above screenshot as a new, read-only view so
+you can't actually resolve conflicts in the two-way diff but must instead go
+back to the file with conflict markers, remember what change you wanted to
+make, and then make the fix manually.
+
+It could be great if only the two-way diff was the default view and the buffer
+was editable.
 
 ---
 

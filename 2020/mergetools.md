@@ -244,8 +244,19 @@ only choose "hunks" of a conflict which makes grabbing part of one change and
 part of another very difficult.
 
 I would _love_ to see a two-way diff between each side of `MERGED` in the
-middle, bookended by `LOCAL` and `REMOTE` with those whisp lines to direct your
+middle, bookended by `LOCAL` and `REMOTE` with those wisp lines to direct your
 eyes to the relevant sections. **It could be greatness.**
+
+### P4Merge
+
+Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. Like with Sublime the
+wispy lines that guide your eye between changes are a great visual effect.
+Unfortunately between the three-way diff p4merge can't make heads-or-tails of
+which change corresponds to which. And the bottom pane the familiar view of
+`MERGED` also diffed against the top panes which produces a mess of unhelpful
+colors and no straightforward resolution.
+
+![](./mergetools/p4merge.png)
 
 ### tkdiff
 

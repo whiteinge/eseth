@@ -283,16 +283,40 @@ a mergetool.
 
 ![](./mergetools/vimdiff-three-way.png)
 
+#### vimdiff2
+
 The newer vimdiff2 also get it's wrong. Although the differences highlighting
 is much, much more clear it still diffs `LOCAL` against `REMOTE` which forces
-you to re-resolve conflicts that Git has already resolved.
+you to re-resolve conflicts that Git has already resolved. (Contrast with
+diffconflicts below.)
 
 ![](./mergetools/vimdiff2-diffoff.png)
 
 (Depending on your Git version it will open two or three windows instead of the
-default four, but in all cases it diffs `LOCAL` against `REMOTE`. vimdiff2
-pictured above with `:diffoff` on the middle pane to showcase both the
-two-window and three-window variants.)
+default four, but in all cases it unfortunately diffs `LOCAL` against `REMOTE`.
+vimdiff2 is pictured above with `:diffoff` on the middle pane to showcase both
+the two-window and three-window results with a single screenshot.)
+
+#### diffconflicts
+
+Lest you think I'm complaining without acting, I wrote a Vim plugin that makes
+vimdiff perform the way that I describe above. It's called
+[diffconflicts](https://github.com/whiteinge/diffconflicts) and has a small
+following. It splits `MERGED` apart into two files and diffs those two files.
+
+![](./mergetools/vimdiff-two-way.png)
+
+If you contrast it with the two-way diff in the vimdiff section above you can
+see that Vim automatically resolved the conflicts in the second stanza which is
+why they're not present in this screenshot. Yes, they are minor conflicts and
+easy to resolve but the point is that Git already resolved them -- imagine that
+but applied to conflicts within a large file of source code instead of a simple
+poem.
+
+The purpose of this post is not to talk about my plugin but rather to try and
+convince other mergetools to take the same approach. I want to be able to
+recommend mergetools to coworkers and trainees regardless of which editor they
+use.
 
 ### VS Code
 

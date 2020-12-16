@@ -266,6 +266,15 @@ present at all.
 
 ![](./mergetools/intellij.png)
 
+### Tortoise Merge
+
+Wrong. Tortoise does the usual diff between `LOCAL` and `REMOTE` which doesn't
+show the conflicts that Git already resolved. In addition `MERGED` appears to
+be trying to display `BASE`. (I invoked it using Git-for-Windows with `git
+mergetool -t tortoisemerge` but perhaps I have something misconfigured?)
+
+![](./mergetools/tortoise-merge.png)
+
 ### tkdiff
 
 Wrong. (But closer!) A two-way diff between `LOCAL` and `REMOTE` but it appears

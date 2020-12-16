@@ -311,6 +311,23 @@ don't see that work reflected anywhere here.
 
 So close!
 
+### Emacs
+
+(I would very much appreciate help filling this subsection out!)
+
+#### Emacs + Magit
+
+Right! I need to do some code diving to see how they're achiving this result
+but the two-way diff on the top looks great. All the resolved conflicts are
+missing which frees the user to resolve only the remaining conflicts. The diff
+highlights show just the relevant conflicts. The bottom pane is somewhat noisy
+but still useful context to look at when resolving in the top panes.
+
+![](./mergetools/Emacs-Magit.png)
+
+(Thank you to [u/tech_addictede](https://www.reddit.com/user/tech_addictede/)
+for investigating and creating the screenshot.)
+
 ### vimdiff
 
 Wrong. So, so wrong. A four-way diff between `LOCAL`, `BASE`, `REMOTE`, and

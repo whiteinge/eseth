@@ -258,6 +258,14 @@ colors and no straightforward resolution.
 
 ![](./mergetools/p4merge.png)
 
+### IntelliJ
+
+Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
+of which Git already resolved, and those resolutions in `MERGED` are not even
+present at all.
+
+![](./mergetools/intellij.png)
+
 ### tkdiff
 
 Wrong. (But closer!) A two-way diff between `LOCAL` and `REMOTE` but it appears

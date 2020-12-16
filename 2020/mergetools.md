@@ -272,6 +272,17 @@ a mergetool.
 
 ![](./mergetools/vimdiff-three-way.png)
 
+The newer vimdiff2 also get it's wrong. Although the differences highlighting
+is much, much more clear it still diffs `LOCAL` against `REMOTE` which forces
+you to re-resolve conflicts that Git has already resolved.
+
+![](./mergetools/vimdiff2-diffoff.png)
+
+(Depending on your Git version it will open two or three windows instead of the
+default four, but in all cases it diffs `LOCAL` against `REMOTE`. vimdiff2
+pictured above with `:diffoff` on the middle pane to showcase both the
+two-window and three-window variants.)
+
 ### VS Code
 
 So very, very close! A two-way diff between each side of `MERGED`! Exactly what

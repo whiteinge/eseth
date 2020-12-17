@@ -296,6 +296,24 @@ mergetool -t tortoisemerge` but perhaps I have something misconfigured?)
 
 ![](./mergetools/tortoise-merge.png)
 
+### WinMerge
+
+Wrong (but has an effective auto-merge). WinMerge diffs `LOCAL` and `REMOTE` as
+usual so the conflict resolution Git already performed is not visible. It also
+appears to generate it's own version of `MERGED` rather than using the one Git
+generated.
+
+![](./mergetools/winmerge.png)
+
+There is an auto-merge button that does an admirable job of resolving
+conflicts:
+
+![](./mergetools/winmerge-automerge.png)
+
+An effort worthy of praise and if we were diffing files without Git it would be
+a helpful tool. However, in the context of Git it is mostly repeating work that
+Git already performed.
+
 ### tkdiff
 
 Wrong. (But closer!) A two-way diff between `LOCAL` and `REMOTE` but it appears

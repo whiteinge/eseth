@@ -5,156 +5,168 @@ m4SUMMARY({"A three-way merge will not help you resolve merge conflicts."})
 
 # Mergetools: Stop doing three-way merges!
 
-_A three-way merge will not help you resolve merge conflicts._
+*Update 2020-12-19:* This post took a different direction than I intended.
+Thanks to Felipe Contreras and several other people on the Git mailing list
+[there is a patch and discussion underway to make this change in upstream
+Git](https://lore.kernel.org/git/5fdaeffc8b6c_d0e262088b@natae.notmuch/T/#t)
+rather than in individual mergetools. As such, I've updated this post to
+reflect what ramifications that upstream change will have on the mergetools
+surveyed below. [The original post is still
+available](https://github.com/whiteinge/eseth/blob/e993b4b9c5f7e5d2c83890bcb7cd218abe867afd/2020/mergetools.md).
 
-Git mergetools can be an amazing, concise, and _precise_ way of resolving
-tricky merge conflicts. But for the most part they're all very hard to use,
-especially for beginners, and it's because they all make the exact same mistake.
+**Table of Contents**:
 
-## Prefer video?
+* [Conflict Resolution](#conflict-resolution)
+* [Mergetool Categories](#mergetool-categories)
+* [autoMerge Proposal](#automerge)
+* [Mergetools Comparison](#mergetool-comparison)
+* [How does Git generate `MERGED`?](#gits-merged)
 
-The problem and solution from this post is demonstrated in the video below.
-Ignore the Vim-specific parts as the problem and solution is relevant for all
-mergetools.
+## Conflict Resolution <a id="conflict-resolution"></a>
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/Pxgl3Wtf78Y" frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-picture-in-picture" allowfullscreen></iframe>
+When there is a merge conflict in Git there are several versions of the
+conflicted file that all represent different times in the lifecycle of that
+file:
 
-## Why use a mergetool?
+The `LOCAL` version of the file is what the file looks like on your branch
+_before the merge started_.
 
-Mergetools exist because nobody wants to edit conflict markers by hand. It's
-very difficult to do reliably, especially for subtle changes. Try to resolve
-the following conflict without accidentally losing a wanted change from either
-side. (Hint: there are five wanted changes.)
+The `REMOTE` version of the file is what the file looks like on the other
+branch _before the merge started_.
 
-```
-<<<<<<< HEAD
-twas brillig, and the slithy toves
-Did gyre and gimble in the wabe:
-all mimsy were the borogoves,
-And the mome raths outgrabe.
-=======
-'Twas brillig, and the slithy toves
-Did gyre and gimble in the wabe:
-All mimsy were the borogroves
-And the mome raths outgabe.
->>>>>>> branchA
+The `BASE` version of the file is what the file looks like from before the
+point that your branch and the other branch diverged. It's the most recent
+common ancestor of both branches.
 
-"Beware the Jabberwock, my son!
-The jaws that bite, the claws that catch!
-Beware the Jubjub bird, and shun
-The frumious Bandersnatch!"
-```
+When there is a conflict a tool that performs conflict resolution will compare
+those three files against one another in order to try and resolve any
+conflicting changes without human intervention. Any conflicts that cannot be
+automatically resolved must be resolved manually by a person.
 
-Manually removing conflict markers and manually moving individual changes from
-one section to another is just generally boring, error-prone work.
+Git is one such tool that performs conflict resolution but there are also many
+others. In general, a conflict resolution algorithm will produce the best
+results by starting with all three versions of the conflicted file instead of
+just looking at the latest two versions. An excellent algorithm, such as the
+one Git uses, [will do even more work](#gits-merged).
 
-## Background
+If there is a conflict that must be resolved manually then Git will write
+a fourth file named `MERGED` which contains everything Git was able to resolve
+by itself and also everything that it was not able to resolve. This is the file
+containing conflict markers that you may already be familiar with.
 
-When you start a merge in Git and there is a conflict there are several
-versions of the file that are in play:
+The most notable thing about `MERGED` is that **a file containing conflict
+markers represents a two-way diff.** Writing conflict markers is a nice,
+simple, and static way to represent conflicts. Conflicts may be visualized
+directly by just looking at the file (though it's very difficult to spot subtle
+differences), or those same conflicts may be visualized another way using
+specialized tools often called "mergetools" in the Git ecosystem.
 
-- `LOCAL` - the version of the file on your current branch.
-- `REMOTE` - the version of the file from the branch that you're merging into
-  your current branch.
-- `BASE` - the version of the file that your branch and the remote branch
-  started from.
-- `MERGED` - the version of the file that contains every change from `LOCAL`
-  and `REMOTE` -- including conflicts that Git _was_ able to automatically
-  resolve, and conflicts that Git _wasn't_ able to automatically resolve.
-  (Hint: this is important!)
+## Mergetool Categories <a id="mergetool-categories"></a>
 
-Almost every mergetool works the same way: they open `LOCAL`, `REMOTE`, and
-`MERGED` and then perform a three-way diff between them.
+There are three "categories" of mergetools that I've seen in my limited
+travels. There are many others that I haven't seen yet, and there's every
+likelihood that I have miscategorised some of them, so please take this broad
+categorization with a grain of salt and [corrections are very
+welcome](https://github.com/whiteinge/eseth/issues/new).
 
-## Problem
+### Blind Diff <a id="blind-diff"></a>
 
-The common mistake is that most every mergetool diffs `LOCAL` against `REMOTE`.
-Look again at the description of `MERGED`: Git automatically resolves a bunch
-of stuff and that hard work is _only_ represented in `MERGED`.
+Most mergetools surveyed below _do not_ perform their own conflict resolution,
+_nor_ do they make use of Git's conflict resolution, but rather they simply
+present the user with a diff of two or more files.
 
-A mergetool that diffs `LOCAL` and `REMOTE` will display a bunch of changes
-that Git may have already resolved for you, and the tool is asking you to
-resolve them yet again but manually. A mergetool is supposed to help you
-resolve conflicts and avoid dealing with conflict markers but **almost every
-mergetool makes it harder and makes it more work to resolve conflicts**. It's
-no wonder that mergetools aren't more widely used.
+Often this is a diff of `LOCAL` and `REMOTE`. As explained above, this approach
+will often present the end-user with unnecessary differences that have already
+been resolved by Git. This forces the user to re-resolve those differences by
+hand.
 
-Compare the example above with conflict markers to the default vimdiff view:
+It is also common to diff `LOCAL` and `REMOTE` and `BASE`. This approach will
+usually produce quite a lot of unhelpful visual noise and forces the end-user
+to perform all the same mental steps that a merge algorithm would perform --
+and, again, steps Git's merge algorithm already performed.
 
-![](./mergetools/vimdiff-three-way.png)
+Finally, another common configuration is to diff `LOCAL` and `REMOTE` and
+`BASE` _and_ `MERGED`. This approach produces an _impenetrable_ amount of
+visual noise and is effectively useless.
 
-It's a mess. Yes, vimdiff is particularly egregious but other mergetools have
-the exact same problem just with fewer awful colors.
+Some mergetools do allow the user to selectively turn off the diff comparison
+in order to only compare two panes at a time. This helps to reduce visual noise
+but still requires the end-user manually resolve all conflicts.
 
-## Solution
+### Custom Merge Algorithm <a id="custom-algorithm"></a>
 
-The goal of this post is to encourage all mergetools to adopt some variant of
-the simple approach of "unmerging" `MERGED` and diffing both halves.
+More sophisticated mergetools have their own conflict resolution algorithms.
+Sometimes these algorithms are quite clever. Although [Git's algorithm is
+excellent and has many options](#gits-merged) it is by no means the final
+word and innovation in conflict resolution algorithms is alive and well. We
+_want_ other tools to compete with Git in this arena because it will have
+positive outcomes for everyone.
 
-**A file containing conflict markers is a two-way diff.**
+[As described above](#conflict-resolution) a conflict resolution algorithm will
+almost certainly want to start with `LOCAL`, `REMOTE`, and `BASE`, and any
+additional information about the merge or file history can help.
 
-It can be demonstrated with two lines of `sed`:
+A mergetool with a custom conflict resolution algorithm _may_ want to look at
+the result of Git's algorithm that is stored in `MERGED` or it may want to do
+its own thing entirely. Both approaches are fine -- Git does a great job but
+maybe somebody else can do better.
 
-```sh
-sed -E -e '/^=======\r?$/,/^>>>>>>> /d' -e '/^<<<<<<< /d' "$MERGED" > "$LEFT_CONFLICTS"
-sed -E -e '/^<<<<<<< /,/^=======\r?$/d' -e '/^>>>>>>> /d' "$MERGED" > "$RIGHT_CONFLICTS"
-```
+### Reuse Git's Algorithm <a id="gits-algorithm"></a>
 
-Or in English: Make two copies of `MERGED`. One with all the right-hand
-conflicts removed; one with all the left-hand conflicts removed.
+The last category of mergetools entirely rely on the conflict resolution that
+Git automatically performs and stores in `MERGED`. They usually work by
+splitting `MERGED` into two halves and showing the end-user each half as
+a two-way diff.
 
-Diff those two files. Allow users to combine individual changes from both left
-and right. Replace `MERGED` with the result.
+This is a very simple approach that presents the smallest amount of visual
+noise to the end-user and relies on Git to do _all_ of the hard work. (Which,
+it should be noted, Git is already doing anyway.)
 
-That's it.
+These tools may, optionally, show the end-user additional information that
+could be useful in understanding the file history leading up to the conflict.
+This often includes temporarily showing `LOCAL`, `REMOTE`, or `BASE` or
+invoking additional Git commands to show the file history. However the actual
+conflict resolution is done by resolving the two halves of `MERGED` that
+contain the minimal, remaining conflicts.
 
-This is what the above conflict looks like as a two-way merge. The resolution
-suddenly becomes much, much more clear and obvious.
+## `autoMerge` Proposal <a id="automerge"></a>
 
-![](./mergetools/vimdiff-two-way.png)
+[There is a patch and discussion underway in upstream
+Git](https://lore.kernel.org/git/5fdaeffc8b6c_d0e262088b@natae.notmuch/T/#t) to
+add a flag that will make the [Blind Diff mergetools](#blind-diff) work more
+like the [tools that Reuse Git's Algorithm](#gits-algorithm) by
+splitting `MERGED` and _overwriting_ `LOCAL` and `REMOTE` with each half.
 
-`LOCAL` and `REMOTE` and `BASE` are very useful to understand the history
-leading up to the conflict. You can (and should!) read the relevant parts from
-those files. You should use [Git's merge
-log](https://www.git-scm.com/book/en/v2/Git-Tools-Advanced-Merging#_merge_log)
-for even more understanding. You should even individually compare the relevant
-sections of thsoe files with the left or right half of `MERGED` -- and maybe
-that does mean _temporarily_ showing a diff between them.
+This flag will allow these tools to benefit without making any other changes.
+At the time of this writing the proposal is to enable the flag by default.
 
-After you understand the history of the conflict and when it comes time to
-resolve those conflicts, you should only resolve them as a diff between the
-left half of `MERGED` and the right half of `MERGED`.
+Mergetools that want to display the original versions of `LOCAL` and `REMOTE`,
+or tools that want to use those original versions in their own conflict
+resolution algorithm may toggle this flag off. Mergetools that want the
+original verions of those files _and_ the result of Git's resolution can simply
+disable the flag and split `MERGED` themselves.
 
-## Summary
-
-Mergetool authors:
-
-Please continue to display `LOCAL` and `REMOTE`! Please display `BASE`. Please
-highlight the relevant sections of those files. But **don't** include those
-files in the diff. It doesn't help.
-
-**Do** show the "left" and "right" sides of the conflict markers as a two-way
-diff. Allow the user to grab individual changes from either side.
-
-I want this technique adopted by every tool. Software is hard. The world will
-be a better place if it's easier to avoid accidentally losing changes during
-a merge conflict.
+Given the large prevalence of tools in that first category, defaulting to an
+opt-out setting will positively affect many more users than an opt-in setting
+would. Plus the authors of more sophisticated mergetools that prefer it to be
+disabled are better able to recognize the pros and cons and make an informed
+choice.
 
 ---
 
-## A comparison of default mergetools
+## A comparison of default mergetools <a id="mergetool-comparison"></a>
 
-I've tested all the default mergetools that ship with Git that were easily
-installable on Fedora or Brew, plus Sublime Merge and VS Code. I'll try to add
-others to the list over time.
+Below is a comparison of several default mergetools that ship with Git plus
+some other popular tools. I'll try to add others to the list over time. [Fixes
+and contributions are welcome.](https://github.com/whiteinge/eseth/issues/new)
 
-I'm using [a script in the `diffconflicts` repository that generates subtle
+In addition, the tools surveyed below also have a before/after summary to
+visualize the ramifications of the new `autoMerge` flag proposal.
+
+This uses [a script in the `diffconflicts` repository that generates subtle
 merge
 conflicts](https://github.com/whiteinge/diffconflicts/tree/master/_utils#readme).
-Here are some results to watch out for in a good mergetool:
+Here are some results to watch out for the comparisons:
 
 1.  The `bri1lig` -> `brillig` conflict was automatically resolved. It should
     not be shown to the user.
@@ -174,160 +186,364 @@ Here are some results to watch out for in a good mergetool:
 7.  The conflict on the fourth line should be easily noticeable. We want the
     'r'.
 
-All of them tested so far get it wrong by diffing `LOCAL` against `REMOTE` and
-sometimes also against `BASE`. _All of them._
+### [Araxis Merge](https://www.araxis.com/merge/index.en)
 
-### Araxis
+Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
 
-Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
-of which Git already resolved, and those resolutions in `MERGED` are not even
-present at all.
+Before `autoMerge`:
 
 ![](./mergetools/araxis.png)
 
+After `autoMerge`:
+
+![](./mergetools/araxis-autoMerge.png)
+
+**Summary: uneccessary conflicts are no longer shown; no adverse effects.**
+
+Suggestions for tool authors:
+
+* Don't include `BASE` in the default diff. Continue to show the file, and have
+  a toggle to compare `BASE` with the left or right pane, but the resolution
+  will almost always only come from the `LOCAL` or `REMOTE` panes so make it
+  easier to grab individual changes from both.
+
 ### Beyond Compare
 
-Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
-of which Git already resolved. The bottom pane is an odd jumble of multiple
-versions from all three files and completely ignores the resolutions Git
-already performed. In addition the bottom pane is diffed against the above
-three which makes the highlighted changes meaningless.
+Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
+
+Before `autoMerge`:
 
 ![](./mergetools/beyond-compare.png)
 
-Beyond compare has a "show conflicts" mode which removes some noise, but it
-still only show conflicts between `LOCAL` and `REMOTE`, ignoring `MERGED` and
-repeating automatically resolved conflicts.
+After `autoMerge`:
+
+![](./mergetools/beyond-compare-autoMerge.png)
+
+**Summary: uneccessary conflicts are no longer shown; no adverse effects.**
+
+Suggestions for tool authors:
+
+* Don't include `BASE` in the default diff. The bottom panel doesn't provide
+  any value over the left and right upper panels; perhaps that would be a good
+  place to display (not compare) `BASE` instead.
+* I tried without success to use the "show conflicts" mode so it's very
+  possible I've overlooking a useful mode.
 
 ### DiffMerge
 
-Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
-of which Git already resolved, and those resolutions in `MERGED` are not even
-present at all.
+Category: [Custom Merge Algorithm](#custom-algorithm)
+
+Before `autoMerge`:
 
 ![](./mergetools/DiffMerge.png)
 
-DiffMerge automatically resolves conflicts itself by also looking at `BASE` and
-while it did resolve some conflicts Git did a much, much better job.
+After `autoMerge`:
+
+![](./mergetools/diffmerge-autoMerge.png)
+
+**Summary: uneccessary conflicts are no longer shown; no adverse effects on
+custom merge algorithm or end-result.**
+
+Suggestions for tool authors:
+
+* Don't include `BASE` in the default diff. The resolution will almost always
+  only come from the `LOCAL` or `REMOTE` panes so make it easier to grab
+  individual changes from both.
 
 ### kdiff3
 
-Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
-of which Git already resolved, and those resolutions in `MERGED` are not even
-present at all. The bottom pane unhelpfully shows the conflicts as `<Merge
-Conflicts>` and doesn't try to show them at all.
+Category: [Blind Diff](#blind-diff) & [Custom Merge Algorithm](#custom-algorithm)
+
+Before `autoMerge`:
 
 ![](./mergetools/kdiff3.png)
 
+Default view after `autoMerge`:
+
+![](./mergetools/kdiff3-autoMerge.png)
+
+"Auto solve" after `autoMerge`:
+
+![](./mergetools/kdiff3-auto-solve-autoMerge.png)
+
+**Summary: uneccessary conflicts are no longer shown; no adverse effects on
+custom merge algorithm or end-result; end result is identical to builtin "auto
+solve" results.**
+
+Suggestions for tool authors:
+
+* The visual emphasis on the `LOCAL` and `REMOTE` panes is good but hard to
+  notice for new users since `BASE` comes first and because `BASE` is also
+  diffed.
+* Don't include `BASE` in the default diff. Increase emphasis on the other two
+  panes.
+* The lower pane isn't providing any value and that space could be reclaimed.
+* I tried and failed to use the toggles between the A B C panes. They sound
+  useful but didn't seem to have an effect; I'm sure I'm missing something.
+
 ### Meld
 
-Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
-of which Git already resolved, and those resolutions in `MERGED` are not even
-present at all. The lack of character-level differences just shows solid blocks
-of changes that don't help with resolution at all or even a little bit.
+Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
+
+Before `autoMerge`:
 
 ![](./mergetools/meld.png)
 
+After `autoMerge`:
+
+![](./mergetools/meld-autoMerge.png)
+
+**Summary: uneccessary conflicts are no longer shown; no adverse effects.**
+
+Suggestions for tool authors:
+
+* Add option to remove the middle pane; it is not providing any benefit for
+  this use-case. Perhaps default to a two-way diff in the upstream Git
+  mergetool wrapper.
+
 ### Sublime Merge
 
-Wrong. (But gorgeous!) Diffs `LOCAL` against `REMOTE` against `BASE` or
-`MERGED`. It hides the conflicts behind an unhelpful `CONFLICT` marker.
+Category: [Custom Merge Algorithm](#custom-algorithm)
+
+Before `autoMerge`:
+
+The way Sublime Merge represents differences is _much_ less visually
+distracting and the merge algorithm works well. It's tantalizing close to being
+useful in grasping the history of the conflict at-a-glance.
 
 ![](./mergetools/Sublime-Merge.png)
 
-Sublime Merge gets it wrong like most the others however the way it represents
-differences is much less visually distracting. It's tantalizing close to being
-useful in grasping the history of the conflict at-a-glance.
+After `autoMerge`:
 
-Unfortunately it doesn't try to display complex conflicts at all, and you can
-only choose "hunks" of a conflict which makes grabbing part of one change and
-part of another very difficult.
+Identical output. I believe Sublime Merge opens files from the repository by
+itself rather than integrating with Git's mergetool. This also seems true when
+using the CLI `smerge` to invoke Sublime Merge.
 
-I would _love_ to see a two-way diff between each side of `MERGED` in the
-middle, bookended by `LOCAL` and `REMOTE` with those wisp lines to direct your
-eyes to the relevant sections. **It could be greatness.**
+**Summary: Identical output; no benefits; no adverse effects.**
+
+Suggestions for tool authors:
+
+* The `CONFLICT` placeholder in the middle pane isn't useful to resolve the
+  conflict.
+* I would _love_ to see a two-way diff between each side of `MERGED` in the
+  middle, using the existing character-level highlights. Then bookend those two
+  panes by `LOCAL` and `REMOTE` using those wisp lines to direct your eyes from
+  LOCAL to the left conflicts and from REMOTE to the right conflicts. The
+  visual embellishments in this tool are _so good_ this is one place I think
+  a four-panel display would actually help end-users.
 
 ### SmartGit
 
-Wrong, but close. SmartGit shows the merge conflicts but like some of the other
-more sophisticated graphical tools it does so in a way that brilliantly removes
-visual clutter.
+Category: [Blind Diff](#blind-diff) & [Reuse Git's Algorithm](#gits-algorithm)
+(sort of)
+
+The tool does an excellent job of navigating a whole repository, not just
+resolving conflicts, and provides easy-access to file history and the state of
+the repository. This is exactly the kind of tool that helps new programmers to
+see what needs to happen and helps seasoned programmers find relevant info
+quickly. The conflict resolution features are the weakest features (see
+suggestions below).
+
+Default view before `autoMerge`:
 
 ![](./mergetools/SmartGit.png)
 
-If SmartGit displayed each side of the merge conflict with the same visual
-flair it could be amazing. The tool does an excellent job of navigating
-a repository and giving easy-access to history. This is exactly the kind of
-tool that helps new programmers to see what needs to happen and helps seasoned
-programmers find relevant info quickly. So close!
+"Conflict resolver" before `autoMerge`:
+
+![](./mergetools/smartgit-conflict-resolver.png)
+
+After `autoMerge`:
+
+SmartGit opens files from the repository itself. I couldn't find a CLI util to
+use as a mergetool. (Corrections very welcome.)
+
+**Summary: Identical output; no benefits; no adverse effects.**
+
+Suggestions for tool authors:
+
+* The default view is visually appealing and almost performs a similar task to
+  `autoMerge` except the tool doesn't highlight differences between the "left"
+  and "right" side of the conflict markers. The tool supports character-level
+  highlighting and that would be useful in this view too.
+* The "conflict resolver" mode also looks fantastic but doesn't actually help
+  the end-user resolve conflicts. A CLI util to invoke SmartGit from Git's
+  mergetool would make use of the `autoMerge` addition and the middle panel
+  could then be removed.
 
 ### Fork
 
-Wrong. Fork displays the traditional three-way `LOCAL`, `REMOTE`, merge
-conflicts which isn't helpful in resolving the conflict.
+Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
+
+Before `autoMerge`:
 
 ![](./mergetools/Fork.png)
 
+After `autoMerge`:
+
+Fork opens files from the repository itself. I couldn't find a CLI util to
+use as a mergetool. (Corrections very welcome.)
+
+**Summary: Identical output; no benefits; no adverse effects.**
+
+Suggestions for tool authors:
+
+* The two-way diff is _perfect_ for use with the `autoMerge` flag. Integration
+  with Git's mergetool wrapper scripts (whether opened from the CLI or directly
+  from the GUI) would provide immediate benefit. This would also make the
+  bottom pane redundant and that space could be reclaimed.
+
 ### P4Merge
 
-Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. Like with Sublime the
-wispy lines that guide your eye between changes are a great visual effect.
-Unfortunately between the three-way diff p4merge can't make heads-or-tails of
-which change corresponds to which. And the bottom pane the familiar view of
-`MERGED` also diffed against the top panes which produces a mess of unhelpful
-colors and no straightforward resolution.
+Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
+
+Before `autoMerge`:
 
 ![](./mergetools/p4merge.png)
 
+After `autoMerge`:
+
+![](./mergetools/p4merge-autoMerge.png)
+
+**Summary: uneccessary conflicts are no longer shown; no adverse effects.**
+
+Suggestions for tool authors:
+
+* The wispy lines that guide your eye between changes are a great visual effect
+  that would be much more useful in a two-way diff. This tool is well-suited to
+  benefit from the `autoMerge` flag with small tweaks.
+* With `autoMerge` enabled the middle pane containing `BASE` is unecessary to
+  resolve the conflict and should be moved.
+* The bottom pane is too noisy to be helpful in identifying conflicts. It would
+  be better as a place to show (not diff) `BASE` instead.
+
 ### IntelliJ
 
-Wrong. Diffs `LOCAL` against `REMOTE` against `BASE`. A mess of changes, most
-of which Git already resolved, and those resolutions in `MERGED` are not even
-present at all.
+Category: [Blind Diff](#blind-diff) & [Custom Merge Algorithm](#custom-algorithm)
+
+Default view before `autoMerge`:
 
 ![](./mergetools/intellij.png)
 
+"Resolve simple conflicts" view before `autoMerge`:
+
+![](./mergetools/intelij-after-resolve-simple-conflicts.png)
+
+After `autoMerge`:
+
+Identical output. I could not figure out how to install the IntelliJ CLI util
+and configure this as Git mergetool. (Corrections very welcome.)
+
+**Summary: Identical output; no benefits; no adverse effects.**
+
+Suggestions for tool authors:
+
+* The "resolve simple conflicts" button produces similar results to the
+  `autoMerge` flag and this works very well. That also means the middle pane
+  presents already-resolved conflicts and is a visual distraction that should
+  be removed entirely or at least sidelined and not included in the diff by
+  default.
+
 ### Tortoise Merge
 
-Wrong. Tortoise does the usual diff between `LOCAL` and `REMOTE` which doesn't
-show the conflicts that Git already resolved. In addition `MERGED` appears to
-be trying to display `BASE`. (I invoked it using Git-for-Windows with `git
-mergetool -t tortoisemerge` but perhaps I have something misconfigured?)
+Category: [Custom Merge Algorithm](#custom-algorithm) (?)
+
+Before `autoMerge`:
 
 ![](./mergetools/tortoise-merge.png)
 
+Tortoise appears to automatically resolves trivial conflicts without user
+intervention.
+
+After `autoMerge`:
+
+![](./mergetools/tortoise-autoMerge.png)
+
+Identical output. Although I'm not convinced I'm using Tortoise correctly (see
+below), the result is identical with and without `autoMerge` enabled so I think
+we're safe to say this is a no-harm change for Tortoise.
+
+**Summary: Identical output; no benefits; no adverse effects.**
+
+Additional notes:
+
+I mischaracterized Tortoise on my first pass. It does appear to perform it's
+own conflict resolution. Since I'm reviewing so many tools at once it's hard to
+spend more than an hour learning any one tool in depth and I don't think I'm
+giving Tortoise a fair shake; [corrections
+welcome](https://github.com/whiteinge/eseth/issues/new). I invoked it using
+Git-for-Windows with `git mergetool -t tortoisemerge` but I may have something
+misconfigured -- the bottom panel says `MERGED` but looks like `BASE`. I'm
+honestly not sure if repeating the contents of `BASE` in all three panes is
+intentional or if I have something misconfigured. The new-user thoughts below
+are assuming it's intentional.
+
+Thoughts for tool authors:
+
+* The automatic conflict resolution between `REMOTE` and `LOCAL` is indeed very
+  effective and worthy of praise.
+* There's quite a bit of visual noise and it took me a long time to realize
+  each side was independently contrasting `REMOTE` with `BASE` and `LOCAL` with
+  `BASE`. That contrast is very helpful and not including `BASE` in the diff
+  highlighting is a good call.
+* I would like to see a way to include part of a change rather than having to
+  choose the entire line.
+
 ### WinMerge
 
-Wrong (but has an effective auto-merge). WinMerge diffs `LOCAL` and `REMOTE` as
-usual so the conflict resolution Git already performed is not visible. It also
-appears to generate it's own version of `MERGED` rather than using the one Git
-generated.
+Category: [Custom Merge Algorithm](#custom-algorithm)
+
+Default view before proposed `autoMerge` flag:
 
 ![](./mergetools/winmerge.png)
 
-There is an auto-merge button that does an admirable job of resolving
-conflicts:
+Results of built-in "auto merge" button **before** proposed `autoMerge` flag:
 
-![](./mergetools/winmerge-automerge.png)
+![](./mergetools/winmerge-auto-merge.png)
 
-An effort worthy of praise and if we were diffing files without Git it would be
-a helpful tool. However, in the context of Git it is mostly repeating work that
-Git already performed.
+The built-in "auto merge" button does an admirable job of resolving conflicts
+although the results are not quite as good as Git's algorithm.
+
+Results of built-in "auto merge" button **after** proposed `autoMerge` flag:
+
+![](./mergetools/winmerge-auto-merge-autoMerge.png)
+
+**Summary: resolved additional conflict that the tool missed; no adverse
+effects.**
+
+Suggestions for tool authors:
+
+* The conflict markers in the right-hand pane aren't helpful in resolving the
+  conflict. With the proposed `autoMerge` flag enabled they could be hidden
+  altogether to reclaim space; without the proposed `autoMerge` flag that pane
+  should not be included in the diff by default (an optional toggle would be
+  helpful though).
 
 ### tkdiff
 
-Wrong. (But closer!) A two-way diff between `LOCAL` and `REMOTE` but it appears
-to have also used `BASE` and resolved _some_ of the conflicts by itself. The
-two-way diff and character-level difference highlights make the resolution
-steps very, very clear and straightforward.
+Category: [Custom Merge Algorithm](#custom-algorithm)
+
+Before `autoMerge`:
 
 ![](./mergetools/tkdiff.png)
 
-An effort worthy of praise and if we were diffing files without Git it would be
-a useful tool indeed. Unfortunately Git resolved those conflicts better and we
-don't see that work reflected anywhere here.
+tkdiff has an impressive conflict resolution algorithm. The simple, two-way
+diff is a simple, straightforward, and effective way to view differences. It
+will even go so far as to recommend resolutions for all conflicts, though that
+is more fraught (in this example that loses wanted changes).
 
-So close!
+After `autoMerge`:
+
+![](./mergetools/tkdiff-autoMerge.png)
+
+**Summary: resolved additional conflict that the tool missed; no adverse
+effects.**
+
+Suggestions for tool authors:
+
+* I really like the workflow of stepping through conflicts and marking the
+  wanted change. It's the most effective resolution GUI I've worked with that
+  isn't also a text editor. However, I would like to be able to mark
+  _individual changes_ on each line rather than just the line.
 
 ### Emacs
 
@@ -335,111 +551,126 @@ So close!
 
 #### Emacs + Magit
 
-Right! I need to do some code diving to see how they're achiving this result
-but the two-way diff on the top looks great. All the resolved conflicts are
-missing which frees the user to resolve only the remaining conflicts. The diff
-highlights show just the relevant conflicts. The bottom pane is somewhat noisy
-but still useful context to look at when resolving in the top panes.
+Category: [Reuse Git's Algorithm](#gits-algorithm)
+
+Before `autoMerge`:
 
 ![](./mergetools/Emacs-Magit.png)
+
+After `autoMerge`:
+
+_Untested_
+
+General notes:
+
+I need to do some code diving to see how they're achiving this result but the
+two-way diff on the top looks great. All the resolved conflicts are missing
+which frees the user to resolve only the remaining conflicts. The diff
+highlights show just the relevant conflicts. The bottom pane is somewhat noisy
+but still useful context to look at when resolving in the top panes.
 
 (Thank you to [u/tech_addictede](https://www.reddit.com/user/tech_addictede/)
 for investigating and creating the screenshot.)
 
 ### vimdiff
 
-Wrong. So, so wrong. A four-way diff between `LOCAL`, `BASE`, `REMOTE`, and
-`MERGED` make this a solid block of unhelpful red. The resolution must be
-performed in the bottom pane by manually editing the conflict markers. The diff
-tells you nothing and the resolution is every bit as hard as doing it without
-a mergetool.
+Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, `BASE`,
+& `MERGED`
 
-![](./mergetools/vimdiff-three-way.png)
+_Note: the screenshots below have `:diffoff` on the `BASE` and `MERGED` windows
+for clarity and brevity. The vimdiff, vimdiff3, and vimdiff2 mergetools are not
+individually detailed because they're all variations on the same theme -- all
+need to toggle the diff between individual windows to maximize effectiveness._
 
-#### vimdiff2
+Before `autoMerge`:
 
-The newer vimdiff2 also get it's wrong. Although the differences highlighting
-is much, much more clear it still diffs `LOCAL` against `REMOTE` which forces
-you to re-resolve conflicts that Git has already resolved. (Contrast with
-diffconflicts below.)
+![](./mergetools/vimdiff.png)
 
-![](./mergetools/vimdiff2-diffoff.png)
+After `autoMerge`:
 
-(Depending on your Git version it will open two or three windows instead of the
-default four, but in all cases it unfortunately diffs `LOCAL` against `REMOTE`.
-vimdiff2 is pictured above with `:diffoff` on the middle pane to showcase both
-the two-window and three-window results with a single screenshot.)
+![](./mergetools/vimdiff-autoMerge.png)
+
+**Summary: uneccessary conflicts are no longer shown; no adverse effects.**
+
+Suggestions for tool authors:
+
+* The default four-way vimdiff view is decidedly unhelpful because _everything_
+  is highlighted.
+* Most Vim users will know how to selectively disable the diff in individual
+  windows in order to meaningfully compare one change against another.
+* That is not a default Vim mapping, however so all Vim users will need to do
+  it manually or add their [own
+  mappings](https://github.com/whiteinge/dotfiles/blob/7bc58a06a23f080112ea216f78e0a8603a267d3e/.vimrc#L433-L436).
+* Some Vim users will not know how to do that and this mergetool will be much
+  less effective until they do.
+* Changing those existing mergetools now is a non-starter however other
+  vimdiff wrappers are easy to add.
 
 #### diffconflicts
 
-Lest you think I'm complaining without acting, I wrote a Vim plugin that makes
-vimdiff perform the way that I describe above. It's called
-[diffconflicts](https://github.com/whiteinge/diffconflicts) and has a small
-following. It splits `MERGED` apart into two files and diffs those two files.
+Category: [Reuse Git's Algorithm](#gits-algorithm)
 
-![](./mergetools/vimdiff-two-way.png)
+Before `autoMerge`:
 
-If you contrast it with the two-way diff in the vimdiff section above you can
-see that Vim automatically resolved the conflicts in the second stanza which is
-why they're not present in this screenshot. Yes, they are minor conflicts and
-easy to resolve but the point is that Git already resolved them -- imagine that
-but applied to conflicts within a large file of source code instead of a simple
-poem.
+![](./mergetools/diffconflicts.png)
 
-The purpose of this post is not to talk about my plugin but rather to try and
-convince other mergetools to take the same approach. I want to be able to
-recommend mergetools to coworkers and trainees regardless of which editor they
-use.
+After `autoMerge`:
+
+Identical output in the first tab. The second tab is now missing the `LOCAL`
+and `REMOTE` versions of the file from before the merge since they were
+overwritten. Users that reference those versions to learn the conflict history
+will want to disable the `autoMerge` flag for this tool.
+
+**Summary: Identical output; minor adverse effects.**
+
+#### [vim-mergetool](https://github.com/samoshkin/vim-mergetool)
+
+Category: [Reuse Git's Algorithm](#gits-algorithm)
+
+Before `autoMerge`:
+
+(Same default output as diffconflicts above.)
+
+After `autoMerge`:
+
+Identical output when using the default layout. Users that have configured
+another default layout will see surprising results since `LOCAL` and `REMOTE`
+no longer contain the expected versions. Users that make use of other layouts
+will want to disable the `autoMerge` flag for this tool.
+
+**Summary: Identical default output; minor adverse effects.**
 
 ### VS Code
 
-So very, very close! A two-way diff between each side of `MERGED`! Exactly what
-you'd want to resolve the conflicts.
+Category: [Blind Diff](#blind-diff) & [Reuse Git's Algorithm](#gits-algorithm)
+(sort of)
+
+Before `autoMerge`:
 
 ![](./mergetools/vscode.png)
 
-Unfortunately you must first view the file with the conflict markers, then
-avoid the temptation to of clicking the easy-buttons that just choose all the
-changes in one side or the other, and then click the "compare changes" button.
+VS Code presents the file containing conflict markers directly, but if you
+click the "compare changes" button it will open a new view as simple and
+effective two-way diff that makes it easy to identify differences at a glance.
+Unfortunately this new view is read-only and the user must return to the file
+containing conflict markers to resolve the conflict manually.
 
-But then _tragically_ it opens the above screenshot as a new, read-only view so
-you can't actually resolve conflicts in the two-way diff but must instead go
-back to the file with conflict markers, remember what change you wanted to
-make, and then make the fix manually.
+After `autoMerge`:
 
-It could be great if only the two-way diff was the default view and the buffer
-was editable.
+Identical output because `LOCAL` and `REMOTE` are not used.
+
+**Summary: Identical output; no benefits; no adverse effects.**
+
+Suggestions for tool authors:
+
+* Make the two way-diff the default view or emphasize the "compare changes"
+  button as the preferred/recommended action.
+* Change the two-way diff to be directly editable using all the awesome power
+  of regular VS Code (linting, completion, etc).
 
 ---
 
-## Addendum
-
-This is a good place to stop reading. If you are interested to read more about
-such an esoteric topic then you are my kind of weird and we should be friends.
-
-Ten years ago I was [inspired by
-xxdiff](https://github.com/whiteinge/dotfiles/commit/358ca434fc474d59b9f0f6d84bf92b85b1faef81)
-to use an "unmerge" script to split a file containing conflict markers into two
-halves and diff those. I thought it was an obvious approach and other tools
-would also adopt it. They didn't.
-
-The script eventually expanded to Vim Tips as [A better Vimdiff Git
-mergetool](https://vim.fandom.com/wiki/A_better_Vimdiff_Git_mergetool), and
-(much) later became a standalone Vim plugin called
-[diffconflicts](https://github.com/whiteinge/diffconflicts).
-
-I'm a Vim user and so my scripts use vimdiff but **this technique should be
-even more effective in a rich, graphical tool** that can more beautifully
-display a two-way diff in addition to useful surrounding context such as Git
-log integration and highlighting (not diffing!) `LOCAL` and `REMOTE`. There's
-no comparison between the aesthetics of vimdiff and Sublime Merge. ;-)
-
-There is [a script in the `diffconflicts` repository that generates subtle
-merge
-conflicts](https://github.com/whiteinge/diffconflicts/tree/master/_utils#readme).
-It is useful to test Git behavior and compare mergetools.
-
-## How does Git generate `MERGED`?
+## How does Git generate `MERGED`? <a id="gits-merged"></a>
 
 It is worth asking how much work Git puts into creating the `MERGED` version of
 the file to appreciate how much work you lose by instead diffing `LOCAL` and

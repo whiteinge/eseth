@@ -154,7 +154,7 @@ choice.
 
 ---
 
-## A comparison of default mergetools <a id="mergetool-comparison"></a>
+## Mergetool Comparison <a id="mergetool-comparison"></a>
 
 Below is a comparison of several default mergetools that ship with Git plus
 some other popular tools. I'll try to add others to the list over time. [Fixes
@@ -186,7 +186,7 @@ Here are some results to watch out for the comparisons:
 7.  The conflict on the fourth line should be easily noticeable. We want the
     'r'.
 
-### [Araxis Merge](https://www.araxis.com/merge/index.en)
+### Araxis Merge
 
 Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
 

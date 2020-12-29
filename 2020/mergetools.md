@@ -8,7 +8,7 @@ m4SUMMARY({"A three-way merge will not help you resolve merge conflicts."})
 *Update 2020-12-19:* This post took a different direction than I intended.
 Thanks to Felipe Contreras and several other people on the Git mailing list
 [there is a patch and discussion underway to make this change in upstream
-Git](https://lore.kernel.org/git/5fdaeffc8b6c_d0e262088b@natae.notmuch/T/#t)
+Git](https://lore.kernel.org/git/5fe4bec2da21a_19c92085f@natae.notmuch/T/#t)
 rather than in individual mergetools. As such, I've updated this post to
 reflect what ramifications that upstream change will have on the mergetools
 surveyed below. [The original post is still
@@ -132,7 +132,7 @@ contain the minimal, remaining conflicts.
 ## `autoMerge` Proposal <a id="automerge"></a>
 
 [There is a patch and discussion underway in upstream
-Git](https://lore.kernel.org/git/5fdaeffc8b6c_d0e262088b@natae.notmuch/T/#t) to
+Git](https://lore.kernel.org/git/5fe4bec2da21a_19c92085f@natae.notmuch/T/#t) to
 add a flag that will make the [Blind Diff mergetools](#blind-diff) work more
 like the [tools that Reuse Git's Algorithm](#gits-algorithm) by
 splitting `MERGED` and _overwriting_ `LOCAL` and `REMOTE` with each half.

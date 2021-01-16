@@ -24,7 +24,7 @@ all: init $(DST) _metadata_cache $(IDX) rss.xml
 
 %.mdhtml %.m4f: %.md
 	m4 -P _macros.m4 "$^" -F "$(F).m4f" \
-	| markdown -f -smarty,+html,+fencedcode > "$(F).mdhtml"
+	| multimarkdown > "$(F).mdhtml"
 %.m4f: %.mdhtml
 
 %.html %.mdhtml %.m4f: F = $(basename $@)

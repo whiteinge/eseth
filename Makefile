@@ -7,7 +7,7 @@
 # new HTML into the site template. The frozen m4 files cache metadata to avoid
 # needing to reprocess the whole file.
 
-.PHONY: init printline public
+.PHONY: init printline deploy
 .SUFFIXES: .m4f .mdhtml .md .rst .html
 .PRECIOUS: %.mdhtml
 
@@ -43,9 +43,15 @@ rss.xml: _metadata_cache _make_rss.sh
 # resume.html: resume.rst resume.css
 # 	pandoc --section-divs -c ./resume.css -s -o "$@" "$<"
 
-public: all
+deploy: all
 	mkdir -p public
 	cp -r base.css categories.html index.html rss.xml 20* public
+	git checkout --orphan glpages glpages-init
+	git add public
+	git commit -m "Add site build"
+	git checkout master
+	git push -f gitlab glpages
+	git branch -D glpages
 
 init:
 	@command -v m4 > /dev/null 2>&1 \
@@ -55,6 +61,7 @@ clean:
 	rm -f $(DST) $(INT) $(MTA) \
 	    $(IDX) $(IDX:%.html=%.m4f) $(IDX:%.html=%.mdhtml) \
 	    _metadata_cache rss.xml
+	rm -rf public
 
 printline:
 	@echo $(INT)

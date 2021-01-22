@@ -1,0 +1,12 @@
+image: alpine
+
+pages:
+  stage: deploy
+  script:
+  - echo 'GNDN'
+  artifacts:
+    paths:
+    - public
+  only:
+    refs:
+      - glpages

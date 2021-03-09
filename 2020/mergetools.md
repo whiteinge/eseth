@@ -128,11 +128,11 @@ contain the minimal, remaining conflicts.
 
 ## `hideResolved` Proposal [hideResolved]
 
-[There is a patch and discussion underway in upstream
-Git](https://lore.kernel.org/git/5fe4bec2da21a_19c92085f@natae.notmuch/T/#t) to
+[There is a patch in upstream
+Git](https://lore.kernel.org/git/20210209200712.156540-1-seth@eseth.com/) to
 add a flag that will make the [Blind Diff mergetools](#blind-diff) work more
-like the [tools that Reuse Git's Algorithm](#gits-algorithm) by
-splitting `MERGED` and _overwriting_ `LOCAL` and `REMOTE` with each half.
+like the [tools that Reuse Git's Algorithm](#gits-algorithm) by splitting
+`MERGED` and _overwriting_ `LOCAL` and `REMOTE` with each half.
 
 This flag will allow these tools to benefit without making any other changes.
 At the time of this writing the proposal is to enable the flag by default.
@@ -602,6 +602,11 @@ Suggestions for tool authors:
   less effective until they do.
 * Changing those existing mergetools now is a non-starter however other
   vimdiff wrappers are easy to add.
+
+*Update 2021-03-08:* [a patch was accepted upstream to add a new `vimdiff1`
+layout
+variant](https://lore.kernel.org/git/20210214022840.849312-1-seth@eseth.com/)
+that takes advantage of `hideResolved` and only shows a simple, two-way diff.
 
 #### diffconflicts
 

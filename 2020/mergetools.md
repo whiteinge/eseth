@@ -5,14 +5,15 @@ m4SUMMARY({"A three-way merge will not help you resolve merge conflicts."})
 
 # Mergetools: Stop doing three-way merges!
 
-*Update 2020-12-19:* This post took a different direction than I intended.
-Thanks to Felipe Contreras and several other people on the Git mailing list
-[there is a patch and discussion underway to make this change in upstream
-Git](https://lore.kernel.org/git/5fe4bec2da21a_19c92085f@natae.notmuch/T/#t)
+*Update 2021-03-08:* This post took a different direction than I intended.
+Thanks to several people on the Git mailing list [there is a patch to make this
+change in upstream
+Git](https://lore.kernel.org/git/20210209200712.156540-1-seth@eseth.com/)
 rather than in individual mergetools. As such, I've updated this post to
 reflect what ramifications that upstream change will have on the mergetools
 surveyed below. [The original post is still
 available](https://github.com/whiteinge/eseth/blob/e993b4b9c5f7e5d2c83890bcb7cd218abe867afd/2020/mergetools.md).
+It appears to be slated for inclusion in the v2.31.0 Git release.
 
 **Table of Contents**:
 
@@ -125,7 +126,7 @@ invoking additional Git commands to show the file history. However the actual
 conflict resolution is done by resolving the two halves of `MERGED` that
 contain the minimal, remaining conflicts.
 
-## `autoMerge` Proposal [automerge]
+## `hideResolved` Proposal [hideResolved]
 
 [There is a patch and discussion underway in upstream
 Git](https://lore.kernel.org/git/5fe4bec2da21a_19c92085f@natae.notmuch/T/#t) to
@@ -157,7 +158,7 @@ some other popular tools. I'll try to add others to the list over time. [Fixes
 and contributions are welcome.](https://github.com/whiteinge/eseth/issues/new)
 
 In addition, the tools surveyed below also have a before/after summary to
-visualize the ramifications of the new `autoMerge` flag proposal.
+visualize the ramifications of the new `hideResolved` flag proposal.
 
 This uses [a script in the `diffconflicts` repository that generates subtle
 merge
@@ -186,11 +187,11 @@ Here are some results to watch out for the comparisons:
 
 Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/araxis.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 ![](./mergetools/araxis-autoMerge.png)
 
@@ -207,11 +208,11 @@ Suggestions for tool authors:
 
 Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/beyond-compare.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 ![](./mergetools/beyond-compare-autoMerge.png)
 
@@ -229,11 +230,11 @@ Suggestions for tool authors:
 
 Category: [Custom Merge Algorithm](#custom-algorithm)
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/DiffMerge.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 ![](./mergetools/diffmerge-autoMerge.png)
 
@@ -250,15 +251,15 @@ Suggestions for tool authors:
 
 Category: [Blind Diff](#blind-diff) & [Custom Merge Algorithm](#custom-algorithm)
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/kdiff3.png)
 
-Default view after `autoMerge`:
+Default view after `hideResolved`:
 
 ![](./mergetools/kdiff3-autoMerge.png)
 
-"Auto solve" after `autoMerge`:
+"Auto solve" after `hideResolved`:
 
 ![](./mergetools/kdiff3-auto-solve-autoMerge.png)
 
@@ -281,11 +282,11 @@ Suggestions for tool authors:
 
 Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/meld.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 ![](./mergetools/meld-autoMerge.png)
 
@@ -301,7 +302,7 @@ Suggestions for tool authors:
 
 Category: [Custom Merge Algorithm](#custom-algorithm)
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 The way Sublime Merge represents differences is _much_ less visually
 distracting and the merge algorithm works well. It's tantalizing close to being
@@ -309,7 +310,7 @@ useful in grasping the history of the conflict at-a-glance.
 
 ![](./mergetools/Sublime-Merge.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 Identical output. I believe Sublime Merge opens files from the repository by
 itself rather than integrating with Git's mergetool. This also seems true when
@@ -340,15 +341,15 @@ see what needs to happen and helps seasoned programmers find relevant info
 quickly. The conflict resolution features are the weakest features (see
 suggestions below).
 
-Default view before `autoMerge`:
+Default view before `hideResolved`:
 
 ![](./mergetools/SmartGit.png)
 
-"Conflict resolver" before `autoMerge`:
+"Conflict resolver" before `hideResolved`:
 
 ![](./mergetools/smartgit-conflict-resolver.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 SmartGit opens files from the repository itself. I couldn't find a CLI util to
 use as a mergetool. (Corrections very welcome.)
@@ -358,23 +359,23 @@ use as a mergetool. (Corrections very welcome.)
 Suggestions for tool authors:
 
 * The default view is visually appealing and almost performs a similar task to
-  `autoMerge` except the tool doesn't highlight differences between the "left"
+  `hideResolved` except the tool doesn't highlight differences between the "left"
   and "right" side of the conflict markers. The tool supports character-level
   highlighting and that would be useful in this view too.
 * The "conflict resolver" mode also looks fantastic but doesn't actually help
   the end-user resolve conflicts. A CLI util to invoke SmartGit from Git's
-  mergetool would make use of the `autoMerge` addition and the middle panel
+  mergetool would make use of the `hideResolved` addition and the middle panel
   could then be removed.
 
 ### Fork
 
 Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/Fork.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 Fork opens files from the repository itself. I couldn't find a CLI util to
 use as a mergetool. (Corrections very welcome.)
@@ -383,7 +384,7 @@ use as a mergetool. (Corrections very welcome.)
 
 Suggestions for tool authors:
 
-* The two-way diff is _perfect_ for use with the `autoMerge` flag. Integration
+* The two-way diff is _perfect_ for use with the `hideResolved` flag. Integration
   with Git's mergetool wrapper scripts (whether opened from the CLI or directly
   from the GUI) would provide immediate benefit. This would also make the
   bottom pane redundant and that space could be reclaimed.
@@ -392,11 +393,11 @@ Suggestions for tool authors:
 
 Category: [Blind Diff](#blind-diff) — diffs `LOCAL`, `REMOTE`, & `BASE`.
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/p4merge.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 ![](./mergetools/p4merge-autoMerge.png)
 
@@ -406,8 +407,8 @@ Suggestions for tool authors:
 
 * The wispy lines that guide your eye between changes are a great visual effect
   that would be much more useful in a two-way diff. This tool is well-suited to
-  benefit from the `autoMerge` flag with small tweaks.
-* With `autoMerge` enabled the middle pane containing `BASE` is unecessary to
+  benefit from the `hideResolved` flag with small tweaks.
+* With `hideResolved` enabled the middle pane containing `BASE` is unecessary to
   resolve the conflict and should be moved.
 * The bottom pane is too noisy to be helpful in identifying conflicts. It would
   be better as a place to show (not diff) `BASE` instead.
@@ -416,15 +417,15 @@ Suggestions for tool authors:
 
 Category: [Blind Diff](#blind-diff) & [Custom Merge Algorithm](#custom-algorithm)
 
-Default view before `autoMerge`:
+Default view before `hideResolved`:
 
 ![](./mergetools/intellij.png)
 
-"Resolve simple conflicts" view before `autoMerge`:
+"Resolve simple conflicts" view before `hideResolved`:
 
 ![](./mergetools/intelij-after-resolve-simple-conflicts.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 Identical output. I could not figure out how to install the IntelliJ CLI util
 and configure this as Git mergetool. (Corrections very welcome.)
@@ -434,7 +435,7 @@ and configure this as Git mergetool. (Corrections very welcome.)
 Suggestions for tool authors:
 
 * The "resolve simple conflicts" button produces similar results to the
-  `autoMerge` flag and this works very well. That also means the middle pane
+  `hideResolved` flag and this works very well. That also means the middle pane
   presents already-resolved conflicts and is a visual distraction that should
   be removed entirely or at least sidelined and not included in the diff by
   default.
@@ -443,19 +444,19 @@ Suggestions for tool authors:
 
 Category: [Custom Merge Algorithm](#custom-algorithm) (?)
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/tortoise-merge.png)
 
 Tortoise appears to automatically resolves trivial conflicts without user
 intervention.
 
-After `autoMerge`:
+After `hideResolved`:
 
 ![](./mergetools/tortoise-autoMerge.png)
 
 Identical output. Although I'm not convinced I'm using Tortoise correctly (see
-below), the result is identical with and without `autoMerge` enabled so I think
+below), the result is identical with and without `hideResolved` enabled so I think
 we're safe to say this is a no-harm change for Tortoise.
 
 **Summary: Identical output; no benefits; no adverse effects.**
@@ -488,18 +489,18 @@ Thoughts for tool authors:
 
 Category: [Custom Merge Algorithm](#custom-algorithm)
 
-Default view before proposed `autoMerge` flag:
+Default view before proposed `hideResolved` flag:
 
 ![](./mergetools/winmerge.png)
 
-Results of built-in "auto merge" button **before** proposed `autoMerge` flag:
+Results of built-in "auto merge" button **before** proposed `hideResolved` flag:
 
 ![](./mergetools/winmerge-auto-merge.png)
 
 The built-in "auto merge" button does an admirable job of resolving conflicts
 although the results are not quite as good as Git's algorithm.
 
-Results of built-in "auto merge" button **after** proposed `autoMerge` flag:
+Results of built-in "auto merge" button **after** proposed `hideResolved` flag:
 
 ![](./mergetools/winmerge-auto-merge-autoMerge.png)
 
@@ -509,8 +510,8 @@ effects.**
 Suggestions for tool authors:
 
 * The conflict markers in the right-hand pane aren't helpful in resolving the
-  conflict. With the proposed `autoMerge` flag enabled they could be hidden
-  altogether to reclaim space; without the proposed `autoMerge` flag that pane
+  conflict. With the proposed `hideResolved` flag enabled they could be hidden
+  altogether to reclaim space; without the proposed `hideResolved` flag that pane
   should not be included in the diff by default (an optional toggle would be
   helpful though).
 
@@ -518,7 +519,7 @@ Suggestions for tool authors:
 
 Category: [Custom Merge Algorithm](#custom-algorithm)
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/tkdiff.png)
 
@@ -527,7 +528,7 @@ diff is a simple, straightforward, and effective way to view differences. It
 will even go so far as to recommend resolutions for all conflicts, though that
 is more fraught (in this example that loses wanted changes).
 
-After `autoMerge`:
+After `hideResolved`:
 
 ![](./mergetools/tkdiff-autoMerge.png)
 
@@ -549,11 +550,11 @@ Suggestions for tool authors:
 
 Category: [Reuse Git's Algorithm](#gits-algorithm)
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/Emacs-Magit.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 _Untested_
 
@@ -578,11 +579,11 @@ for clarity and brevity. The vimdiff, vimdiff3, and vimdiff2 mergetools are not
 individually detailed because they're all variations on the same theme -- all
 need to toggle the diff between individual windows to maximize effectiveness._
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/vimdiff.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 ![](./mergetools/vimdiff-autoMerge.png)
 
@@ -606,16 +607,16 @@ Suggestions for tool authors:
 
 Category: [Reuse Git's Algorithm](#gits-algorithm)
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/diffconflicts.png)
 
-After `autoMerge`:
+After `hideResolved`:
 
 Identical output in the first tab. The second tab is now missing the `LOCAL`
 and `REMOTE` versions of the file from before the merge since they were
 overwritten. Users that reference those versions to learn the conflict history
-will want to disable the `autoMerge` flag for this tool.
+will want to disable the `hideResolved` flag for this tool.
 
 **Summary: Identical output; minor adverse effects.**
 
@@ -623,16 +624,16 @@ will want to disable the `autoMerge` flag for this tool.
 
 Category: [Reuse Git's Algorithm](#gits-algorithm)
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 (Same default output as diffconflicts above.)
 
-After `autoMerge`:
+After `hideResolved`:
 
 Identical output when using the default layout. Users that have configured
 another default layout will see surprising results since `LOCAL` and `REMOTE`
 no longer contain the expected versions. Users that make use of other layouts
-will want to disable the `autoMerge` flag for this tool.
+will want to disable the `hideResolved` flag for this tool.
 
 **Summary: Identical default output; minor adverse effects.**
 
@@ -641,7 +642,7 @@ will want to disable the `autoMerge` flag for this tool.
 Category: [Blind Diff](#blind-diff) & [Reuse Git's Algorithm](#gits-algorithm)
 (sort of)
 
-Before `autoMerge`:
+Before `hideResolved`:
 
 ![](./mergetools/vscode.png)
 
@@ -651,7 +652,7 @@ effective two-way diff that makes it easy to identify differences at a glance.
 Unfortunately this new view is read-only and the user must return to the file
 containing conflict markers to resolve the conflict manually.
 
-After `autoMerge`:
+After `hideResolved`:
 
 Identical output because `LOCAL` and `REMOTE` are not used.
 

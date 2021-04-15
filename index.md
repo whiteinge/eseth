@@ -17,6 +17,8 @@ m4_esyscmd({"
     }'
 "})
 
+[RSS Feed](/rss.xml).
+
 ## Archives
 
 m4_esyscmd({"

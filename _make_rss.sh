@@ -22,7 +22,7 @@ printf '<?xml version="1.0" encoding="UTF-8"?>
     fpath=$(dirname "$pfile")
     printf '<item>\n'
         printf '<title>%s</title>\n' "$ptitle"
-        printf '<link>xROOT/%s</link>\n' "$pfile"
+        printf '<link>xROOT/%s</link>\n' "$fname"
         printf '<description><![CDATA[\n'
         cat "$iname" \
             | sed -e 's/src="\.\//src="xROOT\/'"$fpath"'\//g'

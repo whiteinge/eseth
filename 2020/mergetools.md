@@ -5,15 +5,14 @@ m4SUMMARY({"A three-way merge will not help you resolve merge conflicts."})
 
 # Mergetools: Stop doing three-way merges!
 
-*Update 2021-03-08:* This post took a different direction than I intended.
-Thanks to several people on the Git mailing list [there is a patch to make this
-change in upstream
-Git](https://lore.kernel.org/git/20210209200712.156540-1-seth@eseth.com/)
-rather than in individual mergetools. As such, I've updated this post to
-reflect what ramifications that upstream change will have on the mergetools
-surveyed below. [The original post is still
+*Update 2024-11-19:* This post took a different direction than I intended.
+Thanks to several people on the Git mailing list this proposal has been
+included in upstream Git rather than in individual mergetools. There is now
+a [hideResolved](https://git-scm.com/docs/git-mergetool#Documentation/git-mergetool.txt-mergetoolhideResolved)
+flag in Git v2.31.0 and later. This post now reflects what ramifications that
+upstream change will have on the mergetools surveyed below. [The original post
+is still
 available](https://github.com/whiteinge/eseth/blob/e993b4b9c5f7e5d2c83890bcb7cd218abe867afd/2020/mergetools.md).
-It appears to be slated for inclusion in the v2.31.0 Git release.
 
 **Table of Contents**:
 
@@ -128,14 +127,14 @@ contain the minimal, remaining conflicts.
 
 ## `hideResolved` Proposal [hideResolved]
 
-[There is a patch in upstream
-Git](https://lore.kernel.org/git/20210209200712.156540-1-seth@eseth.com/) to
-add a flag that will make the [Blind Diff mergetools](#blind-diff) work more
-like the [tools that Reuse Git's Algorithm](#gits-algorithm) by splitting
-`MERGED` and _overwriting_ `LOCAL` and `REMOTE` with each half.
+There is now
+a [hideResolved](https://git-scm.com/docs/git-mergetool#Documentation/git-mergetool.txt-mergetoolhideResolved)
+flag in Git v2.31.0 and later that will make the [Blind Diff
+mergetools](#blind-diff) work more like the [tools that Reuse Git's
+Algorithm](#gits-algorithm) by splitting `MERGED` and _overwriting_ `LOCAL` and
+`REMOTE` with each half.
 
 This flag will allow these tools to benefit without making any other changes.
-At the time of this writing the proposal is to enable the flag by default.
 
 Mergetools that want to display the original versions of `LOCAL` and `REMOTE`,
 or tools that want to use those original versions in their own conflict

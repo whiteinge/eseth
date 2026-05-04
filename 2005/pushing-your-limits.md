@@ -1,6 +1,7 @@
-m4TITLE({"Pushing your limits"})
-m4CATEGORY({"computing, web"})
-m4DATE({"2005-01-01"})
+---
+date: 2005-01-01
+categories: [computing, web]
+---
 
 Pushing your limits
 ===================

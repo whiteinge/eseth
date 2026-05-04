@@ -1,6 +1,7 @@
-m4TITLE({"Mac OS X 10.4 (Tiger) Bug Review"})
-m4CATEGORY({"computing, os x"})
-m4DATE({"2005-05-04"})
+---
+date: 2005-05-04
+categories: [computing, os x]
+---
 
 Mac OS X 10.4 (Tiger) Bug Review
 ================================

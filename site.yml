@@ -1,0 +1,6 @@
+root: https://eseth.org
+site-title: Esoteric Rubbish
+site-rubric: Rambling so utterly bereft of purpose or brevity or praticality or utility or decorum.
+author: Seth House
+css:
+  - /base.css

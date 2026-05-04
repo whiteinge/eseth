@@ -1,6 +1,7 @@
-m4TITLE({"Pimping out your .pythonrc.py"})
-m4CATEGORY({"computing, python"})
-m4DATE({"2008-01-01"})
+---
+date: 2008-01-01
+categories: [computing, python]
+---
 
 Pimping out your .pythonrc.py
 =============================

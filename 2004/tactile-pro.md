@@ -1,6 +1,7 @@
-m4TITLE({"The Tactile Pro"})
-m4CATEGORY({"computing"})
-m4DATE({"2004-01-01"})
+---
+date: 2004-01-01
+categories: [computing]
+---
 
 The Tactile Pro
 ===============

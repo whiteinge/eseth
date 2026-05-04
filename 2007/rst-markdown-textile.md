@@ -1,6 +1,7 @@
-m4TITLE({"RestructuredText, Markdown, and Textile (and typography)"})
-m4CATEGORY({"computing"})
-m4DATE({"2007-04-10"})
+---
+date: 2007-04-10
+categories: [computing]
+---
 
 RestructuredText, Markdown, and Textile (and typography)
 ========================================================

@@ -1,7 +1,8 @@
-m4TITLE({"Visualize changes to the Git DAG in real-time"})
-m4CATEGORY({"computing, git"})
-m4DATE({"2023-05-12"})
-m4SUMMARY({"Real-time visualization of Git operations that change the DAG using a simple hook and an image viewer."})
+---
+date: 2023-05-12
+categories: [computing, git]
+summary: "Real-time visualization of Git operations that change the DAG using a simple hook and an image viewer."
+---
 
 # Visualize changes to the Git DAG in real-time
 

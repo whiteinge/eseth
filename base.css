@@ -101,3 +101,13 @@ th {
 tbody tr:nth-child(even) {
     background-color: var(--color-bg-stripe);
 }
+
+.toc-flat ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em 0.75em;
+    font-size: smaller;
+}

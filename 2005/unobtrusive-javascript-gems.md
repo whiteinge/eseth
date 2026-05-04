@@ -1,6 +1,7 @@
-m4TITLE({"Unobtrusive JavaScript Gems"})
-m4CATEGORY({"computing, web, javascript"})
-m4DATE({"2005-03-02"})
+---
+date: 2005-03-02
+categories: [computing, web, javascript]
+---
 
 Unobtrusive JavaScript Gems
 ===========================

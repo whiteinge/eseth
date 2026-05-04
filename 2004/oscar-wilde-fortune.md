@@ -1,7 +1,8 @@
-m4TITLE({"Oscar Wilde fortune cookie"})
-m4CATEGORY({"computing, unix"})
-m4DATE({"2004-09-23"})
-m4SUMMARY({"Oscar Wilde is the greatest author of all time. I can prove it. I compiled my 257 favorite quotes as UNIX fortune cookie for your local BSD Games installation."})
+---
+date: 2004-09-23
+categories: [computing, unix]
+summary: "Oscar Wilde is the greatest author of all time. I can prove it. I compiled my 257 favorite quotes as UNIX fortune cookie for your local BSD Games installation."
+---
 
 Oscar Wilde fortune cookie
 ==========================

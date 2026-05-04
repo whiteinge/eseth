@@ -1,6 +1,7 @@
-m4TITLE({"Textpattern"})
-m4CATEGORY({"computing, web"})
-m4DATE({"2005-10-26"})
+---
+date: 2005-10-26
+categories: [computing, web]
+---
 
 Textpattern
 ===========

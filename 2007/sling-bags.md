@@ -1,6 +1,7 @@
-m4TITLE({"Sling laptop bags, a review"})
-m4CATEGORY({"computing"})
-m4DATE({"2007-01-01"})
+---
+date: 2007-01-01
+categories: [computing]
+---
 
 Sling laptop bags, a review
 ===========================

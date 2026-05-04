@@ -3,11 +3,24 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-        <link rel="alternate" type="application/rss+xml" href="xROOT/rss.xml">
-        <link rel="stylesheet" href="/base.css">
+        <link rel="alternate" type="application/rss+xml" href="$root$/rss.xml">
+$for(css)$
+        <link rel="stylesheet" href="$css$">
+$endfor$
+$if(highlighting-css)$
+        <style>
+$highlighting-css$
+        </style>
+$endif$
+$if(math)$
+        $math$
+$endif$
+$for(header-includes)$
+        $header-includes$
+$endfor$
 
-        <meta name="description" content="xSUMMARY">
-        <title>xTITLE</title>
+        <meta name="description" content="$if(summary)$$summary$$else$$title$$endif$">
+        <title>$title$</title>
     </head>
     <body>
         <div class="documentwrapper" itemscope itemtype="https://schema.org/BlogPosting">
@@ -15,13 +28,18 @@
             <a href="/">Home</a>
             | <a href="/categories.html">Posts by Category</a>
         </p>
-        m4_ifelse(xDATE, {"xDATE"}, {""}, {"
-        <p class="date"><time itemprop="datePublished">xDATE</time></p>
-        "})
+$if(date)$
+        <p class="date"><time itemprop="datePublished">$date$</time></p>
+$endif$
 
         <article itemprop="articleBody">
-            m4_undivert(xUNDIVERT)
+            $body$
         </article>
+$if(toc)$
+        <nav id="$idprefix$TOC" role="doc-toc">
+            $table-of-contents$
+        </nav>
+$endif$
         </div>
     </body>
 </html>

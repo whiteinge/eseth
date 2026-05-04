@@ -1,6 +1,7 @@
-m4TITLE({"Firefox and boxen-hopping"})
-m4CATEGORY({"computing, web"})
-m4DATE({"2006-03-30"})
+---
+date: 2006-03-30
+categories: [computing, web]
+---
 
 Firefox and boxen-hopping
 =========================

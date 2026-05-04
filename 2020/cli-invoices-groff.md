@@ -1,7 +1,8 @@
-m4TITLE({"Generate PDF Invoices from the CLI with groff"})
-m4CATEGORY({"computing, unix"})
-m4DATE({"2020-08-25"})
-m4SUMMARY({"Generate a PDF invoice from a plain text timelog using groff, m4, and a splash of awk"})
+---
+date: 2020-08-25
+categories: [computing, unix]
+summary: "Generate a PDF invoice from a plain text timelog using groff, m4, and a splash of awk"
+---
 
 # Generate PDF Invoices from the CLI with groff
 

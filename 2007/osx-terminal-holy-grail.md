@@ -1,6 +1,7 @@
-m4TITLE({"The Mac OS X Terminal Holy Grail: mrxvt"})
-m4CATEGORY({"computing, os x"})
-m4DATE({"2007-05-15"})
+---
+date: 2007-05-15
+categories: [computing, os x]
+---
 
 The Mac OS X Terminal Holy Grail: mrxvt
 =======================================

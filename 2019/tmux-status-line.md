@@ -1,7 +1,8 @@
-m4TITLE({"tmux Status Line"})
-m4CATEGORY({"computing, unix"})
-m4DATE({"2019-10-07"})
-m4SUMMARY({"An experiment to move status info that usually lives in your shell prompt into tmux pane statuses."})
+---
+date: 2019-10-07
+categories: [computing, unix]
+summary: "An experiment to move status info that usually lives in your shell prompt into tmux pane statuses."
+---
 
 # tmux Status Line
 

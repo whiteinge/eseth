@@ -1,7 +1,8 @@
-m4TITLE({"Mercurial Info in Your Zsh Prompt"})
-m4CATEGORY({"computing, unix, zsh, mercurial"})
-m4DATE({"2010-05-24"})
-m4SUMMARY({"Zsh's built-in vcs_info system is an amazing, flexible, and extendable system for putting Mercurial information in your shell prompt."})
+---
+date: 2010-05-24
+categories: [computing, unix, zsh, mercurial]
+summary: "Zsh's built-in vcs_info system is an amazing, flexible, and extendable system for putting Mercurial information in your shell prompt."
+---
 
 Mercurial Info in Your Zsh Prompt
 =================================

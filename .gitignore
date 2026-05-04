@@ -1,7 +1,6 @@
 /public
 
-*.m4f
-*.mdhtml
+*.meta
 
 /_metadata_cache
 /20*/*.html

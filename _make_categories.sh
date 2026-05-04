@@ -1,19 +1,22 @@
-m4TITLE({"Posts by Category"})
+#!/usr/bin/env sh
 
-# Posts by Category
+# Generate Markdown for the categories page (categories.html). Reads
+# _metadata_cache and groups posts by category.
 
-m4_esyscmd({"
+printf -- '---\ntitle: "Posts by Category"\n---\n\n# Posts by Category\n\n[TOC]\n'
+
 awk '
 BEGIN { FS="\t" }
 {
     file=$1; sub(/\.md$/, ".html", file)
+    date=$2
     title=$3
     split($4, categories, ", ")
 
     file_index[file] = title
 
     for (c in categories) {
-        cate_index[categories[c]][file] = title
+        cate_index[categories[c]][file] = date
     }
 }
 
@@ -24,8 +27,8 @@ END {
         catname = cate_index_sorted[j]
         printf("\n## %s\n\n", catname == "" ? "Uncategorized" : catname)
 
-        asorti(cate_index[catname], cat_sorted)
-        for (k = length(cat_sorted); k > 0; k -= 1) {
+        asorti(cate_index[catname], cat_sorted, "@val_str_desc")
+        for (k = 1; k <= length(cat_sorted); k += 1) {
             fpath = cat_sorted[k]
             ftitle = file_index[fpath]
             printf("- [%s](%s)\n", ftitle, fpath)
@@ -33,4 +36,3 @@ END {
     }
 }
 ' < _metadata_cache
-"})

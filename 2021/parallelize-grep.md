@@ -1,7 +1,8 @@
-m4TITLE({"Fast, parallel grep using find and xargs"})
-m4CATEGORY({"computing, unix"})
-m4DATE({"2021-04-13"})
-m4SUMMARY({"grep doesn't have to be slow; use the UNIX philosophy of combining utilities."})
+---
+date: 2021-04-13
+categories: [computing, unix]
+summary: "grep doesn't have to be slow; use the UNIX philosophy of combining utilities."
+---
 
 # Fast, parallel grep using find and xargs
 
@@ -33,7 +34,7 @@ for your own wrapper.
 
 **Table of Contents**:
 
-{{TOC:2-3}}
+[TOC]
 
 ## Composing small, single-purpose tools
 

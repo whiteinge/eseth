@@ -1,6 +1,7 @@
-m4TITLE({"Sony Ericsson K700i"})
-m4CATEGORY({"mobiles"})
-m4DATE({"2004-12-26"})
+---
+date: 2004-12-26
+categories: [mobiles]
+---
 
 Sony Ericsson K700i
 ===================

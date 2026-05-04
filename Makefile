@@ -1,44 +1,48 @@
-# Static site generator using Make and m4
+# Static site generator using Make and Pandoc.
 #
-# Workflow -> .md -> .mdhtml/.m4f -> .html
-#
-# The intermediary step provides an opportunity to use m4 to _generate_
-# markdown before converting it to HTML and then uses m4 again to insert the
-# new HTML into the site template. The frozen m4 files cache metadata to avoid
-# needing to reprocess the whole file.
+# Each post is plain Markdown with YAML frontmatter. Pandoc renders the body
+# into _template.html for the final page and into _meta.tmpl for a one-line
+# tab-separated metadata cache used by the index, categories, year-index, and
+# RSS pages.
 
-.PHONY: init printline deploy
-.SUFFIXES: .m4f .mdhtml .md .rst .html
-.PRECIOUS: %.mdhtml
+.PHONY: init deploy clean
+.PRECIOUS: %.meta
 
 SRC = $(filter-out 20%/index.md, $(wildcard 20*/*.md))
-INT = $(SRC:%.md=%.mdhtml)
-MTA = $(SRC:%.md=%.m4f)
 DST = $(SRC:%.md=%.html)
+META = $(SRC:%.md=%.meta)
 IDX = index.html categories.html $(addsuffix /index.html, $(wildcard 20*))
+
+PANDOC = pandoc -f markdown -t html --no-highlight --wrap=none \
+    --lua-filter=_title_from_h1.lua \
+    --lua-filter=_inline_toc.lua \
+    --template=_template.html --metadata-file=site.yml
 
 all: init $(DST) _metadata_cache $(IDX) rss.xml
 
-%.html: %.mdhtml %.m4f _template.html
-	m4 -R "$(F).m4f" _template.m4 "$(F).mdhtml" > "$@"
+%.html: %.md _template.html _title_from_h1.lua _inline_toc.lua site.yml
+	$(PANDOC) "$<" -o "$@"
 
-%.mdhtml %.m4f: %.md
-	m4 -P _macros.m4 "$^" -F "$(F).m4f" \
-	| multimarkdown > "$(F).mdhtml"
-%.m4f: %.mdhtml
+%.meta: %.md _meta.tmpl _title_from_h1.lua
+	pandoc -f markdown -t plain --wrap=none \
+	    --lua-filter=_title_from_h1.lua \
+	    --template=_meta.tmpl \
+	    "$<" -o "$@"
 
-%.html %.mdhtml %.m4f: F = $(basename $@)
+_metadata_cache: $(META)
+	cat $^ > $@
 
-_metadata_cache: $(MTA)
-	rm -f $@
-	for file in $^; do \
-	    m4 -R $$file _metadata_cache.m4 >> _metadata_cache; \
-	done
+index.html: _make_index.sh _metadata_cache _template.html site.yml
+	./_make_index.sh | $(PANDOC) -o "$@"
 
-$(IDX): _metadata_cache
+categories.html: _make_categories.sh _metadata_cache _template.html site.yml
+	./_make_categories.sh | $(PANDOC) -o "$@"
 
-rss.xml: _metadata_cache _make_rss.sh
-	./_make_rss.sh | m4 -P _macros.m4 - > $@
+20%/index.html: _make_year_index.sh _metadata_cache _template.html site.yml
+	./_make_year_index.sh "20$*" | $(PANDOC) -o "$@"
+
+rss.xml: _make_rss.sh _metadata_cache site.yml $(DST)
+	./_make_rss.sh > "$@"
 
 deploy: all
 	mkdir -p public
@@ -51,14 +55,11 @@ deploy: all
 	git branch -D glpages
 
 init:
-	@command -v m4 > /dev/null 2>&1 \
-	    || (echo 'Missing m4' && exit 1)
+	@command -v pandoc > /dev/null 2>&1 \
+	    || (echo 'Missing pandoc' && exit 1)
 
 clean:
-	rm -f $(DST) $(INT) $(MTA) \
-	    $(IDX) $(IDX:%.html=%.m4f) $(IDX:%.html=%.mdhtml) \
+	rm -f $(DST) $(META) \
+	    $(IDX) \
 	    _metadata_cache rss.xml
 	rm -rf public
-
-printline:
-	@echo $(INT)

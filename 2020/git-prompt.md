@@ -1,7 +1,8 @@
-m4TITLE({"One call Git status for your shell prompt"})
-m4CATEGORY({"computing, unix"})
-m4DATE({"2020-01-25"})
-m4SUMMARY({"All the info you need for a Git shell prompt in one Git invocation"})
+---
+date: 2020-01-25
+categories: [computing, unix]
+summary: "All the info you need for a Git shell prompt in one Git invocation"
+---
 
 # One call Git status for your shell prompt
 

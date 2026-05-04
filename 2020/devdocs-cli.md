@@ -1,7 +1,8 @@
-m4TITLE({"Browse devdocs.io from the CLI"})
-m4CATEGORY({"computing, unix"})
-m4DATE({"2020-01-25"})
-m4SUMMARY({"Browse devdocs.io from the CLI with a fuzzy-finder and Lynx"})
+---
+date: 2020-01-25
+categories: [computing, unix]
+summary: "Browse devdocs.io from the CLI with a fuzzy-finder and Lynx"
+---
 
 # Browse devdocs.io from the CLI
 

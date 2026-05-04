@@ -1,6 +1,7 @@
-m4TITLE({"The Elements of Typographic Style"})
-m4CATEGORY({"typography"})
-m4DATE({"2005-12-15"})
+---
+date: 2005-12-15
+categories: [typography]
+---
 
 The Elements of Typographic Style
 =================================

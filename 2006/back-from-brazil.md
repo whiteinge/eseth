@@ -1,6 +1,7 @@
-m4TITLE({"Back from Brazil"})
-m4CATEGORY({"personal"})
-m4DATE({"2006-06-12"})
+---
+date: 2006-06-12
+categories: [personal]
+---
 
 Back from Brazil
 ================

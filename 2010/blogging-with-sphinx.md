@@ -1,6 +1,7 @@
-m4TITLE({"Blogging with Sphinx"})
-m4CATEGORY({"computing, python"})
-m4DATE({"2010-03-17"})
+---
+date: 2010-03-17
+categories: [computing, python]
+---
 
 Blogging with Sphinx
 ====================

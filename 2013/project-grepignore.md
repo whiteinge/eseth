@@ -1,7 +1,8 @@
-m4TITLE({"Setting project-level grep options"})
-m4CATEGORY({"computing, unix, zsh"})
-m4DATE({"2013-04-28"})
-m4SUMMARY({"Change GREP_OPTIONS dynamically using Zshs precmd."})
+---
+date: 2013-04-28
+categories: [computing, unix, zsh]
+summary: "Change GREP_OPTIONS dynamically using Zshs precmd."
+---
 
 Setting project-level grep options
 ==================================

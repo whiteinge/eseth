@@ -1,6 +1,7 @@
-m4TITLE({"Yeti Gore Flash game"})
-m4CATEGORY({"computing"})
-m4DATE({"2004-12-16"})
+---
+date: 2004-12-16
+categories: [computing]
+---
 
 Yeti Gore Flash game
 ====================

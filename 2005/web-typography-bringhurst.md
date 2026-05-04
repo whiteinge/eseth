@@ -1,6 +1,7 @@
-m4TITLE({"Web Typography, Bringhurst-style"})
-m4CATEGORY({"computing, typography, web"})
-m4DATE({"2005-12-14"})
+---
+date: 2005-12-14
+categories: [computing, typography, web]
+---
 
 Web Typography, Bringhurst-style
 ================================

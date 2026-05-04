@@ -1,6 +1,7 @@
-m4TITLE({"Freebase"})
-m4CATEGORY({"computing, web"})
-m4DATE({"2007-09-06"})
+---
+date: 2007-09-06
+categories: [computing, web]
+---
 
 Freebase
 ========

@@ -1,6 +1,7 @@
-m4TITLE({"Dotfiles"})
-m4CATEGORY({"computing, unix, zsh, screen, vim"})
-m4DATE({"2005-10-08"})
+---
+date: 2005-10-08
+categories: [computing, unix, zsh, screen, vim]
+---
 
 Dotfiles
 ========

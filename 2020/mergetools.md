@@ -1,7 +1,8 @@
-m4TITLE({"Mergetools: Stop doing three-way merges!"})
-m4CATEGORY({"computing"})
-m4DATE({"2020-12-08"})
-m4SUMMARY({"A three-way merge will not help you resolve merge conflicts."})
+---
+date: 2020-12-08
+categories: [computing]
+summary: "A three-way merge will not help you resolve merge conflicts."
+---
 
 # Mergetools: Stop doing three-way merges!
 
@@ -16,9 +17,9 @@ available](https://github.com/whiteinge/eseth/blob/e993b4b9c5f7e5d2c83890bcb7cd2
 
 **Table of Contents**:
 
-{{TOC:2-3}}
+[TOC]
 
-## Conflict Resolution [conflict-resolution]
+## Conflict Resolution {#conflict-resolution}
 
 When there is a merge conflict in Git there are several versions of the
 conflicted file that all represent different times in the lifecycle of that
@@ -57,7 +58,7 @@ directly by just looking at the file (though it's very difficult to spot subtle
 differences), or those same conflicts may be visualized another way using
 specialized tools often called "mergetools" in the Git ecosystem.
 
-## Mergetool Categories [mergetool-categories]
+## Mergetool Categories {#mergetool-categories}
 
 There are three "categories" of mergetools that I've seen in my limited
 travels. There are many others that I haven't seen yet, and there's every
@@ -65,7 +66,7 @@ likelihood that I have miscategorised some of them, so please take this broad
 categorization with a grain of salt and [corrections are very
 welcome](https://github.com/whiteinge/eseth/issues/new).
 
-### Blind Diff [blind-diff]
+### Blind Diff {#blind-diff}
 
 Most mergetools surveyed below _do not_ perform their own conflict resolution,
 _nor_ do they make use of Git's conflict resolution, but rather they simply
@@ -89,7 +90,7 @@ Some mergetools do allow the user to selectively turn off the diff comparison
 in order to only compare two panes at a time. This helps to reduce visual noise
 but still requires the end-user manually resolve all conflicts.
 
-### Custom Merge Algorithm [custom-algorithm]
+### Custom Merge Algorithm {#custom-algorithm}
 
 More sophisticated mergetools have their own conflict resolution algorithms.
 Sometimes these algorithms are quite clever. Although [Git's algorithm is
@@ -107,7 +108,7 @@ the result of Git's algorithm that is stored in `MERGED` or it may want to do
 its own thing entirely. Both approaches are fine -- Git does a great job but
 maybe somebody else can do better.
 
-### Reuse Git's Algorithm [gits-algorithm]
+### Reuse Git's Algorithm {#gits-algorithm}
 
 The last category of mergetools entirely rely on the conflict resolution that
 Git automatically performs and stores in `MERGED`. They usually work by
@@ -125,7 +126,7 @@ invoking additional Git commands to show the file history. However the actual
 conflict resolution is done by resolving the two halves of `MERGED` that
 contain the minimal, remaining conflicts.
 
-## `hideResolved` Proposal [hideResolved]
+## `hideResolved` Proposal {#hideResolved}
 
 There is now
 a [hideResolved](https://git-scm.com/docs/git-mergetool#Documentation/git-mergetool.txt-mergetoolhideResolved)
@@ -150,7 +151,7 @@ choice.
 
 ---
 
-## Mergetool Comparison [mergetool-comparison]
+## Mergetool Comparison {#mergetool-comparison}
 
 Below is a comparison of several default mergetools that ship with Git plus
 some other popular tools. I'll try to add others to the list over time. [Fixes
@@ -671,7 +672,7 @@ Suggestions for tool authors:
 
 ---
 
-## How does Git generate `MERGED`? [gits-merged]
+## How does Git generate `MERGED`? {#gits-merged}
 
 It is worth asking how much work Git puts into creating the `MERGED` version of
 the file to appreciate how much work you lose by instead diffing `LOCAL` and

@@ -1,6 +1,7 @@
-m4TITLE({"Viewing the DOM Source with Firefox"})
-m4CATEGORY({"computing, web"})
-m4DATE({"2005-12-06"})
+---
+date: 2005-12-06
+categories: [computing, web]
+---
 
 Viewing the DOM Source with Firefox
 ===================================

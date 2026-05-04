@@ -1,6 +1,6 @@
 ---
 date: 2005-05-04
-categories: [computing, os x]
+categories: [os x, apple, reviews]
 ---
 
 Mac OS X 10.4 (Tiger) Bug Review

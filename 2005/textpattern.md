@@ -1,6 +1,6 @@
 ---
 date: 2005-10-26
-categories: [computing, web]
+categories: [web, blogging, reviews]
 ---
 
 Textpattern

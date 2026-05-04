@@ -1,6 +1,6 @@
 ---
 date: 2007-04-10
-categories: [computing]
+categories: [markup, typography]
 ---
 
 RestructuredText, Markdown, and Textile (and typography)

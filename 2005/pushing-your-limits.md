@@ -1,6 +1,6 @@
 ---
 date: 2005-01-01
-categories: [computing, web]
+categories: [web, css]
 ---
 
 Pushing your limits

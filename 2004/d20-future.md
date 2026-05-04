@@ -1,6 +1,6 @@
 ---
 date: 2004-09-21
-categories: [gaming]
+categories: [gaming, books, reviews]
 ---
 
 d20 Future book review

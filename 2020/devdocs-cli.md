@@ -1,6 +1,6 @@
 ---
 date: 2020-01-25
-categories: [computing, unix]
+categories: [unix, cli, shell]
 summary: "Browse devdocs.io from the CLI with a fuzzy-finder and Lynx"
 ---
 

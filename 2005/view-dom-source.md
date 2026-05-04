@@ -1,6 +1,6 @@
 ---
 date: 2005-12-06
-categories: [computing, web]
+categories: [web, javascript, firefox, browsers]
 ---
 
 Viewing the DOM Source with Firefox

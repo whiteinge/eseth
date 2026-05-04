@@ -1,6 +1,6 @@
 ---
 date: 2004-08-21
-categories: [computing, web]
+categories: [web, browsers, accessibility, standards]
 ---
 
 # Can Lynx be used today?

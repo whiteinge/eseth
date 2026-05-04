@@ -1,6 +1,6 @@
 ---
 date: 2007-09-06
-categories: [computing, web]
+categories: [web]
 ---
 
 Freebase

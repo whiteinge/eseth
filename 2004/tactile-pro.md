@@ -1,6 +1,6 @@
 ---
 date: 2004-01-01
-categories: [computing]
+categories: [hardware, reviews]
 ---
 
 The Tactile Pro

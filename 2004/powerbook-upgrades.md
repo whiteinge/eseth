@@ -1,6 +1,6 @@
 ---
 date: 2004-12-23
-categories: [computing, os x]
+categories: [os x, apple, hardware, laptops]
 ---
 
 Powerbook Upgrades

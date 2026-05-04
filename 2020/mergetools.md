@@ -1,6 +1,6 @@
 ---
 date: 2020-12-08
-categories: [computing]
+categories: [git]
 summary: "A three-way merge will not help you resolve merge conflicts."
 ---
 

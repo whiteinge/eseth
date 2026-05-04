@@ -1,6 +1,6 @@
 ---
 date: 2007-05-15
-categories: [computing, os x]
+categories: [os x, apple, terminal, unix]
 ---
 
 The Mac OS X Terminal Holy Grail: mrxvt

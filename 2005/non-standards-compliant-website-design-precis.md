@@ -1,6 +1,6 @@
 ---
 date: 2005-01-26
-categories: [computing, web]
+categories: [web, standards]
 ---
 
 Non-standards compliant website design précis

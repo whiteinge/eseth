@@ -1,6 +1,6 @@
 ---
 date: 2009-12-22
-categories: [computing, unix]
+categories: [unix, zsh, shell, prompts, dotfiles]
 summary: "A Zsh multi-line prompt featuring the dog from Nethack."
 ---
 

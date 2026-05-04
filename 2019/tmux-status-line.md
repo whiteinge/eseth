@@ -1,6 +1,6 @@
 ---
 date: 2019-10-07
-categories: [computing, unix]
+categories: [unix, terminal, prompts]
 summary: "An experiment to move status info that usually lives in your shell prompt into tmux pane statuses."
 ---
 

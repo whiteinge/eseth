@@ -1,6 +1,6 @@
 ---
 date: 2010-03-17
-categories: [computing, python]
+categories: [python, blogging, markup]
 ---
 
 Blogging with Sphinx

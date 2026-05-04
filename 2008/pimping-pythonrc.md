@@ -1,6 +1,6 @@
 ---
 date: 2008-01-01
-categories: [computing, python]
+categories: [python, dotfiles, shell]
 ---
 
 Pimping out your .pythonrc.py

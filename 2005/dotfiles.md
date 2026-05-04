@@ -1,6 +1,6 @@
 ---
 date: 2005-10-08
-categories: [computing, unix, zsh, screen, vim]
+categories: [unix, dotfiles, shell, zsh, vim, screen]
 ---
 
 Dotfiles

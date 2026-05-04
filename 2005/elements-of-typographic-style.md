@@ -1,6 +1,6 @@
 ---
 date: 2005-12-15
-categories: [typography]
+categories: [typography, books, reviews]
 ---
 
 The Elements of Typographic Style

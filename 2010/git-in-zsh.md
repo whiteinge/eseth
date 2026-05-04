@@ -1,6 +1,6 @@
 ---
 date: 2010-05-24
-categories: [computing, unix, zsh, mercurial]
+categories: [unix, zsh, git, prompts, dotfiles, shell]
 summary: "Zsh's built-in vcs_info system is an amazing, flexible, and extendable system for putting Git information in your shell prompt."
 ---
 

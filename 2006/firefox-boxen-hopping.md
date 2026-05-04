@@ -1,6 +1,6 @@
 ---
 date: 2006-03-30
-categories: [computing, web]
+categories: [web, firefox, browsers, dotfiles]
 ---
 
 Firefox and boxen-hopping

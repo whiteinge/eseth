@@ -1,6 +1,6 @@
 ---
 date: 2007-04-09
-categories: [computing, vim]
+categories: [unix, vim]
 summary: "Vim buffers go in Vim windows which go in Vim tabs. Sometimes they're hidden, sometimes one appears in multiple windows. It works a bit differently from more \"modern\" text editors."
 ---
 

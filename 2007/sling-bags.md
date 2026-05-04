@@ -1,6 +1,6 @@
 ---
 date: 2007-01-01
-categories: [computing]
+categories: [hardware, laptops, reviews]
 ---
 
 Sling laptop bags, a review

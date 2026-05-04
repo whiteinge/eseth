@@ -1,6 +1,6 @@
 ---
 date: 2005-12-14
-categories: [computing, typography, web]
+categories: [web, typography, css]
 ---
 
 Web Typography, Bringhurst-style

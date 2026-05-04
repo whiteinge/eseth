@@ -1,6 +1,6 @@
 ---
 date: 2013-04-28
-categories: [computing, unix, zsh]
+categories: [unix, zsh, shell, grep]
 summary: "Change GREP_OPTIONS dynamically using Zshs precmd."
 ---
 

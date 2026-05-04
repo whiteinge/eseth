@@ -1,6 +1,6 @@
 ---
 date: 2005-03-02
-categories: [computing, web, javascript]
+categories: [web, javascript, accessibility]
 ---
 
 Unobtrusive JavaScript Gems

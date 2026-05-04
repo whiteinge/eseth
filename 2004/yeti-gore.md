@@ -1,6 +1,6 @@
 ---
 date: 2004-12-16
-categories: [computing]
+categories: [web, gaming]
 ---
 
 Yeti Gore Flash game

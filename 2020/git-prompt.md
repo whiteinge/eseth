@@ -1,6 +1,6 @@
 ---
 date: 2020-01-25
-categories: [computing, unix]
+categories: [unix, git, shell, prompts, awk]
 summary: "All the info you need for a Git shell prompt in one Git invocation"
 ---
 

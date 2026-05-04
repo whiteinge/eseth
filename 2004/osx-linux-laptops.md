@@ -1,6 +1,6 @@
 ---
 date: 2004-01-01
-categories: [computing, os x, unix]
+categories: [os x, unix, linux, apple, hardware, laptops]
 ---
 
 OS X vs. Linux and Linux on Laptops

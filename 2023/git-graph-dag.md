@@ -1,6 +1,6 @@
 ---
 date: 2023-05-12
-categories: [computing, git]
+categories: [git]
 summary: "Real-time visualization of Git operations that change the DAG using a simple hook and an image viewer."
 ---
 

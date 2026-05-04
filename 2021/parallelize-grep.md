@@ -1,6 +1,6 @@
 ---
 date: 2021-04-13
-categories: [computing, unix]
+categories: [unix, shell, cli, grep, awk]
 summary: "grep doesn't have to be slow; use the UNIX philosophy of combining utilities."
 ---
 

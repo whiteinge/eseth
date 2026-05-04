@@ -1,6 +1,6 @@
 ---
 date: 2007-05-20
-categories: [computing, web]
+categories: [web, standards]
 ---
 
 Cool URIs don't change; so what's considered 'cool'?

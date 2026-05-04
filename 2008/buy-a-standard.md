@@ -1,6 +1,6 @@
 ---
 date: 2008-04-03
-categories: [computing]
+categories: [standards]
 ---
 
 How to buy a standard in 10 days

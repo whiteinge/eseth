@@ -1,6 +1,6 @@
 ---
 date: 2004-12-26
-categories: [mobiles]
+categories: [mobiles, hardware, reviews]
 ---
 
 Sony Ericsson K700i

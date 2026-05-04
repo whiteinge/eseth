@@ -1,6 +1,6 @@
 ---
 date: 2004-01-01
-categories: [computing, os x]
+categories: [os x, apple, hardware, laptops]
 ---
 
 Auto-sensing PowerBook network port

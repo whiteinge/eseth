@@ -1,6 +1,6 @@
 ---
 date: 2007-10-11
-categories: [computing]
+categories: [markup]
 ---
 
 ReST for Markdown and Textile Users

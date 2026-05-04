@@ -1,6 +1,6 @@
 ---
 date: 2007-01-28
-categories: [computing, web, django, python]
+categories: [web, django, python]
 ---
 
 Learning Django with IPython

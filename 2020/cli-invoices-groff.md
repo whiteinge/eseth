@@ -1,6 +1,6 @@
 ---
 date: 2020-08-25
-categories: [computing, unix]
+categories: [unix, cli, typography]
 summary: "Generate a PDF invoice from a plain text timelog using groff, m4, and a splash of awk"
 ---
 

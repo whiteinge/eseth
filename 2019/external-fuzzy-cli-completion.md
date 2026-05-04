@@ -1,6 +1,6 @@
 ---
 date: 2019-10-30
-categories: [computing, unix]
+categories: [unix, shell, zsh, cli]
 summary: "Use an external fuzzy-finder as a replacement for writing burdensome and slow shell completion functions."
 ---
 

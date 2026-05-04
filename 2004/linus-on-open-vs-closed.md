@@ -1,6 +1,6 @@
 ---
 date: 2004-08-18
-categories: [computing, unix]
+categories: [unix, linux]
 ---
 
 # Linus Torvalds on Open Source vs Closed

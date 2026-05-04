@@ -47,7 +47,7 @@ rss.xml: _make_rss.sh _metadata_cache site.yml $(DST)
 deploy: all
 	mkdir -p public
 	cp -r base.css categories.html index.html rss.xml 20* public
-	git checkout --orphan glpages glpages-init
+	git checkout --orphan glpages gitlab/glpages-init
 	git add public
 	git commit -m "Add site build"
 	git checkout master

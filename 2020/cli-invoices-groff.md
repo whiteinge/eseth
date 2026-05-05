@@ -16,7 +16,7 @@ I stumbled across an old book from 1987 by Dale Dougherty and Tim O'Reilly
 called _Unix Text Processing_. They've made it [freely
 available](https://www.oreilly.com/openbook/utp/) and there's even an amazing
 community project to [recreate and modernize the
-book](http://home.windstream.net/kollar/utp/).
+book](https://github.com/larrykollar/Unix-Text-Processing).
 
 ![Unix Text Processing cover](./unixtextprocess_s.gif)
 

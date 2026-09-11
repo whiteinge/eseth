@@ -38,5 +38,5 @@ find . '(' -path '*.git' -o -path '*public' ')' -prune -o -type d -name '20*' -p
 printf '\n\n'
 
 printf '## About Me\n\n'
-printf '* [Code](https://github.com/whiteinge/).\n'
+printf '* [Code](https://github.com/whiteinge/){rel="me"}.\n'
 printf '* [Presentations](https://github.com/whiteinge/presentations/#readme).\n'

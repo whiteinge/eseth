@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$if(canonical)$
+        <link rel="canonical" href="$canonical$">
+$endif$
         <link rel="alternate" type="application/rss+xml" href="$root$/rss.xml">
 $for(css)$
         <link rel="stylesheet" href="$css$">
@@ -23,16 +26,21 @@ $endfor$
         <title>$title$</title>
     </head>
     <body>
-        <div class="documentwrapper" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="documentwrapper"$if(date)$ itemscope itemtype="https://schema.org/BlogPosting"$endif$>
         <p class="index">
             <a href="/">Home</a>
             | <a href="/categories.html">Posts by Category</a>
         </p>
 $if(date)$
-        <p class="date"><time itemprop="datePublished">$date$</time></p>
+        <meta itemprop="headline" content="$title$">
+        <link itemprop="mainEntityOfPage" href="$canonical$">
+        <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="name" content="$author$">
+        </span>
+        <p class="date"><time itemprop="datePublished" datetime="$date$">$date$</time></p>
 $endif$
 
-        <article itemprop="articleBody">
+        <article$if(date)$ itemprop="articleBody"$endif$>
             $body$
         </article>
 $if(toc)$

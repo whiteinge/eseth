@@ -13,15 +13,17 @@ DST = $(SRC:%.md=%.html)
 META = $(SRC:%.md=%.meta)
 IDX = index.html categories.html $(addsuffix /index.html, $(wildcard 20*))
 
+FILTERS = _title_from_h1.lua _inline_toc.lua
+DEPS = _template.html site.yml $(FILTERS)
+
 PANDOC = pandoc -f markdown -t html --no-highlight --wrap=none \
-    --lua-filter=_title_from_h1.lua \
-    --lua-filter=_inline_toc.lua \
+    $(addprefix --lua-filter=,$(FILTERS)) \
     --template=_template.html --metadata-file=site.yml
 
 all: init $(DST) _metadata_cache $(IDX) rss.xml
 
-%.html: %.md _template.html _title_from_h1.lua _inline_toc.lua site.yml
-	$(PANDOC) "$<" -o "$@"
+%.html: %.md $(DEPS)
+	$(PANDOC) --metadata=outfile="$@" "$<" -o "$@"
 
 %.meta: %.md _meta.tmpl _title_from_h1.lua
 	pandoc -f markdown -t plain --wrap=none \
@@ -32,14 +34,14 @@ all: init $(DST) _metadata_cache $(IDX) rss.xml
 _metadata_cache: $(META)
 	cat $^ > $@
 
-index.html: _make_index.sh _metadata_cache _template.html site.yml
-	./_make_index.sh | $(PANDOC) -o "$@"
+index.html: _make_index.sh _metadata_cache $(DEPS)
+	./_make_index.sh | $(PANDOC) --metadata=outfile="$@" -o "$@"
 
-categories.html: _make_categories.sh _metadata_cache _template.html site.yml
-	./_make_categories.sh | $(PANDOC) -o "$@"
+categories.html: _make_categories.sh _metadata_cache $(DEPS)
+	./_make_categories.sh | $(PANDOC) --metadata=outfile="$@" -o "$@"
 
-20%/index.html: _make_year_index.sh _metadata_cache _template.html site.yml
-	./_make_year_index.sh "20$*" | $(PANDOC) -o "$@"
+20%/index.html: _make_year_index.sh _metadata_cache $(DEPS)
+	./_make_year_index.sh "20$*" | $(PANDOC) --metadata=outfile="$@" -o "$@"
 
 rss.xml: _make_rss.sh _metadata_cache site.yml $(DST)
 	./_make_rss.sh > "$@"
